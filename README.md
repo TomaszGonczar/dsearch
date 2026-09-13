@@ -1,137 +1,72 @@
-# dSearch
+<h1 align="center">dSearch</h1>
 
-**Archived research report. Development stopped before an end-to-end search product existed.**
+<p align="center">
+  <b>261 URLs were corroborated across eligible search indexes. 38 matched the labelled page.</b><br>
+  Completed falsification study · 60 labelled queries · no product release
+</p>
 
-dSearch tested whether a URL returned by more than one independent search index was more likely
-to be the right page for a query.
+<p align="center">
+  <a href="#result">Result</a> ·
+  <a href="#reproduce">Reproduce</a> ·
+  <a href="#experiment">Experiment</a> ·
+  <a href="#retained-implementation">Implementation</a> ·
+  <a href="#audit-notes">Audit notes</a> ·
+  <a href="#evidence">Evidence</a>
+</p>
 
-Four providers were queried for 60 document-finding queries. Consensus was calculated across the
-eligible independent indexes. Of 261 URLs returned by at least two of those indexes, 38 matched a
-labelled reference URL. Strict precision was **0.1456** (Wilson 95% CI **[0.108, 0.194]**).
+<p align="center">
+  <img src="https://img.shields.io/badge/status-research%20complete-64748B" alt="Status: research complete">
+  <a href="https://github.com/TomaszGonczar/dsearch/actions/workflows/ci.yml"><img src="https://github.com/TomaszGonczar/dsearch/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.11+-3776AB?logo=python&logoColor=white" alt="Python 3.11+"></a>
+  <img src="https://img.shields.io/badge/tests-78%20offline-2563EB" alt="78 offline tests">
+</p>
 
-The measured precision was too low to use agreement as a quality signal. This repository contains
-the pure-core implementation, recorded provider output, evaluation scripts, and a later audit of
-the experiment.
+---
 
-[Results](#results) · [Method](#method) · [Decision](#decision) ·
-[Limitations](#limitations-found-in-review) · [Reproduction](#reproduction)
+> [!IMPORTANT]
+> dSearch is an archived research repository. It contains a deterministic core and recorded
+> evaluation evidence, not an installable search router, CLI, MCP server, or supported package.
 
-## Results
+## Result
 
-| Question | Result |
-|---|---|
-| How often did a corroborated URL match the labelled page? | **38 / 261 = 0.1456** |
-| Did a zero-consensus case identify ambiguous queries? | No zero case occurred; consensus fired in **60 / 60** evaluation queries |
-| Was greater agreement associated with greater precision? | An exploratory inclusive analysis found a negative association: **r = -0.287**, two-sided **p = 0.026** |
+The hypothesis was that a canonical URL returned by two independent search indexes carried
+useful evidence of correctness. The providers agreed often. Their agreement did not identify the
+labelled document reliably.
 
-Search indexes tend to share coverage of popular pages such as documentation roots, repository
-pages, and general references. Several providers can return those pages even when a query asks
-for one specific reference.
+| Measurement | Observed |
+|---|---:|
+| Labelled document queries | 60 |
+| Queries where consensus fired | 60 / 60 |
+| URLs returned by at least two eligible indexes | 261 |
+| Exact matches to a labelled URL | 38 |
+| Strict precision | **0.1456** |
+| Wilson 95% confidence interval | **[0.108, 0.194]** |
 
-The decision rests on the strict result: 38 exact matches among 261 corroborated URLs. The
-negative correlation is exploratory because its calculation has the classification and
-provenance limitations described below.
+Consensus did not fail because it was rare. It fired for every query in the evaluation and
+produced 261 corroborated URLs. It failed at the next step: only 38 were exact matches to the
+labelled page.
 
-## Why this was tested
+An exploratory inclusive analysis also found a negative association between agreement rate and
+precision (`r = -0.287`, two-sided `p = 0.026`). That secondary result has classification and
+provenance limitations, so the engineering decision rests on strict precision.
 
-The project began with a failure observed in an agent session. Three web searches returned no
-results without producing a useful failure for the model. One call took 264 seconds. The agent
-continued planning without search evidence.
+> **Decision:** consensus remains descriptive metadata. Product development stopped before the
+> provider runtime and agent integrations were built.
 
-dSearch separated two concerns:
+## Reproduce
 
-1. Search should return an attributed, bounded outcome, including when no results are found.
-2. Agreement between independent indexes might provide evidence that a result is reliable.
-
-The deterministic envelope addresses the first concern. The second claim motivated the router,
-so it was evaluated before provider orchestration and agent integrations were implemented.
-
-## Method
-
-- 60 queries asking for specific technical documents.
-- One or more labelled reference URLs per query.
-- Four providers, with up to 10 results requested from each.
-- Consensus calculated only across providers configured as independent.
-- URL comparison after normalizing scheme, `www`, trailing slashes, and tracking parameters.
-- A URL classified as corroborated when at least two eligible providers returned it.
-- Strict precision defined as exact canonical matches divided by all corroborated URLs.
-
-The first run contained 22 queries:
-
-```text
-12 exact matches / 108 corroborated URLs = 0.1111
-Wilson 95% CI: [0.065, 0.184]
-```
-
-The extended run contained 60:
-
-```text
-38 exact matches / 261 corroborated URLs = 0.1456
-Wilson 95% CI: [0.108, 0.194]
-```
-
-Raw responses, per-query scores, and classifications for both runs are in
-[`experiments/ds3/data/`](experiments/ds3/data/).
-
-The unit of measurement is page retrieval. The experiment checks whether consensus recovers a
-labelled document; it never evaluates an answer produced from the search results.
-
-## Decision
-
-At 0.1456 strict precision, consensus remains descriptive metadata. It provides no evidence that
-a page is correct or relevant.
-
-Rescuing consensus with a semantic relevance model would put an opaque judgement inside the path
-intended to provide auditable evidence. Development stopped instead.
-
-Development stopped after this result. The repository is retained as the record of the test and
-the decision.
-
-The implemented parts are:
-
-- attributed envelopes with explicit zero-result outcomes;
-- URL canonicalization;
-- pairwise agreement calculations;
-- context-aware output budgets;
-- provider declarations and offline contract fixtures;
-- handling for malformed provider URLs;
-- 78 offline tests for the provider contracts and pure core.
-
-Implementation ends at the pure core. The provider orchestrator, command-line product, MCP
-server, and supported package were never built.
-
-## Limitations found in review
-
-A separate verification pass reproduced the strict precision result and found three problems
-with the broader analysis:
-
-- **Alternate classifications.** [`classify.py`](experiments/ds3/classify.py) counts two URLs as
-  `alternate`, although their annotations say they should remain `wrong`. The committed inclusive
-  precision is 0.1801; applying the stated conservative rule gives `45 / 261 = 0.1724`. Strict
-  precision remains 38 / 261 because it excludes every alternate.
-- **Label chronology.** Measurement timestamps precede the commits that first contain the
-  corresponding labels, and the label metadata timestamps are later still. The repository
-  cannot establish the claimed ordering or rule out labels informed by provider output.
-- **Missing evidence and analysis code.** The overlap summary omits the provider URLs and repeated
-  calls needed to recompute its pairwise Jaccard and stability claims. Its document records
-  Parallel repeat stability at `J = 0.82`, not `1.00`. The permutation, median-split, and
-  domain-precision calculations were not committed as code, and their reported p-values require
-  an unstated one-sided test.
-
-The negative correlation is therefore an exploratory result from this dataset.
-
-## Reproduction
-
-The core test suite and stored classification run offline. No provider credentials are required.
+The core tests and stored classification run without network access or provider credentials.
 
 ```bash
+git clone https://github.com/TomaszGonczar/dsearch.git
+cd dsearch
 python3 -m pip install -e '.[dev]'
 python3 -m pytest -q
 python3 -m ruff check .
 python3 experiments/ds3/classify.py
 ```
 
-Current output:
+Expected headline output:
 
 ```text
 78 passed
@@ -144,18 +79,85 @@ all_corroborations      261
 precision, STRICT         0.1456
 ```
 
-The classification command reproduces the committed classification, including the two
-alternate-label inconsistencies noted above. It does not independently reproduce every
-statistical claim.
+`classify.py` reproduces the committed classification, including the alternate-label issue
+described in [Audit notes](#audit-notes). It does not recreate the live provider calls.
 
-## Repository guide
+## Experiment
+
+dSearch began with a failure observed in an AI coding session: three web searches returned zero
+results without surfacing a useful failure to the model. One call took 264 seconds. The proposed
+router had two separate claims:
+
+1. Search should return a bounded, attributed outcome, including when no results are found.
+2. Agreement across independent indexes might indicate that a result deserves more trust.
+
+The first claim produced deterministic engineering components. The second was the proposed trust
+signal and was tested before building the runtime around it.
+
+```text
+4 providers × up to 10 results
+              ↓
+       canonical URLs
+              ↓
+agreement across eligible independent indexes
+              ↓
+ exact comparison with human-labelled documents
+```
+
+The evaluation used 60 document-finding queries with one or more labelled authoritative URLs.
+Scheme, `www`, trailing slash, tracking parameters, and query ordering were normalized before URL
+comparison. A URL counted as corroborated when at least two eligible providers returned it.
+
+This measures document retrieval, not answer correctness. No model-generated answer was scored.
+
+The first 22-query run produced `12 / 108 = 0.1111` strict precision. Extending the same method to
+60 queries produced `38 / 261 = 0.1456`.
+
+## Retained implementation
+
+| Implemented and tested | Not built |
+|---|---|
+| Attributed envelopes, including explicit zero-result outcomes | Live provider orchestration |
+| URL canonicalization | Search CLI |
+| Pairwise agreement rates | MCP server and agent adapters |
+| Context-aware output budgets | Local search ledger |
+| Provider declarations and recorded contract fixtures | Release package |
+| Malformed provider URL handling | Supported end-to-end product |
+
+The retained core is deterministic: no clock, locale dependence, network access, or model
+judgement appears in its result path. The test suite contains 78 offline tests.
+
+## Audit notes
+
+A separate verification pass reproduced strict precision and found four limits on the wider
+analysis:
+
+- **Alternate labels:** `classify.py` reports nine alternates, but the annotations for two of them
+  say they should remain wrong. The committed inclusive value is `0.1801`; applying the stated
+  conservative rule gives `45 / 261 = 0.1724`. Strict precision is unchanged.
+- **Label chronology:** result timestamps precede the commits that first contain the labels, while
+  label metadata timestamps are later. Repository history does not establish that labels predated
+  provider calls.
+- **Overlap evidence:** the preliminary overlap artifact omits the raw URLs and repeated calls
+  needed to recompute every Jaccard and stability claim. It records Parallel repeat stability at
+  `J = 0.82`, not `1.00`.
+- **Secondary statistics:** code for the permutation, median-split, domain-precision, and
+  correlation calculations was not committed. The negative correlation is therefore exploratory.
+
+These limitations do not change the strict numerator or denominator: 38 exact matches among 261
+corroborated URLs.
+
+## Evidence
 
 | Path | Contents |
 |---|---|
-| [`docs/DS3-DECISION.md`](docs/DS3-DECISION.md) | Decision recorded after the 60-query evaluation |
-| [`experiments/ds3/data/`](experiments/ds3/data/) | Provider output and scoring data for both runs |
-| [`docs/EXPERIMENT-OVERLAP.md`](docs/EXPERIMENT-OVERLAP.md) | Initial overlap experiment |
-| [`docs/CONCEPT.md`](docs/CONCEPT.md) | Original product proposal; not the current project status |
-| [`docs/PROVIDERS.md`](docs/PROVIDERS.md) | Provider provenance and independence classes |
-| [`core/`](core/) | Pure deterministic components |
-| [`tests/`](tests/) | Offline tests |
+| [`experiments/ds3/data/`](experiments/ds3/data/) | Raw provider output, per-query scores, and classifications for the 22- and 60-query runs |
+| [`experiments/ds3/eval-set.json`](experiments/ds3/eval-set.json) | The 60 labelled document queries |
+| [`experiments/ds3/classify.py`](experiments/ds3/classify.py) | Reproducible strict-precision classification |
+| [`docs/DS3-DECISION.md`](docs/DS3-DECISION.md) | Contemporaneous decision record with an archival audit warning |
+| [`docs/EXPERIMENT-OVERLAP.md`](docs/EXPERIMENT-OVERLAP.md) | Preliminary provider-overlap experiment and its limitations |
+| [`core/`](core/) | Deterministic envelope, canonicalization, consensus, and budget code |
+| [`tests/`](tests/) | Offline unit, property, weak-spot, and provider-contract tests |
+
+Raw responses and both evaluation runs remain committed so the result can be inspected without
+repeating the live provider calls.
