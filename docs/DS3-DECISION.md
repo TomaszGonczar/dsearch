@@ -50,12 +50,21 @@ The `alternate` map in `classify.py` covers only the original 22 queries. The 38
 statistical power have **no alternates defined**, so any same-document-at-another-URL they
 produced is currently counted `wrong`. This biases strict precision **downward**.
 
-The original 22 established an alternate rate of **9.8% of non-exact corroborations**. If that
-rate holds for the new queries, roughly **13 undetected alternates** sit in the new set and the
-inclusive figure would be approximately **0.229**.
+Two different inclusive figures exist here and they must not be confused:
 
-That is an **estimate and is labelled as one**. The strict figure requires no estimate, is
-unaffected by the gap, and is the number the verdict rests on. Hand-auditing 214 URLs was not
+| Figure | Value | Status |
+|---|---|---|
+| Strict — exact URL only | **0.1456** | measured; carries the verdict |
+| Inclusive — alternates **as currently defined** | **0.1801** | measured, but under-counts the new queries |
+| Inclusive — if the original alternate rate holds | ≈ **0.229** | **estimate, not measured** |
+
+The middle row is what `classify.py` actually outputs. The third row is the projection: the
+original 22 established an alternate rate of **9.8% of non-exact corroborations**; if that holds
+for the 38 new queries, roughly **13 undetected alternates** sit in the set and the inclusive
+figure would be about 0.229. **That number is an estimate and is labelled as one.**
+
+Only the strict figure requires no estimate, and it is the one the verdict rests on. Hand-auditing
+214 URLs was not
 done; the gap is stated rather than papered over.
 
 ---
