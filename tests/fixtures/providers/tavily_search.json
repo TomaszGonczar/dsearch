@@ -1,0 +1,16 @@
+{
+  "provider": "tavily",
+  "recorded_at": "2026-09-13",
+  "status_code": 200,
+  "body": {
+    "query": "fixture query",
+    "results": [
+      {
+        "title": "Tavily contract result",
+        "url": "https://example.com/tavily",
+        "content": "Recorded Tavily response shape.",
+        "score": 0.9
+      }
+    ]
+  }
+}

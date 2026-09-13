@@ -1,0 +1,12 @@
+{
+  "provider": "brave",
+  "recorded_at": "2026-09-13",
+  "status_code": 429,
+  "body": {
+    "type": "ErrorResponse",
+    "error": {
+      "code": "RATE_LIMITED",
+      "message": "Too many requests"
+    }
+  }
+}

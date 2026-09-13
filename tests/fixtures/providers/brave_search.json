@@ -1,0 +1,17 @@
+{
+  "provider": "brave",
+  "recorded_at": "2026-09-13",
+  "status_code": 200,
+  "body": {
+    "type": "search",
+    "web": {
+      "results": [
+        {
+          "title": "Brave contract result",
+          "url": "https://example.com/brave",
+          "description": "Recorded Brave response shape."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "source": "docs/EXPERIMENT-OVERLAP.md section 3",
+  "measurements": [
+    {"query": "apple", "union": 28, "consensus": 9, "rate": 0.321},
+    {"query": "mercury", "union": 25, "consensus": 7, "rate": 0.28},
+    {"query": "model", "union": 30, "consensus": 6, "rate": 0.2},
+    {"query": "the best way", "union": 25, "consensus": 10, "rate": 0.4},
+    {"query": "x", "union": 26, "consensus": 4, "rate": 0.154}
+  ]
+}

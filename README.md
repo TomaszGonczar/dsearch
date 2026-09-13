@@ -108,6 +108,19 @@ model's citations × an aggregator's results.** Tavily is not an independent ind
 independent crawlers found it"* — and a router cannot tell the difference, because it never
 asks what an index **is**. That is why [`docs/PROVIDERS.md`](docs/PROVIDERS.md) exists.
 
+## Development
+
+Requires Python 3.11 or newer. The default suite uses recorded provider fixtures and blocks
+network access.
+
+```bash
+python -m pip install -e '.[dev]'
+ruff check .
+mypy
+python scripts/check_dependency_policy.py
+pytest
+```
+
 ### The mechanism nobody else has: disagreement as output
 
 Every merge-and-rank pipeline treats disjoint result sets as a merge problem — union and sort.
@@ -159,7 +172,8 @@ Two integration patterns:
 
 ## Status
 
-Design phase. No code, no repository yet.
+**Foundation implementation in progress.** Provider response contracts use recorded fixtures;
+the deterministic envelope and canonicalization core follow in DS-2.
 
 - [`docs/CONCEPT.md`](docs/CONCEPT.md) — the full concept: failure scenarios, competitive
   position, tiering, adapter model, decisions and open questions

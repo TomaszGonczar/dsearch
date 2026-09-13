@@ -1,0 +1,28 @@
+{
+  "providers": {
+    "brave": {
+      "display_name": "Brave Search",
+      "independence_class": "A",
+      "index_provenance": "First-party crawler and index",
+      "caveat": null
+    },
+    "exa": {
+      "display_name": "Exa",
+      "independence_class": "A",
+      "index_provenance": "Proprietary neural index over a curated crawl",
+      "caveat": null
+    },
+    "parallel": {
+      "display_name": "Parallel",
+      "independence_class": "A",
+      "index_provenance": "First-party web-scale index for agent search",
+      "caveat": null
+    },
+    "tavily": {
+      "display_name": "Tavily",
+      "independence_class": "B",
+      "index_provenance": "Own crawler combined with licensed third-party data",
+      "caveat": "Observed overlap resembles independent indexes, but independence is not a fixed contractual property"
+    }
+  }
+}

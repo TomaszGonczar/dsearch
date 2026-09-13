@@ -1,0 +1,14 @@
+{
+  "provider": "parallel",
+  "recorded_at": "2026-09-13",
+  "status_code": 200,
+  "body": {
+    "results": [
+      {
+        "title": "Parallel contract result",
+        "url": "https://example.com/parallel",
+        "excerpts": ["Recorded Parallel response shape."]
+      }
+    ]
+  }
+}

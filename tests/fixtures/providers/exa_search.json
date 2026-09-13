@@ -1,0 +1,15 @@
+{
+  "provider": "exa",
+  "recorded_at": "2026-09-13",
+  "status_code": 200,
+  "body": {
+    "requestId": "recorded-fixture",
+    "results": [
+      {
+        "title": "Exa contract result",
+        "url": "https://example.com/exa",
+        "text": "Recorded Exa response shape."
+      }
+    ]
+  }
+}
