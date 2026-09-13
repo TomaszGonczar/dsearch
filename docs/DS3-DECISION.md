@@ -1,5 +1,12 @@
 # DS-3 — Consensus precision: measured, and the verdict
 
+> [!WARNING]
+> Historical decision record. A later audit reproduced strict precision at `38 / 261 = 0.1456`
+> and found limitations in secondary claims: two alternate classifications conflict with their
+> annotations, label chronology is not established by repository history, and the statistical
+> analysis code was not committed. The body below preserves the contemporaneous report; use the
+> [README](../README.md) as the current audited summary.
+
 **Date:** 2026-09-13
 **Status:** COMPLETE — **consensus is demoted to metadata; the ledger is the headline**
 **Method:** **60** labelled document-class queries × 4 live providers × 10 results each

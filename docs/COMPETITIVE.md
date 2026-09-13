@@ -1,5 +1,10 @@
 # Competitive analysis — AllSearch MCP
 
+> [!WARNING]
+> Historical design comparison. It describes the proposed router before consensus precision was
+> measured. dSearch was not completed as a product; use the [README](../README.md) for the result
+> and current status.
+
 **Reviewed:** [`Windrunner20/allsearch`](https://github.com/Windrunner20/allsearch) @ v0.2.0
 (2 commits, 0 stars, Python 3.11+, ~590-line README)
 **Verdict:** a real, working, well-engineered project solving a **different problem** from ours —

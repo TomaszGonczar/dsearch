@@ -1,5 +1,10 @@
 # search-router — Concept
 
+> [!WARNING]
+> Historical proposal. This document predates implementation and the DS-3 evaluation. Statements
+> about a future product are not current status; use the [README](../README.md) for the audited
+> result and repository scope.
+
 **Portfolio #2. Status: concept. No code, no repo yet.**
 
 ---
