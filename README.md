@@ -1,190 +1,157 @@
-# search-router
+# dSearch: when search consensus pointed the wrong way
 
-**Portfolio #2 — a search reliability and trust layer for coding agents.**
+**This is a completed falsification record, not a working search product.**
 
-> Dear developer — how many searches have been corrupted in your coding agent?
->
-> Not failed. **Corrupted.** A search that returned nothing, said nothing about returning
-> nothing, and let your agent plan on top of it.
->
-> Can you count them? I couldn't. That is the problem.
->
-> A failed search is visible. A *silently empty* search is indistinguishable from a good one,
-> and your agent treats both the same. Every corrupted search quietly degrades the research
-> phase, and the plan built on it, and the code built on the plan.
->
-> `search-router` exists because I got tired of not being able to count them.
+Four search providers were queried, and the eligible independent indexes agreed often enough
+to look useful. On 60 labelled document queries, that agreement identified the labelled page
+in only **38 of 261 corroborated URLs: 14.6% strict precision** (Wilson 95% CI
+**[10.8%, 19.4%]**). Development stopped before the signal could be presented as trust.
 
----
+**The mechanism worked. The hypothesis did not.**
 
-## The one-paragraph version
+[Result](#the-result) · [Method](#how-it-was-tested) · [Decision](#the-engineering-decision) ·
+[Audit notes](#what-the-evidence-does-not-establish) · [Reproduce](#reproduce-the-verifiable-core)
 
-Every coding agent ships a web search tool, and it fails in the worst possible way:
-successfully. A real documented Claude Code session returned `{"results": [], "searchCount":
-0}` three times in a row — including one call that took **264 seconds** — while handing the
-model a result envelope that said *"REMINDER: You MUST include the sources above in your
-response."* The agent did not error. It reasoned on top of nothing.
+> [!IMPORTANT]
+> dSearch is a research artifact. It preserves the hypothesis, deterministic core, measurement
+> harness, raw provider results, and the mistakes found during verification. It is not an
+> end-to-end router, supported package, or recommendation to use consensus as a quality signal.
 
-`search-router` treats search as a **trust problem**, not an availability problem. It queries
-engines with independent indexes in parallel under a hard timeout, fuses their rankings with
-Reciprocal Rank Fusion, and marks which results two independent sources agree on. Zero results
-is never a null — it is an attributed outcome naming which providers were asked and why each
-failed.
+## The result
 
-## Three failures it addresses
+The proposed trust signal was simple: if independent search indexes return the same canonical
+URL, that page has corroboration unavailable from a single provider.
 
-| # | Failure | Why it is worse than an outage | What the router does |
-|---|---|---|---|
-| 1 | **The Silent Empty** — HTTP 200, zero results | An outage is loud. An empty set is *epistemically invisible*: the model cannot tell it is reasoning from nothing, and neither can you | Every response is an attributed envelope. Empty is a first-class outcome, never a null |
-| 2 | **The Single-Index Blind Spot** — the page is not in *this* index | Results look fine: credible titles, real domains, plausible snippets. Nothing suggests the authoritative page exists elsewhere | RRF fusion over independent indexes; `consensus: true` when 2+ agree on the same canonical URL |
-| 3 | **The Stall** — the call hangs | It does not abort. Documented: 264 s on one call, then 158 s of silence until a human interrupted | Per-provider timeout, parallel fan-out. A hung provider cannot eat the research phase |
+The signal was measurable and frequent. It was not informative enough to ship.
 
-## Three claims, each verifiable
+| Prediction | Measurement | Outcome |
+|---|---:|---|
+| Provider agreement identifies the right page | **38 / 261 = 0.1456** strict precision | Falsified |
+| `consensus: none` exposes ambiguity | Consensus fired in **60 / 60** evaluation queries | Falsified in this sample |
+| More agreement means greater confidence | Exploratory inclusive analysis: **r = -0.287**, two-sided **p = 0.026** | Inverted in this sample |
 
-1. **Never a silent empty.** Attributed envelopes at every tier.
-2. **Agreement is measurable.** Deterministic consensus marking. No model in the trust path.
-3. **Bounded by construction.** Timeout per provider, explicit failover chain, honest
-   `degraded` tier when keys are absent.
+The third result is the surprising one: agreement did not merely add little information. In the
+recorded evaluation it moved in the wrong direction. A plausible mechanism is popularity:
+generic documentation roots, repository pages, and other widely indexed URLs are easy for
+providers to agree on, even when a query asks for one precise authoritative page.
 
-## Two signups, not four
+The correlation is reported as **exploratory**, not established. Its classification and
+provenance limitations are stated below. The load-bearing result is strict precision:
+`38 / 261`, which does not depend on alternate-URL judgements.
 
-The setup objection is fair, and the answer is tiers — the product is **Tier 2**, not Tier 4:
+## Why test this before building the router
 
-```
-Tier 0  no keys           → works, labelled degraded
-Tier 1  one free key      → bounded search, attributed envelope   (fixes #1 and #3)
-Tier 2  two free keys     → RRF fusion + consensus  ⭐ THE PRODUCT
-Tier 3  + rerank key      → cross-encoder over candidates          (for data nerds)
-```
+The project started from a real agent failure. Three web searches returned zero results without
+surfacing a useful failure to the model; one call consumed **264 seconds**. The agent continued
+planning on an empty evidence base.
 
-**Two free API keys gets the whole product.** Brave ships monthly free credit on its own
-independent index; Exa and Tavily both have free monthly allowances.
+dSearch separated two questions:
 
-### But it has to be the *right* two
+1. Did search return an attributed, bounded outcome rather than a silent empty?
+2. Can cross-provider URL agreement say whether the result deserves trust?
 
-This is the part that makes the project more than a router, and it is why a provider guide
-ships with the engine:
+The first question produced useful deterministic components. The second was the proposed
+differentiator, so it was measured before provider orchestration, packaging, or integrations
+were built around it. The measurement killed that feature.
 
-> Two providers deriving results from the same upstream index agree on almost everything.
-> That agreement carries zero information — it is one opinion counted twice, wearing a badge
-> that says "confirmed by two sources."
+## How it was tested
 
-**Tavily is an aggregator**, not an independent index — Brave's own comparison describes it as
-using "its own crawler in tandem with third-party data aggregation." Pairing Brave with Tavily
-*looks* like consensus and is not. A router cannot detect that. So the guide does:
+- **60 document-finding queries** with one or more labelled authoritative URLs.
+- **Four providers**, requesting up to 10 results from each.
+- URLs canonicalized before comparison: scheme, `www`, trailing slash, and tracking parameters.
+- A URL counted as consensus when at least two eligible providers returned it.
+- Strict precision counted only canonical matches to a labelled URL.
+- Raw responses, per-query scores, and classifications were committed under
+  [`experiments/ds3/data/`](experiments/ds3/data/).
 
-```
-✅  Brave + Exa          two independent indexes, differing on BOTH axes
-                        (keyword crawl vs neural index, different coverage gaps)
-✅  Brave + Parallel     the agent-native alternative
-❌  Tavily + anything    aggregator — independence varies per query
-❌  Google + SerpAPI     both derivative of the same upstream — consensus is theatre
-```
+The evaluation was first run at 22 queries, where strict precision was `12 / 108 = 0.1111`
+(Wilson 95% CI `[0.065, 0.184]`), then extended to 60. The final strict result was
+`38 / 261 = 0.1456` (Wilson 95% CI `[0.108, 0.194]`).
 
-→ **[`docs/PROVIDERS.md`](docs/PROVIDERS.md)** — independence classes, free tiers with
-verification sources, recommended pairings, and the combinations to avoid.
+This measures **page findability**, not answer correctness. It asks whether agreement recovers a
+labelled document. It does not test whether an answer synthesized from the results is correct.
 
-An engine that returns a confidence signal, shipped without a map of which providers make that
-signal meaningful, hands the user a number they cannot interpret. The guide is what turns
-`consensus: true` from decoration into evidence.
+## The engineering decision
 
-## What is not new, and what is
+Consensus was demoted from a trust signal to descriptive metadata, and product work stopped.
+Topical scoping was not used to rescue it: deciding whether a page is relevant would require a
+model or another semantic judge inside the trust path, replacing a failed transparent signal
+with a harder-to-audit one.
 
-Multi-provider fallback exists — `reliable-web-search`, **AllSearch MCP**, and several others do
-it well. That solves *"can I get an answer?"*
+What remains technically valid:
 
-Nobody ships the second question: *"should I trust this answer?"*
+- deterministic attributed envelopes, including explicit zero-result outcomes;
+- URL canonicalization and pairwise agreement rates;
+- context-aware output budgets;
+- offline provider contract fixtures;
+- explicit provider independence classes stored as configuration;
+- graceful handling of malformed provider URLs;
+- **78 offline tests** covering the pure core and provider contracts.
 
-```
-AllSearch MCP:   more providers → better answer      (Grok-first, model in the loop)
-reliable-web-search:  provider A down → use B        (failover only)
-search-router:   measured agreement → known trust    (no model in the path)
-```
+These components are evidence of the experiment, not a claim that dSearch is a complete tool.
 
-The sharpest difference: **AllSearch's "independent cross-validation" is computed across a
-model's citations × an aggregator's results.** Tavily is not an independent index — it uses
-"its own crawler in tandem with third-party data aggregation." So its cross-provider hits mean
-*"a model said this and an aggregator found it,"* which is materially weaker than *"two
-independent crawlers found it"* — and a router cannot tell the difference, because it never
-asks what an index **is**. That is why [`docs/PROVIDERS.md`](docs/PROVIDERS.md) exists.
+## What the evidence does not establish
 
-## Development
+An adversarial verification pass reproduced the strict result and found limitations that matter:
 
-Requires Python 3.11 or newer. The default suite uses recorded provider fixtures and blocks
-network access.
+- Two URLs are counted as `alternate` by
+  [`classify.py`](experiments/ds3/classify.py) even though their own annotations say they must
+  remain `wrong`. The committed measured-inclusive value is therefore `0.1801`; applying the
+  script's stated conservative rule gives `45 / 261 = 0.1724`. **Strict precision is unchanged.**
+- Repository history does not prove that labels predated provider calls. The result files have
+  measurement timestamps earlier than the commits that first contain their labels, while the
+  label metadata timestamps are later still. This is a provenance failure, not proof that the
+  labels were derived from provider output.
+- The committed overlap summary does not contain the raw URLs or repeated-call runs needed to
+  independently reproduce its pairwise Jaccard and stability claims. Its document records
+  Parallel repeat stability at `J = 0.82`, not `1.00`.
+- The permutation, median-split, and domain-precision calculations were not committed as code.
+  Their p-values depend on an unstated one-sided test. The negative correlation should therefore
+  be treated as an exploratory observation from this dataset.
+
+Finding these issues is part of the result. A repository about search integrity should not ask a
+reader to trust its own evidence envelope.
+
+## Reproduce the verifiable core
+
+The default test suite is offline. Provider contracts use recorded fixtures; no API keys or live
+calls are required.
 
 ```bash
-python -m pip install -e '.[dev]'
-ruff check .
-mypy
-python scripts/check_dependency_policy.py
-pytest
+python3 -m pip install -e '.[dev]'
+python3 -m pytest -q
+python3 -m ruff check .
+python3 experiments/ds3/classify.py
 ```
 
-### The mechanism nobody else has: disagreement as output
+Expected classification headline:
 
-Every merge-and-rank pipeline treats disjoint result sets as a merge problem — union and sort.
-That destroys the most informative outcome available:
-
-```
-[search-router] vercel.json schema validation
-
-⚠ NO CONSENSUS — 0 of 8 results confirmed by both indexes
-  brave: 5 results · exa: 5 results · overlap: 0
-  → independent indexes agree on nothing.
-    treat as: ambiguous query, or contested topic. Verify before planning.
+```text
+exact                    38
+alternate                 9
+wrong                   214
+all_corroborations      261
+precision, STRICT         0.1456
 ```
 
-When two independent indexes return nothing in common, that is a **finding** — the query is
-ambiguous, the topic is contested, or one index has a gap. A Grok-first pipeline and a
-merge-first pipeline are both structurally committed to producing something coherent, so
-neither can report that the evidence does not cohere. An auditor can.
+The classification command reproduces the committed artifact, including the alternate-label
+defect disclosed above.
 
-## Where a competitor beats us, stated plainly
+## Read the record
 
-An honest review of [AllSearch MCP](docs/COMPETITIVE.md) found six things they shipped that we
-had specified badly or not at all — context-usage-aware budgets, SSRF-hardened fetch, hard
-total deadlines, stateful circuit breakers, depth-by-intent naming, and strict-mode refusal.
-**All six are adopted, with credit.**
-
-They are also ahead on execution by a wide margin: working code, offline test suite, a shipped
-Pi extension. We have four markdown files and no repository. That is the honest headline, and
-the competitive document says so.
-
-## Installable in any coding agent
-
-One engine, per-agent adapters — same architecture as Portfolio #1, because the user is
-**inside** their agent, not at a terminal.
-
-| Surface | Agents |
+| Artifact | What it contains |
 |---|---|
-| **MCP server** (stdio) | Claude Code, Codex, OMP, agy, Cursor, Windsurf, VS Code, Gemini CLI, OpenCode |
-| **Native extension** | OMP / pi — in-process |
-| **Terminal binary** | CI, scripting, unintegrated agents |
-
-Two integration patterns:
-
-- **Additive** — expose the router as a new tool beside the agent's default. Simple; the model
-  must *choose* it, and it does not know its default search is lying.
-- **Corrective** — wrap the agent's *existing* `web_search` so the default path routes through
-  the router. The model cannot choose wrong, because there is no longer a wrong path. This is
-  where the product stops being a nicer search API.
+| [`docs/DS3-DECISION.md`](docs/DS3-DECISION.md) | The decision written from the 60-query evaluation; retain the audit notes above while reading it |
+| [`experiments/ds3/data/`](experiments/ds3/data/) | Raw provider output, scored queries, and classification output for n=22 and n=60 |
+| [`docs/EXPERIMENT-OVERLAP.md`](docs/EXPERIMENT-OVERLAP.md) | The earlier overlap experiment and the defect it exposed |
+| [`docs/CONCEPT.md`](docs/CONCEPT.md) | The original product hypothesis; preserved as historical context, not current product truth |
+| [`docs/PROVIDERS.md`](docs/PROVIDERS.md) | Provider-index provenance and independence classes |
+| [`core/`](core/) and [`tests/`](tests/) | Deterministic implementation through the pure-core stage and its offline tests |
 
 ## Status
 
-**Pure integrity core implemented through DS-2.** Provider contracts, URL canonicalization,
-pairwise consensus rates, attributed envelopes, and context-aware budgets are covered by the
-offline suite. Provider orchestration is intentionally not implemented yet.
+**Research complete. Product development stopped.**
 
-- [`docs/CONCEPT.md`](docs/CONCEPT.md) — the full concept: failure scenarios, competitive
-  position, tiering, adapter model, decisions and open questions
-- [`docs/PROVIDERS.md`](docs/PROVIDERS.md) — **which providers to use and which never to pair**
-- [`docs/DIAGRAMS.md`](docs/DIAGRAMS.md) — architecture, failure flows, trust model
-- [`docs/COMPETITIVE.md`](docs/COMPETITIVE.md) — **AllSearch MCP compared, in both directions**
-
-Source material for extraction: `Omega-v3/core/lib/search_router.py` (575 lines) — dual-engine
-ensemble, RRF with URL canonicalization, Exa failover, two-layer rerank.
-
-## License
-
-MIT (to be confirmed).
+The valuable artifact is the decision trail: a plausible trust mechanism was made falsifiable,
+implemented deterministically, tested against labelled data, rejected on its measured precision,
+and then audited hard enough to expose weaknesses in the evaluation itself.
