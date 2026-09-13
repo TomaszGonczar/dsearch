@@ -53,6 +53,24 @@ Precision was measured against consensus rate per query:
 
 **Pearson r = −0.355.**
 
+**Aggregation method, stated because it changes the number.** The figures above are the **mean of
+per-query precision**. Two other defensible aggregations give different values, and all three are
+computed from the same committed data:
+
+| Aggregation | rate ≤ 0.20 | rate > 0.20 |
+|---|---|---|
+| mean of per-query precision *(quoted above)* | 0.270 | 0.172 |
+| pooled, counting same-document alternates | 0.256 | 0.174 |
+| pooled, strict exact-URL only | 0.154 | 0.087 |
+
+**Every method preserves the finding: the lower-rate bucket has the higher precision.** The
+correlation does not depend on the choice, which is why the verdict is robust to it. The
+mean-of-per-query figure is quoted because each query contributes equally regardless of how many
+URLs it happened to return.
+
+A reader who recomputes and gets 0.256 or 0.154 has not found an error — they used a different
+aggregation. This table exists so that is obvious rather than confusing.
+
 Consensus rate is **negatively** correlated with precision. More agreement predicts *less*
 accuracy. The mechanism is explainable and was predicted: popular pages are crawled and ranked
 by every index, and popular pages are generic — the vendor landing page, the Wikipedia entry,
