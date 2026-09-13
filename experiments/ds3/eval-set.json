@@ -5,14 +5,18 @@
     "freeze_rule": "This file must be written and committed BEFORE any provider is queried against it. Timestamps below record label authoring, not measurement.",
     "fact_class_note": "All entries are 'document' class: the query has an unambiguous canonical page. The measurement asks 'was the correct PAGE corroborated', not 'was the ANSWER correct'. That is a narrower claim and must be stated in the report.",
     "authored_at": "2026-09-13T14:00:00Z",
-    "authored_by": "operator session (not a search provider)"
+    "authored_by": "operator session (not a search provider)",
+    "extension_note": "Extended from 22 to 60 queries on 2026-09-13 after a power analysis. The first 22 are frozen and byte-identical to the original — they were authored before any provider was queried. The 38 added here exist to raise statistical power for the correlation claim (r=-0.355 at n=22 does not clear p<0.05; n~60 gives 80% power). Labels come from authoritative sources only, same discipline as the original set.",
+    "extended_at": "2026-09-13T15:00:00Z"
   },
   "queries": [
     {
       "id": "q01",
       "query": "vercel.json schema validation",
       "intent": "Find the reference for what vercel.json allows",
-      "correct_urls": ["https://vercel.com/docs/project-configuration"],
+      "correct_urls": [
+        "https://vercel.com/docs/project-configuration"
+      ],
       "authoritative_because": "Vercel's own project-configuration reference; the schema is vendor-defined and only this page is normative",
       "fact_class": "document"
     },
@@ -31,7 +35,9 @@
       "id": "q03",
       "query": "RFC 9110 conditional requests",
       "intent": "Find the spec for If-None-Match / If-Modified-Since semantics",
-      "correct_urls": ["https://www.rfc-editor.org/rfc/rfc9110"],
+      "correct_urls": [
+        "https://www.rfc-editor.org/rfc/rfc9110"
+      ],
       "authoritative_because": "The RFC itself is the sole normative source",
       "fact_class": "document"
     },
@@ -50,7 +56,9 @@
       "id": "q05",
       "query": "git rebase --onto usage",
       "intent": "Understand rebase --onto semantics",
-      "correct_urls": ["https://git-scm.com/docs/git-rebase"],
+      "correct_urls": [
+        "https://git-scm.com/docs/git-rebase"
+      ],
       "authoritative_because": "Git's own manual page; the upstream reference",
       "fact_class": "api-reference"
     },
@@ -58,7 +66,9 @@
       "id": "q06",
       "query": "docker compose healthcheck syntax",
       "intent": "Correct healthcheck key and options in a compose file",
-      "correct_urls": ["https://docs.docker.com/reference/compose-file/services/"],
+      "correct_urls": [
+        "https://docs.docker.com/reference/compose-file/services/"
+      ],
       "authoritative_because": "Docker's compose file reference; the schema is vendor-defined",
       "fact_class": "document"
     },
@@ -66,7 +76,9 @@
       "id": "q07",
       "query": "typescript satisfies operator",
       "intent": "What satisfies does vs a type annotation",
-      "correct_urls": ["https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html"],
+      "correct_urls": [
+        "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html"
+      ],
       "authoritative_because": "The release notes where the operator was introduced; TypeScript's own docs",
       "fact_class": "document"
     },
@@ -74,7 +86,9 @@
       "id": "q08",
       "query": "tokio select cancellation safety",
       "intent": "Which tokio operations are safe to cancel in select!",
-      "correct_urls": ["https://docs.rs/tokio/latest/tokio/macro.select.html"],
+      "correct_urls": [
+        "https://docs.rs/tokio/latest/tokio/macro.select.html"
+      ],
       "authoritative_because": "docs.rs is the generated API documentation for the crate itself",
       "fact_class": "api-reference"
     },
@@ -82,7 +96,9 @@
       "id": "q09",
       "query": "kubernetes pod disruption budget",
       "intent": "How PDBs constrain voluntary disruptions",
-      "correct_urls": ["https://kubernetes.io/docs/concepts/workloads/pods/disruptions/"],
+      "correct_urls": [
+        "https://kubernetes.io/docs/concepts/workloads/pods/disruptions/"
+      ],
       "authoritative_because": "Kubernetes official concept documentation",
       "fact_class": "document"
     },
@@ -90,7 +106,9 @@
       "id": "q10",
       "query": "github actions matrix strategy",
       "intent": "Matrix job configuration syntax",
-      "correct_urls": ["https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs"],
+      "correct_urls": [
+        "https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs"
+      ],
       "authoritative_because": "GitHub's own Actions documentation; the syntax is vendor-defined",
       "fact_class": "document"
     },
@@ -98,7 +116,9 @@
       "id": "q11",
       "query": "sqlite WAL mode write-ahead log",
       "intent": "What WAL mode changes about concurrency",
-      "correct_urls": ["https://sqlite.org/wal.html"],
+      "correct_urls": [
+        "https://sqlite.org/wal.html"
+      ],
       "authoritative_because": "SQLite's own WAL documentation",
       "fact_class": "document"
     },
@@ -116,7 +136,9 @@
       "id": "q13",
       "query": "pytest fixture scope session module function",
       "intent": "Fixture scope semantics and ordering",
-      "correct_urls": ["https://docs.pytest.org/en/stable/how-to/fixtures.html"],
+      "correct_urls": [
+        "https://docs.pytest.org/en/stable/how-to/fixtures.html"
+      ],
       "authoritative_because": "pytest's official fixtures documentation",
       "fact_class": "document"
     },
@@ -124,7 +146,9 @@
       "id": "q14",
       "query": "terraform state mv command",
       "intent": "Moving a resource between state addresses",
-      "correct_urls": ["https://developer.hashicorp.com/terraform/cli/commands/state/mv"],
+      "correct_urls": [
+        "https://developer.hashicorp.com/terraform/cli/commands/state/mv"
+      ],
       "authoritative_because": "HashiCorp's official CLI reference",
       "fact_class": "api-reference"
     },
@@ -132,7 +156,9 @@
       "id": "q15",
       "query": "webpack tree shaking sideEffects package.json",
       "intent": "How sideEffects controls tree shaking",
-      "correct_urls": ["https://webpack.js.org/guides/tree-shaking/"],
+      "correct_urls": [
+        "https://webpack.js.org/guides/tree-shaking/"
+      ],
       "authoritative_because": "webpack's official tree-shaking guide",
       "fact_class": "document"
     },
@@ -151,7 +177,9 @@
       "id": "q17",
       "query": "linux cgroup v2 memory.max configuration",
       "intent": "How to set a hard memory limit in cgroup v2",
-      "correct_urls": ["https://docs.kernel.org/admin-guide/cgroup-v2.html"],
+      "correct_urls": [
+        "https://docs.kernel.org/admin-guide/cgroup-v2.html"
+      ],
       "authoritative_because": "The Linux kernel's own cgroup v2 documentation",
       "fact_class": "document"
     },
@@ -159,7 +187,9 @@
       "id": "q18",
       "query": "protobuf field presence optional",
       "intent": "When a proto3 field has explicit presence",
-      "correct_urls": ["https://protobuf.dev/programming-guides/field-presence/"],
+      "correct_urls": [
+        "https://protobuf.dev/programming-guides/field-presence/"
+      ],
       "authoritative_because": "Protobuf's official field-presence guide",
       "fact_class": "document"
     },
@@ -167,7 +197,9 @@
       "id": "q19",
       "query": "jq reduce foreach manual",
       "intent": "jq reduce syntax and semantics",
-      "correct_urls": ["https://jqlang.github.io/jq/manual/"],
+      "correct_urls": [
+        "https://jqlang.github.io/jq/manual/"
+      ],
       "authoritative_because": "The official jq manual",
       "fact_class": "api-reference"
     },
@@ -175,7 +207,9 @@
       "id": "q20",
       "query": "zsh glob qualifiers documentation",
       "intent": "zsh filename generation qualifier syntax",
-      "correct_urls": ["https://zsh.sourceforge.io/Doc/Release/Expansion.html"],
+      "correct_urls": [
+        "https://zsh.sourceforge.io/Doc/Release/Expansion.html"
+      ],
       "authoritative_because": "zsh's official Expansion documentation",
       "fact_class": "document"
     },
@@ -193,9 +227,391 @@
       "id": "q22",
       "query": "openssl verify certificate chain command",
       "intent": "Verifying a certificate chain against a CA file",
-      "correct_urls": ["https://docs.openssl.org/master/man1/openssl-verify/"],
+      "correct_urls": [
+        "https://docs.openssl.org/master/man1/openssl-verify/"
+      ],
       "authoritative_because": "OpenSSL's official manpage",
       "fact_class": "api-reference"
+    },
+    {
+      "id": "q23",
+      "query": "node.js fs.promises readFile",
+      "intent": "Find the authoritative reference for: node.js fs.promises readFile",
+      "correct_urls": [
+        "https://nodejs.org/api/fs.html"
+      ],
+      "authoritative_because": "Node.js official API reference",
+      "fact_class": "document"
+    },
+    {
+      "id": "q24",
+      "query": "postgres EXPLAIN ANALYZE output",
+      "intent": "Find the authoritative reference for: postgres EXPLAIN ANALYZE output",
+      "correct_urls": [
+        "https://www.postgresql.org/docs/current/sql-explain.html"
+      ],
+      "authoritative_because": "PostgreSQL SQL command reference",
+      "fact_class": "document"
+    },
+    {
+      "id": "q25",
+      "query": "redis persistence RDB AOF",
+      "intent": "Find the authoritative reference for: redis persistence RDB AOF",
+      "correct_urls": [
+        "https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/"
+      ],
+      "authoritative_because": "Redis official persistence docs",
+      "fact_class": "document"
+    },
+    {
+      "id": "q26",
+      "query": "http2 server push deprecated",
+      "intent": "Find the authoritative reference for: http2 server push deprecated",
+      "correct_urls": [
+        "https://www.rfc-editor.org/rfc/rfc9113"
+      ],
+      "authoritative_because": "RFC 9113 defines HTTP/2",
+      "fact_class": "document"
+    },
+    {
+      "id": "q27",
+      "query": "css has selector browser support",
+      "intent": "Find the authoritative reference for: css has selector browser support",
+      "correct_urls": [
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/:has"
+      ],
+      "authoritative_because": "MDN reference for the selector",
+      "fact_class": "document"
+    },
+    {
+      "id": "q28",
+      "query": "rust lifetime elision rules",
+      "intent": "Find the authoritative reference for: rust lifetime elision rules",
+      "correct_urls": [
+        "https://doc.rust-lang.org/reference/lifetime-elision.html"
+      ],
+      "authoritative_because": "The Rust Reference",
+      "fact_class": "document"
+    },
+    {
+      "id": "q29",
+      "query": "python dataclass frozen default_factory",
+      "intent": "Find the authoritative reference for: python dataclass frozen default_factory",
+      "correct_urls": [
+        "https://docs.python.org/3/library/dataclasses.html"
+      ],
+      "authoritative_because": "CPython standard library reference",
+      "fact_class": "document"
+    },
+    {
+      "id": "q30",
+      "query": "go context cancellation",
+      "intent": "Find the authoritative reference for: go context cancellation",
+      "correct_urls": [
+        "https://pkg.go.dev/context"
+      ],
+      "authoritative_because": "Official Go package documentation",
+      "fact_class": "document"
+    },
+    {
+      "id": "q31",
+      "query": "docker multi-stage build syntax",
+      "intent": "Find the authoritative reference for: docker multi-stage build syntax",
+      "correct_urls": [
+        "https://docs.docker.com/build/building/multi-stage/"
+      ],
+      "authoritative_because": "Docker official build docs",
+      "fact_class": "document"
+    },
+    {
+      "id": "q32",
+      "query": "kubernetes liveness readiness probe difference",
+      "intent": "Find the authoritative reference for: kubernetes liveness readiness probe difference",
+      "correct_urls": [
+        "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/"
+      ],
+      "authoritative_because": "Kubernetes official task documentation",
+      "fact_class": "document"
+    },
+    {
+      "id": "q33",
+      "query": "git worktree add usage",
+      "intent": "Find the authoritative reference for: git worktree add usage",
+      "correct_urls": [
+        "https://git-scm.com/docs/git-worktree"
+      ],
+      "authoritative_because": "Git's own manual page",
+      "fact_class": "document"
+    },
+    {
+      "id": "q34",
+      "query": "bash set -euo pipefail",
+      "intent": "Find the authoritative reference for: bash set -euo pipefail",
+      "correct_urls": [
+        "https://www.gnu.org/software/bash/manual/bash.html"
+      ],
+      "authoritative_because": "The GNU Bash Reference Manual",
+      "fact_class": "document"
+    },
+    {
+      "id": "q35",
+      "query": "sqlite upsert on conflict",
+      "intent": "Find the authoritative reference for: sqlite upsert on conflict",
+      "correct_urls": [
+        "https://sqlite.org/lang_upsert.html"
+      ],
+      "authoritative_because": "SQLite official language documentation",
+      "fact_class": "document"
+    },
+    {
+      "id": "q36",
+      "query": "typescript conditional types infer",
+      "intent": "Find the authoritative reference for: typescript conditional types infer",
+      "correct_urls": [
+        "https://www.typescriptlang.org/docs/handbook/2/conditional-types.html"
+      ],
+      "authoritative_because": "TypeScript handbook",
+      "fact_class": "document"
+    },
+    {
+      "id": "q37",
+      "query": "react useEffect cleanup function",
+      "intent": "Find the authoritative reference for: react useEffect cleanup function",
+      "correct_urls": [
+        "https://react.dev/reference/react/useEffect"
+      ],
+      "authoritative_because": "React official API reference",
+      "fact_class": "document"
+    },
+    {
+      "id": "q38",
+      "query": "nginx worker_processes auto",
+      "intent": "Find the authoritative reference for: nginx worker_processes auto",
+      "correct_urls": [
+        "https://nginx.org/en/docs/ngx_core_module.html"
+      ],
+      "authoritative_because": "nginx core module reference",
+      "fact_class": "document"
+    },
+    {
+      "id": "q39",
+      "query": "pytest parametrize indirect",
+      "intent": "Find the authoritative reference for: pytest parametrize indirect",
+      "correct_urls": [
+        "https://docs.pytest.org/en/stable/how-to/parametrize.html"
+      ],
+      "authoritative_because": "pytest official documentation",
+      "fact_class": "document"
+    },
+    {
+      "id": "q40",
+      "query": "terraform for_each vs count",
+      "intent": "Find the authoritative reference for: terraform for_each vs count",
+      "correct_urls": [
+        "https://developer.hashicorp.com/terraform/language/meta-arguments/for_each"
+      ],
+      "authoritative_because": "HashiCorp language reference",
+      "fact_class": "document"
+    },
+    {
+      "id": "q41",
+      "query": "openssl s_client verify hostname",
+      "intent": "Find the authoritative reference for: openssl s_client verify hostname",
+      "correct_urls": [
+        "https://docs.openssl.org/master/man1/openssl-s_client/"
+      ],
+      "authoritative_because": "OpenSSL official manpage",
+      "fact_class": "document"
+    },
+    {
+      "id": "q42",
+      "query": "linux tc netem delay",
+      "intent": "Find the authoritative reference for: linux tc netem delay",
+      "correct_urls": [
+        "https://man7.org/linux/man-pages/man8/tc-netem.8.html"
+      ],
+      "authoritative_because": "Linux man-pages project",
+      "fact_class": "document"
+    },
+    {
+      "id": "q43",
+      "query": "jq select multiple conditions",
+      "intent": "Find the authoritative reference for: jq select multiple conditions",
+      "correct_urls": [
+        "https://jqlang.github.io/jq/manual/"
+      ],
+      "authoritative_because": "The official jq manual",
+      "fact_class": "document"
+    },
+    {
+      "id": "q44",
+      "query": "yaml anchors and aliases",
+      "intent": "Find the authoritative reference for: yaml anchors and aliases",
+      "correct_urls": [
+        "https://yaml.org/spec/1.2.2/"
+      ],
+      "authoritative_because": "The YAML specification",
+      "fact_class": "document"
+    },
+    {
+      "id": "q45",
+      "query": "protobuf reserved field numbers",
+      "intent": "Find the authoritative reference for: protobuf reserved field numbers",
+      "correct_urls": [
+        "https://protobuf.dev/programming-guides/proto3/"
+      ],
+      "authoritative_because": "Protobuf language guide",
+      "fact_class": "document"
+    },
+    {
+      "id": "q46",
+      "query": "grpc deadline propagation",
+      "intent": "Find the authoritative reference for: grpc deadline propagation",
+      "correct_urls": [
+        "https://grpc.io/docs/guides/deadlines/"
+      ],
+      "authoritative_because": "gRPC official guide",
+      "fact_class": "document"
+    },
+    {
+      "id": "q47",
+      "query": "webpack code splitting dynamic import",
+      "intent": "Find the authoritative reference for: webpack code splitting dynamic import",
+      "correct_urls": [
+        "https://webpack.js.org/guides/code-splitting/"
+      ],
+      "authoritative_because": "webpack official guide",
+      "fact_class": "document"
+    },
+    {
+      "id": "q48",
+      "query": "eslint flat config ignores",
+      "intent": "Find the authoritative reference for: eslint flat config ignores",
+      "correct_urls": [
+        "https://eslint.org/docs/latest/use/configure/configuration-files"
+      ],
+      "authoritative_because": "ESLint official configuration docs",
+      "fact_class": "document"
+    },
+    {
+      "id": "q49",
+      "query": "github actions cache key hashFiles",
+      "intent": "Find the authoritative reference for: github actions cache key hashFiles",
+      "correct_urls": [
+        "https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows"
+      ],
+      "authoritative_because": "GitHub Actions official documentation",
+      "fact_class": "document"
+    },
+    {
+      "id": "q50",
+      "query": "postgres jsonb containment operator",
+      "intent": "Find the authoritative reference for: postgres jsonb containment operator",
+      "correct_urls": [
+        "https://www.postgresql.org/docs/current/datatype-json.html"
+      ],
+      "authoritative_because": "PostgreSQL data type reference",
+      "fact_class": "document"
+    },
+    {
+      "id": "q51",
+      "query": "python asyncio taskgroup",
+      "intent": "Find the authoritative reference for: python asyncio taskgroup",
+      "correct_urls": [
+        "https://docs.python.org/3/library/asyncio-task.html"
+      ],
+      "authoritative_because": "CPython asyncio reference",
+      "fact_class": "document"
+    },
+    {
+      "id": "q52",
+      "query": "rust cargo features optional dependency",
+      "intent": "Find the authoritative reference for: rust cargo features optional dependency",
+      "correct_urls": [
+        "https://doc.rust-lang.org/cargo/reference/features.html"
+      ],
+      "authoritative_because": "The Cargo Book",
+      "fact_class": "document"
+    },
+    {
+      "id": "q53",
+      "query": "http cache-control immutable",
+      "intent": "Find the authoritative reference for: http cache-control immutable",
+      "correct_urls": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control"
+      ],
+      "authoritative_because": "MDN Cache-Control reference",
+      "fact_class": "document"
+    },
+    {
+      "id": "q54",
+      "query": "kubernetes resource requests limits qos",
+      "intent": "Find the authoritative reference for: kubernetes resource requests limits qos",
+      "correct_urls": [
+        "https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/"
+      ],
+      "authoritative_because": "Kubernetes official QoS documentation",
+      "fact_class": "document"
+    },
+    {
+      "id": "q55",
+      "query": "sqlite foreign keys pragma",
+      "intent": "Find the authoritative reference for: sqlite foreign keys pragma",
+      "correct_urls": [
+        "https://sqlite.org/foreignkeys.html"
+      ],
+      "authoritative_because": "SQLite official foreign key documentation",
+      "fact_class": "document"
+    },
+    {
+      "id": "q56",
+      "query": "zsh array indexing",
+      "intent": "Find the authoritative reference for: zsh array indexing",
+      "correct_urls": [
+        "https://zsh.sourceforge.io/Doc/Release/Parameters.html"
+      ],
+      "authoritative_because": "zsh official Parameters documentation",
+      "fact_class": "document"
+    },
+    {
+      "id": "q57",
+      "query": "systemd timer OnCalendar syntax",
+      "intent": "Find the authoritative reference for: systemd timer OnCalendar syntax",
+      "correct_urls": [
+        "https://www.freedesktop.org/software/systemd/man/latest/systemd.time.html"
+      ],
+      "authoritative_because": "systemd official manpage",
+      "fact_class": "document"
+    },
+    {
+      "id": "q58",
+      "query": "docker compose depends_on healthcheck condition",
+      "intent": "Find the authoritative reference for: docker compose depends_on healthcheck condition",
+      "correct_urls": [
+        "https://docs.docker.com/reference/compose-file/services/"
+      ],
+      "authoritative_because": "Docker compose file reference",
+      "fact_class": "document"
+    },
+    {
+      "id": "q59",
+      "query": "typescript moduleResolution bundler",
+      "intent": "Find the authoritative reference for: typescript moduleResolution bundler",
+      "correct_urls": [
+        "https://www.typescriptlang.org/tsconfig/#moduleResolution"
+      ],
+      "authoritative_because": "TypeScript tsconfig reference",
+      "fact_class": "document"
+    },
+    {
+      "id": "q60",
+      "query": "certificate transparency log RFC",
+      "intent": "Find the authoritative reference for: certificate transparency log RFC",
+      "correct_urls": [
+        "https://www.rfc-editor.org/rfc/rfc6962"
+      ],
+      "authoritative_because": "RFC 6962 defines Certificate Transparency",
+      "fact_class": "document"
     }
   ]
 }

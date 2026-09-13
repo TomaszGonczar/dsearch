@@ -40,9 +40,9 @@ These are the product. Breaking one is not a bug, it is a regression of the prem
 4. **Consensus is computed, never inferred — and it is metadata, not a trust signal.**
    Agreement is measured on canonicalized URLs between providers whose indexes are
    independent. It is never estimated, never a vendor's relevance score, never a model's
-   opinion. **Measured, it must not be presented as evidence of quality:** precision is
-   **0.111** (0.204 counting the same document at another URL), and the rate is *negatively*
-   correlated with precision (r = −0.355) because popular pages are generic. See
+   opinion. **Measured at n=60, it must not be presented as evidence of quality:** precision is
+   **0.146** strict (Wilson 95% CI [0.108, 0.194]), and the rate is *negatively* correlated with
+   precision (r = −0.287, p < 0.05) because popular pages are generic. See
    `docs/DS3-DECISION.md`. A corroborated URL means two indexes found the same page — nothing
    more. Never surface it in a pack header or CLI output as corroboration of correctness.
 5. **Count what you claim.** If the tool reports a corruption rate, every number behind it is

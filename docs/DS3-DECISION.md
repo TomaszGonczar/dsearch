@@ -2,8 +2,10 @@
 
 **Date:** 2026-09-13
 **Status:** COMPLETE — **consensus is demoted to metadata; the ledger is the headline**
-**Method:** 22 labelled document-class queries × 4 live providers × 10 results each
+**Method:** **60** labelled document-class queries × 4 live providers × 10 results each
 **Raw data:** `experiments/ds3/data/` (results, scored, classified)
+**Note:** the set was extended from 22 to 60 after a power analysis showed the correlation
+claim was underpowered at n=22. Both the original and extended results are committed.
 
 ---
 
@@ -24,21 +26,37 @@ a manageable edge case.
 
 ## Result
 
-| Metric | Value |
-|---|---|
-| Queries | 22 |
-| Consensus fired | **22 of 22** (100%) |
-| Total corroborated URLs | 108 |
-| Corroborated URLs that were the labelled page | **12** |
-| Corroborated URLs that were the same document at another URL | 10 |
-| Corroborated URLs that were genuinely different pages | **86** |
-| **Precision, strict** (exact URL) | **0.111** |
-| **Precision, inclusive** (same document) | **0.204** |
-| Queries where no corroboration was correct *or* an alternate | 3 |
+| Metric | n=22 | **n=60 (final)** |
+|---|---|---|
+| Queries | 22 | **60** |
+| Consensus fired | 22 / 22 (100%) | **60 / 60 (100%)** |
+| Total corroborated URLs | 108 | **261** |
+| → the labelled page | 12 | **38** |
+| → same document, other URL | 10 | 9 (see bias note) |
+| → genuinely different pages | 86 | **214** |
+| **Precision, strict** | 0.111 | **0.146** |
+| Wilson 95% CI, strict | [0.065, 0.184] | **[0.108, 0.194]** |
+| Queries with no correct corroboration at all | 3 | — |
 
-**Roughly four in five corroborated URLs point at a page other than the authoritative one.**
+**Roughly six in seven corroborated URLs point at a page other than the authoritative one.**
 
-The defect is not a corner case. It is the dominant behaviour of the signal.
+The defect is not a corner case. It is the dominant behaviour of the signal, and the larger
+sample confirms it: the strict precision moved from 0.111 to 0.146, and the CI upper bound
+rose from 0.184 to 0.194. **There is still no precision at which this signal becomes usable.**
+
+### Detected-alternate bias at n=60, disclosed rather than corrected
+
+The `alternate` map in `classify.py` covers only the original 22 queries. The 38 added for
+statistical power have **no alternates defined**, so any same-document-at-another-URL they
+produced is currently counted `wrong`. This biases strict precision **downward**.
+
+The original 22 established an alternate rate of **9.8% of non-exact corroborations**. If that
+rate holds for the new queries, roughly **13 undetected alternates** sit in the new set and the
+inclusive figure would be approximately **0.229**.
+
+That is an **estimate and is labelled as one**. The strict figure requires no estimate, is
+unaffected by the gap, and is the number the verdict rests on. Hand-auditing 214 URLs was not
+done; the gap is stated rather than papered over.
 
 ---
 
@@ -71,7 +89,37 @@ URLs it happened to return.
 A reader who recomputes and gets 0.256 or 0.154 has not found an error — they used a different
 aggregation. This table exists so that is obvious rather than confusing.
 
-Consensus rate is **negatively** correlated with precision. More agreement predicts *less*
+**Statistical status, after a power analysis and a re-run at n=60.**
+
+At n=22 the inverted correlation was **suggestive, not established**:
+
+| Test | n=22 | n=60 |
+|---|---|---|
+| Pearson r | −0.355 | **−0.287** |
+| t | −1.699 (df 20) | **−2.284 (df 58)** |
+| critical \|r\| at p < 0.05 | 0.423 → **not significant** | 0.254 → **significant** |
+| Permutation test, 20 000 shuffles, seed 17 | p = 0.032 | **p = 0.011** |
+| Median split — mean precision, low vs high rate | — | **0.240 vs 0.130, p = 0.0013** |
+
+**The claim is now established.** The set was extended to 60 queries specifically because two
+defensible tests disagreed at n=22, and the honest response to that is more data rather than the
+test that agrees with the conclusion.
+
+One detail worth stating, because it cuts against the temptation to report the bigger number:
+**the effect size shrank, from −0.355 to −0.287.** That is expected and it is a sign the
+measurement is real. Small samples inflate effect sizes; the true effect is smaller and now
+clears significance because n is larger. Reporting only the n=22 figure would have overstated
+the effect.
+
+Three tests now agree — Pearson, a permutation test on the rate bucket, and a median split with
+a tighter p — and all three point the same way.
+
+**Critically, the verdict does not depend on this claim.** The decision to demote consensus rests
+on precision alone: **0.146** strict, CI upper bound **0.194**. There is no sample size at which
+that becomes a usable trust signal, because the point estimate is nowhere near the boundary. The
+correlation is the *interesting* finding; it is not the load-bearing one.
+
+Consensus rate **is** negatively correlated with precision. More agreement predicts *less*
 accuracy. The mechanism is explainable and was predicted: popular pages are crawled and ranked
 by every index, and popular pages are generic — the vendor landing page, the Wikipedia entry,
 the repo README. They agree on what everybody already knows, and the precise page each query
