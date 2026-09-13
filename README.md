@@ -172,8 +172,9 @@ Two integration patterns:
 
 ## Status
 
-**Foundation implementation in progress.** Provider response contracts use recorded fixtures;
-the deterministic envelope and canonicalization core follow in DS-2.
+**Pure integrity core implemented through DS-2.** Provider contracts, URL canonicalization,
+pairwise consensus rates, attributed envelopes, and context-aware budgets are covered by the
+offline suite. Provider orchestration is intentionally not implemented yet.
 
 - [`docs/CONCEPT.md`](docs/CONCEPT.md) — the full concept: failure scenarios, competitive
   position, tiering, adapter model, decisions and open questions

@@ -19,7 +19,7 @@ dev = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["providers*", "scripts*"]
+include = ["core*", "providers*", "scripts*"]
 
 [tool.setuptools.package-data]
 providers = ["registry.json"]
@@ -39,4 +39,4 @@ select = ["E", "F", "I", "RUF", "UP"]
 [tool.mypy]
 python_version = "3.11"
 strict = true
-files = ["providers", "scripts"]
+files = ["core", "providers", "scripts"]
