@@ -1,0 +1,1047 @@
+{
+  "aggregate": {
+    "consensus_did_not_fire": 0,
+    "consensus_fired": 22,
+    "mean_per_query_precision": 0.1262,
+    "pooled_precision": 0.1111,
+    "queries": 22,
+    "queries_correct_never_found": 2,
+    "queries_where_correct_found_but_not_corroborated": 8,
+    "queries_where_defect_observed": 10,
+    "total_correct_corroborated": 12,
+    "total_corroborated_urls": 108
+  },
+  "queries": [
+    {
+      "authoritative_because": "Vercel's own project-configuration reference; the schema is vendor-defined and only this page is normative",
+      "consensus_fired": true,
+      "consensus_rate": 0.20833333333333334,
+      "consensus_status": "measured",
+      "correct_corroborated": [],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://vercel.com/docs/project-configuration"
+      ],
+      "corroborated_urls": [
+        "https://github.com/vercel/schemas",
+        "https://github.com/vercel/vercel/pull/7394",
+        "https://vercel.com/changelog/schema-autocomplete-and-validation-for-vercel-json",
+        "https://vercel.com/docs/project-configuration/vercel-json",
+        "https://vercel.com/docs/project-configuration/vercel-json.md"
+      ],
+      "defect_observed": true,
+      "id": "q01",
+      "per_provider_correct_hits": {
+        "brave": [],
+        "exa": [],
+        "parallel": [],
+        "tavily": [
+          "https://vercel.com/docs/project-configuration"
+        ]
+      },
+      "precision": 0.0,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 10
+      },
+      "query": "vercel.json schema validation",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://github.com/vercel/schemas",
+        "https://github.com/vercel/vercel/pull/7394",
+        "https://vercel.com/changelog/schema-autocomplete-and-validation-for-vercel-json",
+        "https://vercel.com/docs/project-configuration/vercel-json",
+        "https://vercel.com/docs/project-configuration/vercel-json.md"
+      ]
+    },
+    {
+      "authoritative_because": "CPython's own whatsnew page and the accepted PEP; both normative for interpreter behaviour",
+      "consensus_fired": true,
+      "consensus_rate": 0.16666666666666666,
+      "consensus_status": "measured",
+      "correct_corroborated": [],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://docs.python.org/3/whatsnew/3.13.html",
+        "https://peps.python.org/pep-0703"
+      ],
+      "corroborated_urls": [
+        "https://codspeed.io/blog/state-of-python-3-13-performance-free-threading",
+        "https://docs.python.org/3.14/howto/free-threading-python.html",
+        "https://docs.python.org/3/howto/free-threading-python.html",
+        "https://realpython.com/python313-free-threading-jit"
+      ],
+      "defect_observed": true,
+      "id": "q02",
+      "per_provider_correct_hits": {
+        "brave": [],
+        "exa": [],
+        "parallel": [
+          "https://docs.python.org/3/whatsnew/3.13.html"
+        ],
+        "tavily": []
+      },
+      "precision": 0.0,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 7
+      },
+      "query": "python 3.13 free-threading status",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://codspeed.io/blog/state-of-python-3-13-performance-free-threading",
+        "https://docs.python.org/3.14/howto/free-threading-python.html",
+        "https://docs.python.org/3/howto/free-threading-python.html",
+        "https://realpython.com/python313-free-threading-jit"
+      ]
+    },
+    {
+      "authoritative_because": "The RFC itself is the sole normative source",
+      "consensus_fired": true,
+      "consensus_rate": 0.20833333333333334,
+      "consensus_status": "measured",
+      "correct_corroborated": [
+        "https://rfc-editor.org/rfc/rfc9110"
+      ],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://rfc-editor.org/rfc/rfc9110"
+      ],
+      "corroborated_urls": [
+        "https://datatracker.ietf.org/doc/html/rfc9110.html",
+        "https://dl.acm.org/doi/10.17487/RFC9110",
+        "https://rfc-editor.org/info/rfc9110",
+        "https://rfc-editor.org/rfc/rfc9110",
+        "https://rfc-editor.org/rfc/rfc9110.pdf"
+      ],
+      "defect_observed": false,
+      "id": "q03",
+      "per_provider_correct_hits": {
+        "brave": [],
+        "exa": [
+          "https://rfc-editor.org/rfc/rfc9110"
+        ],
+        "parallel": [
+          "https://rfc-editor.org/rfc/rfc9110"
+        ],
+        "tavily": []
+      },
+      "precision": 0.2,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 9
+      },
+      "query": "RFC 9110 conditional requests",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://datatracker.ietf.org/doc/html/rfc9110.html",
+        "https://dl.acm.org/doi/10.17487/RFC9110",
+        "https://rfc-editor.org/info/rfc9110",
+        "https://rfc-editor.org/rfc/rfc9110.pdf"
+      ]
+    },
+    {
+      "authoritative_because": "PostgreSQL official documentation; pgstattuple is the built-in contrib module that answers this",
+      "consensus_fired": true,
+      "consensus_rate": 0.15384615384615385,
+      "consensus_status": "measured",
+      "correct_corroborated": [],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://postgresql.org/docs/current/pgstattuple.html",
+        "https://postgresql.org/docs/current/routine-vacuuming.html"
+      ],
+      "corroborated_urls": [
+        "https://dev.to/ozkanpakdil/understanding-and-monitoring-index-and-table-bloat-in-postgresql-4ked",
+        "https://github.com/keithf4/pg_bloat_check",
+        "https://neon.com/docs/extensions/pgstattuple",
+        "https://techcommunity.microsoft.com/blog/adforpostgresql/managing-bloat-in-postgresql-using-pgstattuple-on-azure-database-for-postgresql-/4410449"
+      ],
+      "defect_observed": true,
+      "id": "q04",
+      "per_provider_correct_hits": {
+        "brave": [],
+        "exa": [],
+        "parallel": [
+          "https://postgresql.org/docs/current/pgstattuple.html"
+        ],
+        "tavily": []
+      },
+      "precision": 0.0,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 9
+      },
+      "query": "postgres index bloat monitoring pgstattuple",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://dev.to/ozkanpakdil/understanding-and-monitoring-index-and-table-bloat-in-postgresql-4ked",
+        "https://github.com/keithf4/pg_bloat_check",
+        "https://neon.com/docs/extensions/pgstattuple",
+        "https://techcommunity.microsoft.com/blog/adforpostgresql/managing-bloat-in-postgresql-using-pgstattuple-on-azure-database-for-postgresql-/4410449"
+      ]
+    },
+    {
+      "authoritative_because": "Git's own manual page; the upstream reference",
+      "consensus_fired": true,
+      "consensus_rate": 0.16,
+      "consensus_status": "measured",
+      "correct_corroborated": [
+        "https://git-scm.com/docs/git-rebase"
+      ],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://git-scm.com/docs/git-rebase"
+      ],
+      "corroborated_urls": [
+        "https://atlassian.com/git/tutorials/rewriting-history/git-rebase",
+        "https://blogs.vmware.com/tanzu/getting-started-with-git-rebase-onto-for-specific-commits",
+        "https://git-scm.com/docs/git-rebase",
+        "https://stackoverflow.com/questions/29914052/how-to-git-rebase-a-branch-with-the-onto-command"
+      ],
+      "defect_observed": false,
+      "id": "q05",
+      "per_provider_correct_hits": {
+        "brave": [
+          "https://git-scm.com/docs/git-rebase"
+        ],
+        "exa": [
+          "https://git-scm.com/docs/git-rebase"
+        ],
+        "parallel": [
+          "https://git-scm.com/docs/git-rebase"
+        ],
+        "tavily": [
+          "https://git-scm.com/docs/git-rebase"
+        ]
+      },
+      "precision": 0.25,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 9
+      },
+      "query": "git rebase --onto usage",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://atlassian.com/git/tutorials/rewriting-history/git-rebase",
+        "https://blogs.vmware.com/tanzu/getting-started-with-git-rebase-onto-for-specific-commits",
+        "https://stackoverflow.com/questions/29914052/how-to-git-rebase-a-branch-with-the-onto-command"
+      ]
+    },
+    {
+      "authoritative_because": "Docker's compose file reference; the schema is vendor-defined",
+      "consensus_fired": true,
+      "consensus_rate": 0.2727272727272727,
+      "consensus_status": "measured",
+      "correct_corroborated": [
+        "https://docs.docker.com/reference/compose-file/services"
+      ],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://docs.docker.com/reference/compose-file/services"
+      ],
+      "corroborated_urls": [
+        "https://dev.to/jjoc007/mastering-docker-defining-health-checks-in-docker-compose-4l5k",
+        "https://docs.docker.com/reference/compose-file",
+        "https://docs.docker.com/reference/compose-file/services",
+        "https://last9.io/blog/docker-compose-health-checks",
+        "https://oneuptime.com/blog/post/2026-01-30-docker-compose-health-checks/view",
+        "https://warp.dev/terminus/docker-compose-health-check"
+      ],
+      "defect_observed": false,
+      "id": "q06",
+      "per_provider_correct_hits": {
+        "brave": [
+          "https://docs.docker.com/reference/compose-file/services"
+        ],
+        "exa": [
+          "https://docs.docker.com/reference/compose-file/services"
+        ],
+        "parallel": [
+          "https://docs.docker.com/reference/compose-file/services"
+        ],
+        "tavily": [
+          "https://docs.docker.com/reference/compose-file/services"
+        ]
+      },
+      "precision": 0.16666666666666666,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 10
+      },
+      "query": "docker compose healthcheck syntax",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://dev.to/jjoc007/mastering-docker-defining-health-checks-in-docker-compose-4l5k",
+        "https://docs.docker.com/reference/compose-file",
+        "https://last9.io/blog/docker-compose-health-checks",
+        "https://oneuptime.com/blog/post/2026-01-30-docker-compose-health-checks/view",
+        "https://warp.dev/terminus/docker-compose-health-check"
+      ]
+    },
+    {
+      "authoritative_because": "The release notes where the operator was introduced; TypeScript's own docs",
+      "consensus_fired": true,
+      "consensus_rate": 0.2727272727272727,
+      "consensus_status": "measured",
+      "correct_corroborated": [
+        "https://typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html"
+      ],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html"
+      ],
+      "corroborated_urls": [
+        "https://freecodecamp.org/news/typescript-satisfies-operator",
+        "https://mimo.org/glossary/typescript/satisfies",
+        "https://refine.dev/blog/typescript-satisfies-operator",
+        "https://stackoverflow.com/questions/78636946/what-are-the-differences-between-typescript-s-satisfies-operator-and-type-assert",
+        "https://totaltypescript.com/clarifying-the-satisfies-operator",
+        "https://typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html"
+      ],
+      "defect_observed": false,
+      "id": "q07",
+      "per_provider_correct_hits": {
+        "brave": [
+          "https://typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html"
+        ],
+        "exa": [
+          "https://typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html"
+        ],
+        "parallel": [
+          "https://typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html"
+        ],
+        "tavily": [
+          "https://typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html"
+        ]
+      },
+      "precision": 0.16666666666666666,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 9
+      },
+      "query": "typescript satisfies operator",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://freecodecamp.org/news/typescript-satisfies-operator",
+        "https://mimo.org/glossary/typescript/satisfies",
+        "https://refine.dev/blog/typescript-satisfies-operator",
+        "https://stackoverflow.com/questions/78636946/what-are-the-differences-between-typescript-s-satisfies-operator-and-type-assert",
+        "https://totaltypescript.com/clarifying-the-satisfies-operator"
+      ]
+    },
+    {
+      "authoritative_because": "docs.rs is the generated API documentation for the crate itself",
+      "consensus_fired": true,
+      "consensus_rate": 0.3333333333333333,
+      "consensus_status": "measured",
+      "correct_corroborated": [
+        "https://docs.rs/tokio/latest/tokio/macro.select.html"
+      ],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://docs.rs/tokio/latest/tokio/macro.select.html"
+      ],
+      "corroborated_urls": [
+        "https://developerlife.com/2024/07/10/rust-async-cancellation-safety-tokio",
+        "https://docs.rs/tokio/latest/src/tokio/macros/select.rs.html",
+        "https://docs.rs/tokio/latest/tokio/macro.select.html",
+        "https://stackoverflow.com/questions/74547855/how-to-assess-cancel-safety-of-select",
+        "https://tokio.rs/tokio/tutorial/select",
+        "https://users.rust-lang.org/t/cancel-safety-in-async-and-tokio-select/92381",
+        "https://users.rust-lang.org/t/cancellation-safety-of-locks-in-select/137188"
+      ],
+      "defect_observed": false,
+      "id": "q08",
+      "per_provider_correct_hits": {
+        "brave": [
+          "https://docs.rs/tokio/latest/tokio/macro.select.html"
+        ],
+        "exa": [
+          "https://docs.rs/tokio/latest/tokio/macro.select.html"
+        ],
+        "parallel": [
+          "https://docs.rs/tokio/latest/tokio/macro.select.html"
+        ],
+        "tavily": []
+      },
+      "precision": 0.14285714285714285,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 0
+      },
+      "query": "tokio select cancellation safety",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://developerlife.com/2024/07/10/rust-async-cancellation-safety-tokio",
+        "https://docs.rs/tokio/latest/src/tokio/macros/select.rs.html",
+        "https://stackoverflow.com/questions/74547855/how-to-assess-cancel-safety-of-select",
+        "https://tokio.rs/tokio/tutorial/select",
+        "https://users.rust-lang.org/t/cancel-safety-in-async-and-tokio-select/92381",
+        "https://users.rust-lang.org/t/cancellation-safety-of-locks-in-select/137188"
+      ]
+    },
+    {
+      "authoritative_because": "Kubernetes official concept documentation",
+      "consensus_fired": true,
+      "consensus_rate": 0.21739130434782608,
+      "consensus_status": "measured",
+      "correct_corroborated": [
+        "https://kubernetes.io/docs/concepts/workloads/pods/disruptions"
+      ],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://kubernetes.io/docs/concepts/workloads/pods/disruptions"
+      ],
+      "corroborated_urls": [
+        "https://chkk.io/blog/pod-disruption-budgets",
+        "https://kubernetes.io/docs/concepts/workloads/pods/disruptions",
+        "https://kubernetes.io/docs/tasks/run-application/configure-pdb",
+        "https://scaleops.com/blog/pod-disruption-budget",
+        "https://v1-36.docs.kubernetes.io/docs/tasks/run-application/configure-pdb"
+      ],
+      "defect_observed": false,
+      "id": "q09",
+      "per_provider_correct_hits": {
+        "brave": [
+          "https://kubernetes.io/docs/concepts/workloads/pods/disruptions"
+        ],
+        "exa": [
+          "https://kubernetes.io/docs/concepts/workloads/pods/disruptions"
+        ],
+        "parallel": [
+          "https://kubernetes.io/docs/concepts/workloads/pods/disruptions"
+        ],
+        "tavily": [
+          "https://kubernetes.io/docs/concepts/workloads/pods/disruptions"
+        ]
+      },
+      "precision": 0.2,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 9
+      },
+      "query": "kubernetes pod disruption budget",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://chkk.io/blog/pod-disruption-budgets",
+        "https://kubernetes.io/docs/tasks/run-application/configure-pdb",
+        "https://scaleops.com/blog/pod-disruption-budget",
+        "https://v1-36.docs.kubernetes.io/docs/tasks/run-application/configure-pdb"
+      ]
+    },
+    {
+      "authoritative_because": "GitHub's own Actions documentation; the syntax is vendor-defined",
+      "consensus_fired": true,
+      "consensus_rate": 0.25,
+      "consensus_status": "measured",
+      "correct_corroborated": [],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs"
+      ],
+      "corroborated_urls": [
+        "https://docs.github.com/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow",
+        "https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/run-job-variations",
+        "https://graphite.com/guides/github-actions-matrix",
+        "https://medium.com/credera-engineering/matrix-strategies-in-github-actions-56dd6defeb04",
+        "https://runs-on.com/github-actions/the-matrix-strategy",
+        "https://stackoverflow.com/questions/75318609/matrix-strategy-over-entire-workflow-in-github-actions"
+      ],
+      "defect_observed": true,
+      "id": "q10",
+      "per_provider_correct_hits": {
+        "brave": [],
+        "exa": [],
+        "parallel": [
+          "https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs"
+        ],
+        "tavily": []
+      },
+      "precision": 0.0,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 9
+      },
+      "query": "github actions matrix strategy",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://docs.github.com/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow",
+        "https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/run-job-variations",
+        "https://graphite.com/guides/github-actions-matrix",
+        "https://medium.com/credera-engineering/matrix-strategies-in-github-actions-56dd6defeb04",
+        "https://runs-on.com/github-actions/the-matrix-strategy",
+        "https://stackoverflow.com/questions/75318609/matrix-strategy-over-entire-workflow-in-github-actions"
+      ]
+    },
+    {
+      "authoritative_because": "SQLite's own WAL documentation",
+      "consensus_fired": true,
+      "consensus_rate": 0.16666666666666666,
+      "consensus_status": "measured",
+      "correct_corroborated": [
+        "https://sqlite.org/wal.html"
+      ],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://sqlite.org/wal.html"
+      ],
+      "corroborated_urls": [
+        "https://deepwiki.com/sqlite/sqlite/3.4-write-ahead-logging-(wal)",
+        "https://drupal.org/node/2769027",
+        "https://sqlite.org/wal.html",
+        "https://sqlite.org/walformat.html"
+      ],
+      "defect_observed": false,
+      "id": "q11",
+      "per_provider_correct_hits": {
+        "brave": [
+          "https://sqlite.org/wal.html"
+        ],
+        "exa": [
+          "https://sqlite.org/wal.html"
+        ],
+        "parallel": [
+          "https://sqlite.org/wal.html"
+        ],
+        "tavily": []
+      },
+      "precision": 0.25,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 10
+      },
+      "query": "sqlite WAL mode write-ahead log",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://deepwiki.com/sqlite/sqlite/3.4-write-ahead-logging-(wal)",
+        "https://drupal.org/node/2769027",
+        "https://sqlite.org/walformat.html"
+      ]
+    },
+    {
+      "authoritative_because": "nginx's official module reference",
+      "consensus_fired": true,
+      "consensus_rate": 0.21739130434782608,
+      "consensus_status": "measured",
+      "correct_corroborated": [],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://nginx.org/en/docs/http/ngx_http_proxy_module.html"
+      ],
+      "corroborated_urls": [
+        "https://dev.to/schiff_heimlich/nginx-proxypass-the-trailing-slash-that-changes-everything-47b3",
+        "https://digitalocean.com/community/questions/i-need-help-understanding-trailing-slash-behaviour-in-nginx",
+        "https://getpagespeed.com/server-setup/nginx/nginx-proxy-pass-trailing-slash",
+        "https://serverfault.com/questions/1063540/nginx-location-proxy-pass-behaviour-differs-when-used-with-or-without-trailing",
+        "https://stackoverflow.com/questions/22759345/nginx-trailing-slash-in-proxy-pass-url"
+      ],
+      "defect_observed": true,
+      "id": "q12",
+      "per_provider_correct_hits": {
+        "brave": [],
+        "exa": [
+          "https://nginx.org/en/docs/http/ngx_http_proxy_module.html"
+        ],
+        "parallel": [],
+        "tavily": []
+      },
+      "precision": 0.0,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 9
+      },
+      "query": "nginx proxy_pass trailing slash behaviour",
+      "unparseable_urls": 1,
+      "wrong_corroborated": [
+        "https://dev.to/schiff_heimlich/nginx-proxypass-the-trailing-slash-that-changes-everything-47b3",
+        "https://digitalocean.com/community/questions/i-need-help-understanding-trailing-slash-behaviour-in-nginx",
+        "https://getpagespeed.com/server-setup/nginx/nginx-proxy-pass-trailing-slash",
+        "https://serverfault.com/questions/1063540/nginx-location-proxy-pass-behaviour-differs-when-used-with-or-without-trailing",
+        "https://stackoverflow.com/questions/22759345/nginx-trailing-slash-in-proxy-pass-url"
+      ]
+    },
+    {
+      "authoritative_because": "pytest's official fixtures documentation",
+      "consensus_fired": true,
+      "consensus_rate": 0.15384615384615385,
+      "consensus_status": "measured",
+      "correct_corroborated": [
+        "https://docs.pytest.org/en/stable/how-to/fixtures.html"
+      ],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://docs.pytest.org/en/stable/how-to/fixtures.html"
+      ],
+      "corroborated_urls": [
+        "https://docs.pytest.org/en/stable/how-to/fixtures.html",
+        "https://pytest-with-eric.com/fixtures/pytest-fixture-scope",
+        "https://pythontest.com/framework/pytest/pytest-session-scoped-fixtures",
+        "https://stackoverflow.com/questions/76859293/function-vs-class-vs-module-vs-package-vs-session-for-fixture-scopes-in-pytest"
+      ],
+      "defect_observed": false,
+      "id": "q13",
+      "per_provider_correct_hits": {
+        "brave": [
+          "https://docs.pytest.org/en/stable/how-to/fixtures.html"
+        ],
+        "exa": [
+          "https://docs.pytest.org/en/stable/how-to/fixtures.html"
+        ],
+        "parallel": [],
+        "tavily": [
+          "https://docs.pytest.org/en/stable/how-to/fixtures.html"
+        ]
+      },
+      "precision": 0.25,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 9
+      },
+      "query": "pytest fixture scope session module function",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://pytest-with-eric.com/fixtures/pytest-fixture-scope",
+        "https://pythontest.com/framework/pytest/pytest-session-scoped-fixtures",
+        "https://stackoverflow.com/questions/76859293/function-vs-class-vs-module-vs-package-vs-session-for-fixture-scopes-in-pytest"
+      ]
+    },
+    {
+      "authoritative_because": "HashiCorp's official CLI reference",
+      "consensus_fired": true,
+      "consensus_rate": 0.22727272727272727,
+      "consensus_status": "measured",
+      "correct_corroborated": [
+        "https://developer.hashicorp.com/terraform/cli/commands/state/mv"
+      ],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://developer.hashicorp.com/terraform/cli/commands/state/mv"
+      ],
+      "corroborated_urls": [
+        "https://developer.hashicorp.com/terraform/cli/commands/state/mv",
+        "https://developer.hashicorp.com/terraform/cli/state/move",
+        "https://github.com/hashicorp/web-unified-docs/blob/main/content/terraform/v1.15.x/docs/cli/commands/state/mv.mdx",
+        "https://oneuptime.com/blog/post/2026-02-23-terraform-state-mv-command/view",
+        "https://spacelift.io/blog/terraform-state-mv"
+      ],
+      "defect_observed": false,
+      "id": "q14",
+      "per_provider_correct_hits": {
+        "brave": [
+          "https://developer.hashicorp.com/terraform/cli/commands/state/mv"
+        ],
+        "exa": [
+          "https://developer.hashicorp.com/terraform/cli/commands/state/mv"
+        ],
+        "parallel": [
+          "https://developer.hashicorp.com/terraform/cli/commands/state/mv"
+        ],
+        "tavily": [
+          "https://developer.hashicorp.com/terraform/cli/commands/state/mv"
+        ]
+      },
+      "precision": 0.2,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 9
+      },
+      "query": "terraform state mv command",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://developer.hashicorp.com/terraform/cli/state/move",
+        "https://github.com/hashicorp/web-unified-docs/blob/main/content/terraform/v1.15.x/docs/cli/commands/state/mv.mdx",
+        "https://oneuptime.com/blog/post/2026-02-23-terraform-state-mv-command/view",
+        "https://spacelift.io/blog/terraform-state-mv"
+      ]
+    },
+    {
+      "authoritative_because": "webpack's official tree-shaking guide",
+      "consensus_fired": true,
+      "consensus_rate": 0.16,
+      "consensus_status": "measured",
+      "correct_corroborated": [
+        "https://webpack.js.org/guides/tree-shaking"
+      ],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://webpack.js.org/guides/tree-shaking"
+      ],
+      "corroborated_urls": [
+        "https://dev.to/fogel/tree-shaking-in-webpack-5apj",
+        "https://docs.webpack.js.org/guides/tree-shaking",
+        "https://github.com/webpack/webpack/blob/main/examples/side-effects/README.md",
+        "https://webpack.js.org/guides/tree-shaking"
+      ],
+      "defect_observed": false,
+      "id": "q15",
+      "per_provider_correct_hits": {
+        "brave": [
+          "https://webpack.js.org/guides/tree-shaking"
+        ],
+        "exa": [
+          "https://webpack.js.org/guides/tree-shaking"
+        ],
+        "parallel": [
+          "https://webpack.js.org/guides/tree-shaking"
+        ],
+        "tavily": [
+          "https://webpack.js.org/guides/tree-shaking"
+        ]
+      },
+      "precision": 0.25,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 10
+      },
+      "query": "webpack tree shaking sideEffects package.json",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://dev.to/fogel/tree-shaking-in-webpack-5apj",
+        "https://docs.webpack.js.org/guides/tree-shaking",
+        "https://github.com/webpack/webpack/blob/main/examples/side-effects/README.md"
+      ]
+    },
+    {
+      "authoritative_because": "RFC 5861 defines the directive; MDN is the canonical practical reference",
+      "consensus_fired": true,
+      "consensus_rate": 0.4,
+      "consensus_status": "measured",
+      "correct_corroborated": [],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control",
+        "https://rfc-editor.org/rfc/rfc5861"
+      ],
+      "corroborated_urls": [
+        "https://datatracker.ietf.org/doc/html/rfc5861",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control",
+        "https://developers.cloudflare.com/cache/concepts/revalidation",
+        "https://fastly.com/documentation/guides/concepts/cache/stale",
+        "https://httpwg.org/specs/rfc5861.html",
+        "https://rfc-editor.org/info/rfc5861",
+        "https://rfc-editor.org/rfc/rfc5861.html",
+        "https://web.dev/articles/stale-while-revalidate"
+      ],
+      "defect_observed": true,
+      "id": "q16",
+      "per_provider_correct_hits": {
+        "brave": [
+          "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control"
+        ],
+        "exa": [],
+        "parallel": [],
+        "tavily": []
+      },
+      "precision": 0.0,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 9
+      },
+      "query": "HTTP stale-while-revalidate cache directive",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://datatracker.ietf.org/doc/html/rfc5861",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control",
+        "https://developers.cloudflare.com/cache/concepts/revalidation",
+        "https://fastly.com/documentation/guides/concepts/cache/stale",
+        "https://httpwg.org/specs/rfc5861.html",
+        "https://rfc-editor.org/info/rfc5861",
+        "https://rfc-editor.org/rfc/rfc5861.html",
+        "https://web.dev/articles/stale-while-revalidate"
+      ]
+    },
+    {
+      "authoritative_because": "The Linux kernel's own cgroup v2 documentation",
+      "consensus_fired": true,
+      "consensus_rate": 0.07142857142857142,
+      "consensus_status": "measured",
+      "correct_corroborated": [
+        "https://docs.kernel.org/admin-guide/cgroup-v2.html"
+      ],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://docs.kernel.org/admin-guide/cgroup-v2.html"
+      ],
+      "corroborated_urls": [
+        "https://docs.kernel.org/admin-guide/cgroup-v2.html",
+        "https://facebookmicrosites.github.io/cgroup2/docs/memory-controller.html"
+      ],
+      "defect_observed": false,
+      "id": "q17",
+      "per_provider_correct_hits": {
+        "brave": [
+          "https://docs.kernel.org/admin-guide/cgroup-v2.html"
+        ],
+        "exa": [
+          "https://docs.kernel.org/admin-guide/cgroup-v2.html"
+        ],
+        "parallel": [],
+        "tavily": []
+      },
+      "precision": 0.5,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 10
+      },
+      "query": "linux cgroup v2 memory.max configuration",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://facebookmicrosites.github.io/cgroup2/docs/memory-controller.html"
+      ]
+    },
+    {
+      "authoritative_because": "Protobuf's official field-presence guide",
+      "consensus_fired": true,
+      "consensus_rate": 0.16,
+      "consensus_status": "measured",
+      "correct_corroborated": [],
+      "correct_found_by_any_provider": false,
+      "correct_urls": [
+        "https://protobuf.dev/programming-guides/field-presence"
+      ],
+      "corroborated_urls": [
+        "https://github.com/protocolbuffers/protobuf/blob/main/docs/field_presence.md",
+        "https://github.com/protocolbuffers/protobuf/blob/main/docs/implementing_proto3_presence.md",
+        "https://protobuf.dev/programming-guides/field_presence",
+        "https://protobuf.dev/programming-guides/proto3"
+      ],
+      "defect_observed": true,
+      "id": "q18",
+      "per_provider_correct_hits": {
+        "brave": [],
+        "exa": [],
+        "parallel": [],
+        "tavily": []
+      },
+      "precision": 0.0,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 7
+      },
+      "query": "protobuf field presence optional",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://github.com/protocolbuffers/protobuf/blob/main/docs/field_presence.md",
+        "https://github.com/protocolbuffers/protobuf/blob/main/docs/implementing_proto3_presence.md",
+        "https://protobuf.dev/programming-guides/field_presence",
+        "https://protobuf.dev/programming-guides/proto3"
+      ]
+    },
+    {
+      "authoritative_because": "The official jq manual",
+      "consensus_fired": true,
+      "consensus_rate": 0.20833333333333334,
+      "consensus_status": "measured",
+      "correct_corroborated": [],
+      "correct_found_by_any_provider": false,
+      "correct_urls": [
+        "https://jqlang.github.io/jq/manual"
+      ],
+      "corroborated_urls": [
+        "https://github.com/jqlang/jq/issues/3211",
+        "https://jqlang.org/manual",
+        "https://jqlang.org/manual/dev",
+        "https://jqlang.org/manual/v1.3",
+        "https://jqlang.org/manual/v1.7"
+      ],
+      "defect_observed": true,
+      "id": "q19",
+      "per_provider_correct_hits": {
+        "brave": [],
+        "exa": [],
+        "parallel": [],
+        "tavily": []
+      },
+      "precision": 0.0,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 9
+      },
+      "query": "jq reduce foreach manual",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://github.com/jqlang/jq/issues/3211",
+        "https://jqlang.org/manual",
+        "https://jqlang.org/manual/dev",
+        "https://jqlang.org/manual/v1.3",
+        "https://jqlang.org/manual/v1.7"
+      ]
+    },
+    {
+      "authoritative_because": "zsh's official Expansion documentation",
+      "consensus_fired": true,
+      "consensus_rate": 0.2,
+      "consensus_status": "measured",
+      "correct_corroborated": [
+        "https://zsh.sourceforge.io/Doc/Release/Expansion.html"
+      ],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://zsh.sourceforge.io/Doc/Release/Expansion.html"
+      ],
+      "corroborated_urls": [
+        "https://adhdecode.com/articles/zsh/zsh-glob-expansion-guide",
+        "https://linux.die.net/man/1/zshexpn",
+        "https://thevaluable.dev/zsh-expansion-guide-example",
+        "https://zsh.org/mla/workers/2025/msg00389.html",
+        "https://zsh.sourceforge.io/Doc/Release/Expansion.html"
+      ],
+      "defect_observed": false,
+      "id": "q20",
+      "per_provider_correct_hits": {
+        "brave": [
+          "https://zsh.sourceforge.io/Doc/Release/Expansion.html"
+        ],
+        "exa": [
+          "https://zsh.sourceforge.io/Doc/Release/Expansion.html"
+        ],
+        "parallel": [],
+        "tavily": [
+          "https://zsh.sourceforge.io/Doc/Release/Expansion.html"
+        ]
+      },
+      "precision": 0.2,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 9
+      },
+      "query": "zsh glob qualifiers documentation",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://adhdecode.com/articles/zsh/zsh-glob-expansion-guide",
+        "https://linux.die.net/man/1/zshexpn",
+        "https://thevaluable.dev/zsh-expansion-guide-example",
+        "https://zsh.org/mla/workers/2025/msg00389.html"
+      ]
+    },
+    {
+      "authoritative_because": "OpenTelemetry's official semantic conventions specification",
+      "consensus_fired": true,
+      "consensus_rate": 0.25,
+      "consensus_status": "measured",
+      "correct_corroborated": [],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://opentelemetry.io/docs/specs/semconv/http/http-spans"
+      ],
+      "corroborated_urls": [
+        "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/general/attributes.md",
+        "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/registry/attributes/http.md",
+        "https://opentelemetry.io/docs/concepts/semantic-conventions",
+        "https://opentelemetry.io/docs/specs/semconv/http",
+        "https://opentelemetry.io/docs/specs/semconv/http/http-metrics",
+        "https://opentelemetry.io/docs/specs/semconv/registry/attributes/http"
+      ],
+      "defect_observed": true,
+      "id": "q21",
+      "per_provider_correct_hits": {
+        "brave": [],
+        "exa": [
+          "https://opentelemetry.io/docs/specs/semconv/http/http-spans"
+        ],
+        "parallel": [],
+        "tavily": []
+      },
+      "precision": 0.0,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 9
+      },
+      "query": "opentelemetry semantic conventions http attributes",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/general/attributes.md",
+        "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/registry/attributes/http.md",
+        "https://opentelemetry.io/docs/concepts/semantic-conventions",
+        "https://opentelemetry.io/docs/specs/semconv/http",
+        "https://opentelemetry.io/docs/specs/semconv/http/http-metrics",
+        "https://opentelemetry.io/docs/specs/semconv/registry/attributes/http"
+      ]
+    },
+    {
+      "authoritative_because": "OpenSSL's official manpage",
+      "consensus_fired": true,
+      "consensus_rate": 0.16,
+      "consensus_status": "measured",
+      "correct_corroborated": [],
+      "correct_found_by_any_provider": true,
+      "correct_urls": [
+        "https://docs.openssl.org/master/man1/openssl-verify"
+      ],
+      "corroborated_urls": [
+        "https://docs.openssl.org/1.1.1/man1/verify",
+        "https://docs.openssl.org/3.0/man1/openssl-verify",
+        "https://security.stackexchange.com/questions/223884/verification-of-certificate-chain-using-openssl-verify-command",
+        "https://stackoverflow.com/questions/25482199/verify-a-certificate-chain-using-openssl-verify"
+      ],
+      "defect_observed": true,
+      "id": "q22",
+      "per_provider_correct_hits": {
+        "brave": [],
+        "exa": [],
+        "parallel": [
+          "https://docs.openssl.org/master/man1/openssl-verify"
+        ],
+        "tavily": []
+      },
+      "precision": 0.0,
+      "provider_url_counts": {
+        "brave": 10,
+        "exa": 10,
+        "parallel": 10,
+        "tavily": 9
+      },
+      "query": "openssl verify certificate chain command",
+      "unparseable_urls": 0,
+      "wrong_corroborated": [
+        "https://docs.openssl.org/1.1.1/man1/verify",
+        "https://docs.openssl.org/3.0/man1/openssl-verify",
+        "https://security.stackexchange.com/questions/223884/verification-of-certificate-chain-using-openssl-verify-command",
+        "https://stackoverflow.com/questions/25482199/verify-a-certificate-chain-using-openssl-verify"
+      ]
+    }
+  ]
+}

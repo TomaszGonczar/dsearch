@@ -1,0 +1,826 @@
+{
+  "per_query": [
+    {
+      "alternate": [
+        {
+          "url": "https://github.com/vercel/schemas",
+          "why": "Vercel's own schema repository \u2014 arguably authoritative, but it is a source repo not a reference page; classify as wrong to stay conservative"
+        }
+      ],
+      "exact": [],
+      "id": "q01",
+      "query": "vercel.json schema validation",
+      "wrong": [
+        "https://github.com/vercel/vercel/pull/7394",
+        "https://vercel.com/changelog/schema-autocomplete-and-validation-for-vercel-json",
+        "https://vercel.com/docs/project-configuration/vercel-json",
+        "https://vercel.com/docs/project-configuration/vercel-json.md"
+      ]
+    },
+    {
+      "alternate": [
+        {
+          "url": "https://docs.python.org/3.14/howto/free-threading-python.html",
+          "why": "the 3.14 branch of the same CPython HOWTO page"
+        },
+        {
+          "url": "https://docs.python.org/3/howto/free-threading-python.html",
+          "why": "CPython's own free-threading HOWTO, a second authoritative page for the same topic"
+        }
+      ],
+      "exact": [],
+      "id": "q02",
+      "query": "python 3.13 free-threading status",
+      "wrong": [
+        "https://py-free-threading.github.io",
+        "https://realpython.com/python313-free-threading-jit"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q03",
+      "query": "RFC 9110 conditional requests",
+      "wrong": [
+        "https://datatracker.ietf.org/doc/html/rfc9110.html",
+        "https://rfc-editor.org/info/rfc9110",
+        "https://rfc-editor.org/rfc/rfc9110.pdf"
+      ]
+    },
+    {
+      "alternate": [
+        {
+          "url": "https://neon.com/docs/extensions/pgstattuple",
+          "why": "third-party documentation of the same PostgreSQL contrib module; NOT vendor-authoritative, so classify as wrong \u2014 see NOTE below"
+        }
+      ],
+      "exact": [],
+      "id": "q04",
+      "query": "postgres index bloat monitoring pgstattuple",
+      "wrong": [
+        "https://dev.to/ozkanpakdil/understanding-and-monitoring-index-and-table-bloat-in-postgresql-4ked",
+        "https://github.com/keithf4/pg_bloat_check",
+        "https://techcommunity.microsoft.com/blog/adforpostgresql/managing-bloat-in-postgresql-using-pgstattuple-on-azure-database-for-postgresql-/4410449"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://git-scm.com/docs/git-rebase"
+      ],
+      "id": "q05",
+      "query": "git rebase --onto usage",
+      "wrong": [
+        "https://atlassian.com/git/tutorials/rewriting-history/git-rebase",
+        "https://stackoverflow.com/questions/29914052/how-to-git-rebase-a-branch-with-the-onto-command",
+        "https://womanonrails.com/git-rebase-onto"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://docs.docker.com/reference/compose-file/services"
+      ],
+      "id": "q06",
+      "query": "docker compose healthcheck syntax",
+      "wrong": [
+        "https://last9.io/blog/docker-compose-health-checks",
+        "https://oneuptime.com/blog/post/2026-01-30-docker-compose-health-checks/view",
+        "https://warp.dev/terminus/docker-compose-health-check"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html"
+      ],
+      "id": "q07",
+      "query": "typescript satisfies operator",
+      "wrong": [
+        "https://freecodecamp.org/news/typescript-satisfies-operator",
+        "https://mimo.org/glossary/typescript/satisfies",
+        "https://refine.dev/blog/typescript-satisfies-operator",
+        "https://stackoverflow.com/questions/78636946/what-are-the-differences-between-typescript-s-satisfies-operator-and-type-assert",
+        "https://totaltypescript.com/clarifying-the-satisfies-operator"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://docs.rs/tokio/latest/tokio/macro.select.html"
+      ],
+      "id": "q08",
+      "query": "tokio select cancellation safety",
+      "wrong": [
+        "https://developerlife.com/2024/07/10/rust-async-cancellation-safety-tokio",
+        "https://docs.rs/tokio/latest/src/tokio/macros/select.rs.html",
+        "https://stackoverflow.com/questions/74547855/how-to-assess-cancel-safety-of-select",
+        "https://tokio.rs/tokio/tutorial/select",
+        "https://users.rust-lang.org/t/cancel-safety-in-async-and-tokio-select/92381",
+        "https://users.rust-lang.org/t/cancellation-safety-of-locks-in-select/137188"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://kubernetes.io/docs/concepts/workloads/pods/disruptions"
+      ],
+      "id": "q09",
+      "query": "kubernetes pod disruption budget",
+      "wrong": [
+        "https://chkk.io/blog/pod-disruption-budgets",
+        "https://kubernetes.io/docs/tasks/run-application/configure-pdb",
+        "https://scaleops.com/blog/pod-disruption-budget",
+        "https://v1-36.docs.kubernetes.io/docs/tasks/run-application/configure-pdb"
+      ]
+    },
+    {
+      "alternate": [
+        {
+          "url": "https://docs.github.com/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow",
+          "why": "GitHub relocated the matrix docs to this path; same vendor, same content"
+        }
+      ],
+      "exact": [],
+      "id": "q10",
+      "query": "github actions matrix strategy",
+      "wrong": [
+        "https://graphite.com/guides/github-actions-matrix",
+        "https://medium.com/credera-engineering/matrix-strategies-in-github-actions-56dd6defeb04",
+        "https://runs-on.com/github-actions/the-matrix-strategy"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://sqlite.org/wal.html"
+      ],
+      "id": "q11",
+      "query": "sqlite WAL mode write-ahead log",
+      "wrong": [
+        "https://deepwiki.com/sqlite/sqlite/3.4-write-ahead-logging-(wal)",
+        "https://drupal.org/node/2769027",
+        "https://sqlite.org/walformat.html"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q12",
+      "query": "nginx proxy_pass trailing slash behaviour",
+      "wrong": [
+        "https://dev.to/schiff_heimlich/nginx-proxypass-the-trailing-slash-that-changes-everything-47b3",
+        "https://digitalocean.com/community/questions/i-need-help-understanding-trailing-slash-behaviour-in-nginx",
+        "https://getpagespeed.com/server-setup/nginx/nginx-proxy-pass-trailing-slash",
+        "https://serverfault.com/questions/1063540/nginx-location-proxy-pass-behaviour-differs-when-used-with-or-without-trailing",
+        "https://stackoverflow.com/questions/22759345/nginx-trailing-slash-in-proxy-pass-url"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://docs.pytest.org/en/stable/how-to/fixtures.html"
+      ],
+      "id": "q13",
+      "query": "pytest fixture scope session module function",
+      "wrong": [
+        "https://pytest-with-eric.com/fixtures/pytest-fixture-scope",
+        "https://pythontest.com/framework/pytest/pytest-session-scoped-fixtures",
+        "https://stackoverflow.com/questions/76859293/function-vs-class-vs-module-vs-package-vs-session-for-fixture-scopes-in-pytest"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://developer.hashicorp.com/terraform/cli/commands/state/mv"
+      ],
+      "id": "q14",
+      "query": "terraform state mv command",
+      "wrong": [
+        "https://developer.hashicorp.com/terraform/cli/state/move",
+        "https://github.com/hashicorp/web-unified-docs/blob/main/content/terraform/v1.15.x/docs/cli/commands/state/mv.mdx",
+        "https://oneuptime.com/blog/post/2026-02-23-terraform-state-mv-command/view",
+        "https://spacelift.io/blog/terraform-state-mv"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://webpack.js.org/guides/tree-shaking"
+      ],
+      "id": "q15",
+      "query": "webpack tree shaking sideEffects package.json",
+      "wrong": [
+        "https://blog.saeloun.com/2022/11/24/tree-shaking-in-webpack-5",
+        "https://dev.to/fogel/tree-shaking-in-webpack-5apj",
+        "https://docs.webpack.js.org/guides/tree-shaking",
+        "https://github.com/webpack/webpack/blob/main/examples/side-effects/README.md"
+      ]
+    },
+    {
+      "alternate": [
+        {
+          "url": "https://datatracker.ietf.org/doc/html/rfc5861",
+          "why": "the IETF datatracker mirror of the same RFC; identical specification text"
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control",
+          "why": "MDN restructured its URL scheme; same page, new path"
+        }
+      ],
+      "exact": [],
+      "id": "q16",
+      "query": "HTTP stale-while-revalidate cache directive",
+      "wrong": [
+        "https://debugbear.com/docs/stale-while-revalidate",
+        "https://developers.cloudflare.com/cache/concepts/revalidation",
+        "https://fastly.com/documentation/guides/concepts/cache/stale",
+        "https://httpwg.org/specs/rfc5861.html",
+        "https://rfc-editor.org/rfc/rfc5861.html",
+        "https://web.dev/articles/stale-while-revalidate"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://docs.kernel.org/admin-guide/cgroup-v2.html"
+      ],
+      "id": "q17",
+      "query": "linux cgroup v2 memory.max configuration",
+      "wrong": [
+        "https://facebookmicrosites.github.io/cgroup2/docs/memory-controller.html"
+      ]
+    },
+    {
+      "alternate": [
+        {
+          "url": "https://github.com/protocolbuffers/protobuf/blob/main/docs/field_presence.md",
+          "why": "the upstream protobuf source of the very page protobuf.dev renders"
+        }
+      ],
+      "exact": [],
+      "id": "q18",
+      "query": "protobuf field presence optional",
+      "wrong": [
+        "https://github.com/protocolbuffers/protobuf/blob/main/docs/implementing_proto3_presence.md",
+        "https://protobuf.dev/programming-guides/field_presence",
+        "https://protobuf.dev/programming-guides/proto3"
+      ]
+    },
+    {
+      "alternate": [
+        {
+          "url": "https://jqlang.org/manual",
+          "why": "the jq manual after the project moved from jqlang.github.io to jqlang.org"
+        }
+      ],
+      "exact": [],
+      "id": "q19",
+      "query": "jq reduce foreach manual",
+      "wrong": [
+        "https://github.com/jqlang/jq/issues/3211",
+        "https://jqlang.org/manual/dev",
+        "https://jqlang.org/manual/v1.3",
+        "https://jqlang.org/manual/v1.7"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://zsh.sourceforge.io/Doc/Release/Expansion.html"
+      ],
+      "id": "q20",
+      "query": "zsh glob qualifiers documentation",
+      "wrong": [
+        "https://adhdecode.com/articles/zsh/zsh-glob-expansion-guide",
+        "https://linux.die.net/man/1/zshexpn",
+        "https://thevaluable.dev/zsh-expansion-guide-example",
+        "https://zsh.org/mla/workers/2025/msg00389.html"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q21",
+      "query": "opentelemetry semantic conventions http attributes",
+      "wrong": [
+        "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/general/attributes.md",
+        "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/registry/attributes/http.md",
+        "https://opentelemetry.io/docs/specs/semconv/http",
+        "https://opentelemetry.io/docs/specs/semconv/http/http-metrics",
+        "https://opentelemetry.io/docs/specs/semconv/registry/attributes/http"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q22",
+      "query": "openssl verify certificate chain command",
+      "wrong": [
+        "https://docs.openssl.org/1.0.2/man1/verify",
+        "https://docs.openssl.org/1.1.1/man1/verify",
+        "https://docs.openssl.org/3.0/man1/openssl-verify",
+        "https://security.stackexchange.com/questions/223884/verification-of-certificate-chain-using-openssl-verify-command",
+        "https://stackoverflow.com/questions/25482199/verify-a-certificate-chain-using-openssl-verify"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://nodejs.org/api/fs.html"
+      ],
+      "id": "q23",
+      "query": "node.js fs.promises readFile",
+      "wrong": [
+        "https://beta.docs.nodejs.org/fs.html",
+        "https://docs.deno.com/api/node/fs/~/promises.readFile",
+        "https://geeksforgeeks.org/node-js/node-js-fspromises-readfile-method"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://postgresql.org/docs/current/sql-explain.html"
+      ],
+      "id": "q24",
+      "query": "postgres EXPLAIN ANALYZE output",
+      "wrong": [
+        "https://postgresql.org/docs/current/using-explain.html",
+        "https://thoughtbot.com/blog/reading-an-explain-analyze-query-plan"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://redis.io/docs/latest/operate/oss_and_stack/management/persistence"
+      ],
+      "id": "q25",
+      "query": "redis persistence RDB AOF",
+      "wrong": [
+        "https://learn.microsoft.com/en-us/azure/redis/how-to-persistence",
+        "https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/index.html.md",
+        "https://redis.io/docs/latest/operate/rs/databases/configure/database-persistence",
+        "https://redis.io/tutorials/operate/redis-at-scale/persistence-and-durability"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q26",
+      "query": "http2 server push deprecated",
+      "wrong": [
+        "https://datatracker.ietf.org/doc/html/rfc9113.html",
+        "https://developer.chrome.com/blog/removing-push",
+        "https://httpd.apache.org/docs/current/howto/http2.html",
+        "https://trac.nginx.org/nginx/ticket/2432"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q27",
+      "query": "css has selector browser support",
+      "wrong": [
+        "https://caniuse.com/css-has",
+        "https://caniuse.com/css-sel2"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://doc.rust-lang.org/reference/lifetime-elision.html"
+      ],
+      "id": "q28",
+      "query": "rust lifetime elision rules",
+      "wrong": [
+        "https://doc.rust-lang.org/nomicon/lifetime-elision.html",
+        "https://google.github.io/comprehensive-rust/lifetimes/lifetime-elision.html",
+        "https://rust-lang.github.io/rfcs/0141-lifetime-elision.html",
+        "https://stackoverflow.com/questions/40325690/what-is-lifetime-elision-in-very-simple-terms",
+        "https://web.mit.edu/rust-lang_v1.26.0/arch/amd64_ubuntu1404/share/doc/rust/html/reference/lifetime-elision.html"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://docs.python.org/3/library/dataclasses.html"
+      ],
+      "id": "q29",
+      "query": "python dataclass frozen default_factory",
+      "wrong": [
+        "https://cs.unb.ca/~bremner/teaching/cs2613/books/python3-doc/library/dataclasses.html",
+        "https://realpython.com/python-data-classes",
+        "https://stackoverflow.com/questions/61257658/python-dataclasses-mocking-the-default-factory-in-a-frozen-dataclass"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://pkg.go.dev/context"
+      ],
+      "id": "q30",
+      "query": "go context cancellation",
+      "wrong": [
+        "https://go.dev/doc/database/cancel-operations",
+        "https://oneuptime.com/blog/post/2026-01-23-go-context-cancellation/view"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://docs.docker.com/build/building/multi-stage"
+      ],
+      "id": "q31",
+      "query": "docker multi-stage build syntax",
+      "wrong": [
+        "https://dockerbuild.com/reference/multi-stage-builds"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes"
+      ],
+      "id": "q32",
+      "query": "kubernetes liveness readiness probe difference",
+      "wrong": [
+        "https://baeldung.com/ops/kubernetes-livenessprobe-readinessprobe",
+        "https://developers.redhat.com/blog/2020/11/10/you-probably-need-liveness-and-readiness-probes",
+        "https://kubernetes.io/docs/concepts/workloads/pods/probes",
+        "https://redhat.com/en/blog/liveness-and-readiness-probes",
+        "https://v1-36.docs.kubernetes.io/docs/concepts/workloads/pods/probes"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://git-scm.com/docs/git-worktree"
+      ],
+      "id": "q33",
+      "query": "git worktree add usage",
+      "wrong": [
+        "https://code.googlesource.com/git/+/HEAD/Documentation/git-worktree.adoc",
+        "https://git-scm.com/docs/git-worktree.html"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q34",
+      "query": "bash set -euo pipefail",
+      "wrong": [
+        "https://howtogeek.com/782514/how-to-use-set-and-pipefail-in-bash-scripts-on-linux"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://sqlite.org/lang_upsert.html"
+      ],
+      "id": "q35",
+      "query": "sqlite upsert on conflict",
+      "wrong": [
+        "https://sqlite.org/lang_conflict.html",
+        "https://sqlitetutorial.net/sqlite-upsert",
+        "https://www3.sqlite.org/lang_UPSERT.html"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://typescriptlang.org/docs/handbook/2/conditional-types.html"
+      ],
+      "id": "q36",
+      "query": "typescript conditional types infer",
+      "wrong": [
+        "https://learntypescript.dev/09/l2-conditional-infer",
+        "https://typescript-training.com/course/intermediate-v2/08-infer",
+        "https://typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://react.dev/reference/react/useEffect"
+      ],
+      "id": "q37",
+      "query": "react useEffect cleanup function",
+      "wrong": [
+        "https://blog.logrocket.com/understanding-react-useeffect-cleanup-function",
+        "https://reacttraining.com/blog/useEffect-cleanup",
+        "https://stackoverflow.com/questions/57023074/why-is-the-cleanup-function-from-useeffect-called-on-every-render"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://nginx.org/en/docs/ngx_core_module.html"
+      ],
+      "id": "q38",
+      "query": "nginx worker_processes auto",
+      "wrong": [
+        "https://blog.nginx.org/blog/inside-nginx-how-we-designed-for-performance-scale",
+        "https://f5.com/company/blog/nginx/tuning-nginx",
+        "https://getpagespeed.com/server-setup/nginx/tuning-nginx-worker-processes"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q39",
+      "query": "pytest parametrize indirect",
+      "wrong": [
+        "https://alhuelamo.com/posts/2024/02/the-indirect-argument-in-pytest-fixture-parametrization",
+        "https://docs.pytest.org/en/7.1.x/example/parametrize.html",
+        "https://docs.pytest.org/en/stable/example/parametrize.html",
+        "https://gist.github.com/zobayer1/31f07011f1eaca7e0e5714bf647c2886",
+        "https://stackoverflow.com/questions/35413134/indirect-true-vs-indirect-false-in-pytest-mark-parametrize",
+        "https://til.codeinthehole.com/posts/about-indirect-parametrization-with-pytest"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://developer.hashicorp.com/terraform/language/meta-arguments/for_each"
+      ],
+      "id": "q40",
+      "query": "terraform for_each vs count",
+      "wrong": [
+        "https://developer.hashicorp.com/terraform/language/meta-arguments/count",
+        "https://docs.cloudposse.com/learn/component-development/terraform-in-depth/terraform-count-vs-for-each",
+        "https://spacelift.io/blog/terraform-count-for-each"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q41",
+      "query": "openssl s_client verify hostname",
+      "wrong": [
+        "https://docs.openssl.org/1.1.1/man1/s_client",
+        "https://docs.openssl.org/3.4/man1/openssl-s_client",
+        "https://wiki.openssl.org/index.php/Hostname_validation"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://man7.org/linux/man-pages/man8/tc-netem.8.html"
+      ],
+      "id": "q42",
+      "query": "linux tc netem delay",
+      "wrong": [
+        "https://linux.org/docs/man8/tc-netem.html",
+        "https://man.archlinux.org/man/core/iproute2/tc-netem.8.en",
+        "https://manpages.debian.org/bullseye/iproute2/tc-netem.8.en.html",
+        "https://oneuptime.com/blog/post/2026-03-20-simulate-network-latency-tc-netem/view",
+        "https://pico.net/kb/how-can-i-simulate-delayed-and-dropped-packets-in-linux",
+        "https://srtlab.github.io/srt-cookbook/how-to-articles/using-netem-to-emulate-networks.html"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q43",
+      "query": "jq select multiple conditions",
+      "wrong": [
+        "https://stackoverflow.com/questions/33057420/jq-select-multiple-conditions",
+        "https://unix.stackexchange.com/questions/404699/using-multiple-wildcards-in-jq-to-select-objects-in-a-json-file"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://yaml.org/spec/1.2.2"
+      ],
+      "id": "q44",
+      "query": "yaml anchors and aliases",
+      "wrong": [
+        "https://akamai.com/cloud/guides/yaml-anchors-aliases-overrides-extensions",
+        "https://akamai.com/docs/guides/yaml-anchors-aliases-overrides-extensions",
+        "https://docs.gitlab.com/ci/yaml/yaml_optimization",
+        "https://documentation.coremedia.com/cmcc-11/current/webhelp/headlessserver-en/content/yaml-anchors-and-aliases.html",
+        "https://support.atlassian.com/bitbucket-cloud/docs/yaml-anchors"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://protobuf.dev/programming-guides/proto3"
+      ],
+      "id": "q45",
+      "query": "protobuf reserved field numbers",
+      "wrong": [
+        "https://protobuf.dev/best-practices/dos-donts",
+        "https://protobuf.dev/programming-guides/editions",
+        "https://protobuf.dev/programming-guides/proto2",
+        "https://protobuf.dev/reference/protobuf/proto3-spec",
+        "https://protocolbuffers-protobuf-45.mintlify.app/concepts/proto3",
+        "https://stackoverflow.com/questions/64248087/removing-a-field-in-protobuf"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://grpc.io/docs/guides/deadlines"
+      ],
+      "id": "q46",
+      "query": "grpc deadline propagation",
+      "wrong": [
+        "https://github.com/grpc/grpc-java/issues/11966",
+        "https://github.com/grpc/grpc/tree/master/examples/cpp/deadline",
+        "https://grpc.io/blog/deadlines",
+        "https://learn.microsoft.com/en-us/aspnet/core/grpc/deadlines-cancellation?view=aspnetcore-10.0"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://webpack.js.org/guides/code-splitting"
+      ],
+      "id": "q47",
+      "query": "webpack code splitting dynamic import",
+      "wrong": [
+        "https://docs.webpack.js.org/api/module-methods/import",
+        "https://github.com/webpack/webpack/issues/5703"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://eslint.org/docs/latest/use/configure/configuration-files"
+      ],
+      "id": "q48",
+      "query": "eslint flat config ignores",
+      "wrong": [
+        "https://eslint.org/blog/2022/08/new-config-system-part-2",
+        "https://eslint.org/blog/2025/03/flat-config-extends-define-config-global-ignores",
+        "https://eslint.org/docs/latest/use/configure/ignore",
+        "https://eslint.org/docs/latest/use/configure/migration-guide",
+        "https://github.com/eslint/eslint/issues/17400",
+        "https://github.com/eslint/eslint/issues/18372"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q49",
+      "query": "github actions cache key hashFiles",
+      "wrong": [
+        "https://github.com/actions/cache",
+        "https://github.com/actions/cache/blob/main/caching-strategies.md",
+        "https://github.com/actions/cache/blob/v2/README.md",
+        "https://github.com/marketplace/actions/cache",
+        "https://stackoverflow.com/questions/77194019/when-is-hashfiles-actually-needed-in-the-cache-github-action"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://postgresql.org/docs/current/datatype-json.html"
+      ],
+      "id": "q50",
+      "query": "postgres jsonb containment operator",
+      "wrong": [
+        "https://postgresql.org/docs/13/functions-json.html",
+        "https://postgresql.org/docs/9.4/functions-json.html",
+        "https://tigerdata.com/learn/how-to-query-jsonb-in-postgresql"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://docs.python.org/3/library/asyncio-task.html"
+      ],
+      "id": "q51",
+      "query": "python asyncio taskgroup",
+      "wrong": [
+        "https://stackoverflow.com/questions/42231161/asyncio-gather-vs-asyncio-wait-vs-asyncio-taskgroup"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://doc.rust-lang.org/cargo/reference/features.html"
+      ],
+      "id": "q52",
+      "query": "rust cargo features optional dependency",
+      "wrong": [
+        "https://doc.rust-lang.org/cargo/reference/features-examples.html"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control"
+      ],
+      "id": "q53",
+      "query": "http cache-control immutable",
+      "wrong": [
+        "https://debugbear.com/docs/http-cache-control-header",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control",
+        "https://hacks.mozilla.org/2017/01/using-immutable-caching-to-speed-up-the-web",
+        "https://httpwg.org/specs/rfc8246.html",
+        "https://keycdn.com/blog/cache-control-immutable"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://kubernetes.io/docs/concepts/workloads/pods/pod-qos"
+      ],
+      "id": "q54",
+      "query": "kubernetes resource requests limits qos",
+      "wrong": [
+        "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers",
+        "https://scaleops.com/blog/kubernetes-resource-requests-and-limits"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://sqlite.org/foreignkeys.html"
+      ],
+      "id": "q55",
+      "query": "sqlite foreign keys pragma",
+      "wrong": [
+        "https://sqlite.org/pragma.html",
+        "https://sqlitetutorial.net/sqlite-foreign-key",
+        "https://stackoverflow.com/questions/77874084/how-does-sqlites-pragma-foreign-keys-on-reference-the-foreign-keys-tables"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q56",
+      "query": "zsh array indexing",
+      "wrong": [
+        "https://adhdecode.com/articles/zsh/zsh-arrays-guide",
+        "https://gist.github.com/ClementNerma/1dd94cb0f1884b9c20d1ba0037bdcde2",
+        "https://manpages.debian.org/testing/zsh-common/zshparam.1.en.html",
+        "https://manpages.ubuntu.com/manpages/jammy/man1/zshparam.1.html",
+        "https://stackoverflow.com/questions/50427449/behavior-of-arrays-in-bash-scripting-and-zsh-shell-start-index-0-or-1",
+        "https://unix.stackexchange.com/questions/252368/is-there-a-reason-why-the-first-element-of-a-zsh-array-is-indexed-by-1-instead-o"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q57",
+      "query": "systemd timer OnCalendar syntax",
+      "wrong": [
+        "https://freedesktop.org/software/systemd/man/latest/systemd.timer.html",
+        "https://oneuptime.com/blog/post/2026-03-02-how-to-configure-systemd-calendar-timers-on-ubuntu/view",
+        "https://wiki.archlinux.org/title/Systemd/Timers"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://docs.docker.com/reference/compose-file/services"
+      ],
+      "id": "q58",
+      "query": "docker compose depends_on healthcheck condition",
+      "wrong": [
+        "https://docs.docker.com/compose/how-tos/startup-order",
+        "https://last9.io/blog/docker-compose-health-checks",
+        "https://warp.dev/terminus/docker-compose-depends-on"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q59",
+      "query": "typescript moduleResolution bundler",
+      "wrong": [
+        "https://betterstack.com/community/guides/scaling-nodejs/typescript-module-resolution",
+        "https://typescriptlang.org/docs/handbook/modules/guides/choosing-compiler-options.html",
+        "https://typescriptlang.org/tsconfig/moduleResolution.html"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q60",
+      "query": "certificate transparency log RFC",
+      "wrong": [
+        "https://datatracker.ietf.org/doc/html/rfc6962",
+        "https://letsencrypt.org/2025/08/14/rfc-6962-logs-eol",
+        "https://letsencrypt.org/docs/ct-logs",
+        "https://rfc-editor.org/info/rfc6962",
+        "https://rfc-editor.org/info/rfc9162",
+        "https://rfc-editor.org/rfc/rfc6962.html",
+        "https://rfc-editor.org/rfc/rfc9162.html"
+      ]
+    }
+  ],
+  "precision_inclusive_same_document": 0.1801,
+  "precision_strict_exact_only": 0.1456,
+  "queries_with_zero_correct_or_alternate": 15,
+  "totals": {
+    "all_corroborations": 261,
+    "alternate": 9,
+    "exact": 38,
+    "wrong": 214
+  }
+}

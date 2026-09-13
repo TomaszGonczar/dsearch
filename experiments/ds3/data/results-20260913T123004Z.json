@@ -1,0 +1,1147 @@
+{
+  "eval_set_authored_at": "2026-09-13T14:00:00Z",
+  "measured_at": "2026-09-13T12:30:04.662699+00:00",
+  "providers_configured": [
+    "brave",
+    "exa",
+    "tavily",
+    "parallel"
+  ],
+  "queries": [
+    {
+      "id": "q01",
+      "provider_urls": {
+        "brave": [
+          "https://vercel.com/changelog/schema-autocomplete-and-validation-for-vercel-json",
+          "https://vercel.com/docs/project-configuration/vercel-json",
+          "https://github.com/vercel/schemas",
+          "https://utilitytool.vercel.app/json-schema-validator",
+          "https://vercel.com/changelog/protect-your-edge-config-with-a-json-schema",
+          "https://json-schema-validator.vercel.app/",
+          "https://web4-apps-specification.vercel.app/",
+          "https://community.vercel.com/t/add-node-modules-exposed-schema-for-vercel-json/6304",
+          "https://www.safejson.dev/json-schema-validator",
+          "https://github.com/vercel/schemas/blob/main/README.md"
+        ],
+        "exa": [
+          "https://vercel.com/docs/project-configuration/vercel-json",
+          "https://vercel.com/docs/project-configuration/vercel-json.md",
+          "https://vercel.com/changelog/schema-autocomplete-and-validation-for-vercel-json",
+          "https://github.com/vercel/vercel/blob/7e64cc27/packages/cli/src/util/validate-config.ts",
+          "https://catalog.lintel.tools/schemas/schemastore/vercel/",
+          "https://github.com/vercel/vercel/blob/17d9ebaf/packages/config/src/types.ts",
+          "https://github.com/vercel/vercel/pull/7394",
+          "https://examples.vercel.com/docs/project-configuration/vercel-json",
+          "https://vercel.com/docs/functions/configuring-functions/advanced-configuration",
+          "https://github.com/vercel/vercel/blob/17d9ebaf/packages/cli/test/unit/util/dev/validate.test.ts"
+        ],
+        "parallel": [
+          "https://vercel.com/docs/project-configuration/vercel-json.md",
+          "https://vercel.com/changelog/schema-autocomplete-and-validation-for-vercel-json",
+          "https://github.com/vercel/schemas",
+          "https://github.com/vercel/vercel/blob/main/vercel.json",
+          "https://openapi.vercel.sh/vercel.json",
+          "https://github.com/hivemoot/hivemoot/issues/573",
+          "http://github.toolset.workers.dev/vercel/schemas",
+          "https://github.com/vercel/vercel/pull/7394",
+          "https://datatracker.ietf.org/doc/html/draft-fge-json-schema-validation-00",
+          "http://thecompanycheck.com/company/b/vercel/xp8mo9du8e2gc4f3u"
+        ],
+        "tavily": [
+          "https://vercel.com/changelog/schema-autocomplete-and-validation-for-vercel-json",
+          "https://vercel.com/changelog/protect-your-edge-config-with-a-json-schema",
+          "https://vercel.com/docs/project-configuration/vercel-json",
+          "https://community.vercel.com/t/add-node-modules-exposed-schema-for-vercel-json/6304",
+          "https://ai-sdk.dev/docs/reference/ai-sdk-core/json-schema",
+          "https://community.vercel.com/t/why-vercel-throws-invalid-vercel-json-error-when-using-jsonc-comments/38499",
+          "https://vercel.com/docs/project-configuration",
+          "https://github.com/vercel/vercel/discussions/5131",
+          "https://www.jsonschemavalidator.net/s/bm56YYng",
+          "https://stackoverflow.com/questions/79174764/how-do-i-configure-the-vercel-json-app-to-allow-routes-like-api-items"
+        ]
+      }
+    },
+    {
+      "id": "q02",
+      "provider_urls": {
+        "brave": [
+          "https://docs.python.org/3/howto/free-threading-python.html",
+          "https://py-free-threading.github.io/",
+          "https://codspeed.io/blog/state-of-python-3-13-performance-free-threading",
+          "https://dev.to/dmaxdev/python-314-free-threading-real-benchmarks-real-breakage-real-code-3m5",
+          "https://www.nandann.com/blog/python-free-threading-2026",
+          "https://realpython.com/python313-free-threading-jit/",
+          "https://medium.com/@aftab001x/pythons-liberation-the-gil-is-finally-optional-and-why-this-changes-everything-5579b43e969c",
+          "https://www.reddit.com/r/Python/comments/1gk6azd/blog_post_state_of_python_313_performance/",
+          "https://news.ycombinator.com/item?id=42051197",
+          "https://docs.python.org/3.14/howto/free-threading-python.html"
+        ],
+        "exa": [
+          "https://docs.python.org/3/howto/free-threading-python.html",
+          "https://discuss.python.org/t/free-threaded-library-status-website/90807",
+          "https://docs.pythonlang.net/3/whatsnew/3.13.html",
+          "https://docs.pythonlang.net/3/howto/free-threading-python.html",
+          "https://github.com/python/cpython/blob/main/Doc/howto/free-threading-python.rst",
+          "https://codspeed.io/blog/state-of-python-3-13-performance-free-threading",
+          "https://www.osmondvanhemert.nl/posts/251127-python-313-free-threading-gil/",
+          "https://www.javacodegeeks.com/2026/06/python-3-13s-free-threaded-mode-what-no-gil-actually-means-for-your-code.html",
+          "https://realpython.com/python313-free-threading-jit/",
+          "https://blog.abhimanyu-saharan.com/posts/making-the-gil-optional-a-deep-dive-into-pep-703"
+        ],
+        "parallel": [
+          "https://docs.python.org/3.14/howto/free-threading-python.html",
+          "https://docs.python.org/3/whatsnew/3.13.html",
+          "https://realpython.com/python313-free-threading-jit",
+          "https://docs.python.org/3.13/howto/free-threading-python.html",
+          "https://docs.python.org/3.14/library/threading.html",
+          "http://docs.python.org/3/howto/free-threading-python.html",
+          "https://github.com/python/python-docs-ja/blob/3.14/howto/free-threading-python.po?plain=1",
+          "https://byteiota.com/pythons-free-threaded-build-is-stable-should-you-use-it",
+          "https://docs.python.org/3.13/library/threading.html",
+          "http://peps.python.org/pep-0779"
+        ],
+        "tavily": [
+          "https://py-free-threading.github.io",
+          "https://docs.python.org/3/howto/free-threading-python.html",
+          "https://codspeed.io/blog/state-of-python-3-13-performance-free-threading",
+          "https://www.youtube.com/watch?v=gt_Il1VSz5E",
+          "https://github.com/psf/black/issues/4438",
+          "https://discuss.python.org/t/free-threaded-library-status-website/90807",
+          "https://stackoverflow.com/questions/79009542/python-3-13-with-free-thread-is-slow"
+        ]
+      }
+    },
+    {
+      "id": "q03",
+      "provider_urls": {
+        "brave": [
+          "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "https://www.rfc-editor.org/info/rfc9110/",
+          "https://github.com/apache/tomcat/pull/796",
+          "https://rfc.blacklabs.team/rfc9110.html",
+          "https://statuscodefyi.com/guides/rfc-9110-http-semantics/",
+          "https://tex2e.github.io/rfc-translater/html/rfc9110.html",
+          "https://dl.acm.org/doi/10.17487/RFC9110",
+          "https://www.rfc-editor.org/rfc/rfc9110.pdf",
+          "https://www.ietf.org/rfc/rfc9110.pdf",
+          "https://www.rfc-editor.org/errata/eid7695"
+        ],
+        "exa": [
+          "https://www.rfc-editor.org/rfc/rfc9110",
+          "https://www.rfc-editor.org/rfc/rfc9110.pdf",
+          "https://datatracker.ietf.org/doc/html/rfc9110.html",
+          "https://datatracker.ietf.org/doc/html/rfc9110",
+          "https://http.dev/conditional-requests",
+          "https://www.rfc-editor.org/info/rfc9110/",
+          "https://www.potaroo.net/ietf/rfc/rfc9110.txt",
+          "https://greenbytes.de/tech/specs/rfc9110.xhtml",
+          "https://dl.acm.org/doi/10.17487/RFC9110",
+          "https://rfcinfo.com/rfc-9110/"
+        ],
+        "parallel": [
+          "https://datatracker.ietf.org/doc/html/rfc9110.html",
+          "https://ftp.ripe.net/rfc/rfc9110.pdf",
+          "https://ia601605.us.archive.org/9/items/rfc-9110-http-semantics/RFC%209110%20-%20HTTP%20Semantics.pdf",
+          "https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-conditional-00",
+          "https://www.rfc-editor.org/rfc/rfc9110",
+          "https://datatracker.ietf.org/doc/rfc9110",
+          "https://www.rfc-editor.org/rfc/rfc9110.xml",
+          "https://dl.acm.org/doi/abs/10.17487/RFC9110?download=true",
+          "https://dl.acm.org/doi/abs/10.17487/RFC9110",
+          "https://www.rfc-editor.org/info/rfc9110/"
+        ],
+        "tavily": [
+          "https://www.restguide.info/rfc-9110",
+          "https://http.dev/conditional-requests",
+          "https://www.youtube.com/watch?v=CvEBA_Sm-mw",
+          "https://httpwg.org/specs/rfc7232.html",
+          "https://www.rfc-editor.org/info/rfc9110",
+          "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Resources_and_specifications",
+          "https://datatracker.ietf.org/doc/html/rfc9110",
+          "https://stackoverflow.com/questions/33682533/what-makes-conditional-gets-conditional-if-the-resource-is-obtained-in-the-ini",
+          "https://dl.acm.org/doi/10.17487/RFC9110"
+        ]
+      }
+    },
+    {
+      "id": "q04",
+      "provider_urls": {
+        "brave": [
+          "https://dev.to/ozkanpakdil/understanding-and-monitoring-index-and-table-bloat-in-postgresql-4ked",
+          "https://www.crunchydata.com/blog/checking-for-postgresql-bloat",
+          "https://techcommunity.microsoft.com/blog/adforpostgresql/managing-bloat-in-postgresql-using-pgstattuple-on-azure-database-for-postgresql-/4410449",
+          "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.diag-table-ind-bloat.html",
+          "https://oneuptime.com/blog/post/2026-01-30-postgresql-bloat-prevention/view",
+          "https://postgrespro.com/list/thread-id/2530126",
+          "https://www.netdata.cloud/blog/postgresql-database-bloat/",
+          "https://neon.com/docs/extensions/pgstattuple",
+          "https://opensource-db.com/index-bloat-management-in-postgresql/",
+          "https://github.com/keithf4/pg_bloat_check"
+        ],
+        "exa": [
+          "https://www.postgresql.org/docs/18/pgstattuple.html",
+          "https://aws.amazon.com/blogs/database/improve-postgresql-performance-using-the-pgstattuple-extension/",
+          "https://goldlapel.com/grounds/postgres-internals/pgstattuple-measure-bloat",
+          "https://dev.to/ozkanpakdil/understanding-and-monitoring-index-and-table-bloat-in-postgresql-4ked",
+          "https://techcommunity.microsoft.com/blog/adforpostgresql/managing-bloat-in-postgresql-using-pgstattuple-on-azure-database-for-postgresql-/4410449",
+          "https://neon.com/docs/extensions/pgstattuple",
+          "https://pgdash.io/blog/monday-elephant-postgres-tips-3.html?p=",
+          "https://www.percona.com/blog/postgresql-tuple-level-statistics-with-pgstattuple/",
+          "https://www.netdata.cloud/guides/postgres/postgres-table-bloat/",
+          "https://www.cybertec-postgresql.com/en/detecting-table-bloat/"
+        ],
+        "parallel": [
+          "https://github.com/keithf4/pg_bloat_check",
+          "https://github.com/dataegret/pg_index_watch",
+          "https://wiki.postgresql.org/wiki/Show_database_bloat",
+          "https://edu.postgrespro.com/2dintro/08_admin_maintenance.html",
+          "https://wiki.postgresql.org/wiki/Index_Maintenance",
+          "https://www.postgresql.org/docs/current/pgstattuple.html",
+          "https://github.com/keithf4/pg_bloat_check/blob/master/pg_bloat_check.py",
+          "https://www.postgresql.org/about/news/dasha-performance-dashboard-3360/",
+          "https://www.postgresql.eu/events/pgconfde2024/sessions/session/5266/slides/499/Monitoring%20PostgreSQL%20made%20simple%20-%20pgconf.de%2724.pdf",
+          "https://www.postgresql.org/docs/8.3//routine-reindex.html"
+        ],
+        "tavily": [
+          "https://medium.com/@jramcloud1/understanding-and-managing-bloating-in-postgresql-a-complete-guide-for-dbas-95f50670b488",
+          "https://opensource-db.com/index-bloat-management-in-postgresql",
+          "https://neon.com/docs/extensions/pgstattuple",
+          "https://aws.amazon.com/blogs/database/improve-postgresql-performance-using-the-pgstattuple-extension",
+          "https://techcommunity.microsoft.com/blog/adforpostgresql/managing-bloat-in-postgresql-using-pgstattuple-on-azure-database-for-postgresql-/4410449",
+          "https://www.crunchydata.com/blog/checking-for-postgresql-bloat",
+          "https://ozkanpakdil.github.io/posts/my_collections/2025/09-08-postgres-bloat-humanized",
+          "https://www.percona.com/blog/postgresql-tuple-level-statistics-with-pgstattuple",
+          "https://dba.stackexchange.com/questions/302507/find-bloated-tables-and-indexes-in-postgresql-without-extensions"
+        ]
+      }
+    },
+    {
+      "id": "q05",
+      "provider_urls": {
+        "brave": [
+          "https://stackoverflow.com/questions/29914052/how-to-git-rebase-a-branch-with-the-onto-command",
+          "https://git-scm.com/docs/git-rebase",
+          "https://womanonrails.com/git-rebase-onto",
+          "https://medium.com/@gabriellamedas/git-rebase-and-git-rebase-onto-a6a3f83f9cce",
+          "https://www.slingacademy.com/article/exploring-git-rebase-onto-command-examples/",
+          "https://blogs.vmware.com/tanzu/getting-started-with-git-rebase-onto-for-specific-commits/",
+          "https://belev.dev/how-to-effectively-use-git-rebase-onto/",
+          "https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase",
+          "https://gurudas.dev/blog/2023/11/09/git-rebase-onto/",
+          "https://www.headway.io/blog/regain-control-of-branches-with-git-rebase-onto"
+        ],
+        "exa": [
+          "https://git-scm.com/docs/git-rebase.html",
+          "https://git.github.io/htmldocs/git-rebase.html",
+          "https://stackoverflow.com/questions/29914052/how-to-git-rebase-a-branch-with-the-onto-command",
+          "https://git-scm.com/docs/git-rebase",
+          "https://git-scm.com/docs/git-rebase/2.46.1",
+          "https://blogs.vmware.com/tanzu/getting-started-with-git-rebase-onto-for-specific-commits/",
+          "https://git-scm.com/book/en/v2/Git-Branching-Rebasing",
+          "https://code.googlesource.com/git/+/HEAD/Documentation/git-rebase.adoc",
+          "https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase",
+          "https://man.archlinux.org/man/git-rebase.1.en.txt"
+        ],
+        "parallel": [
+          "http://mirrors.edge.kernel.org/pub/software/scm/git/docs/git-rebase.html",
+          "https://git-scm.com/docs/git-rebase",
+          "https://www.man7.org/linux/man-pages//man1/git-rebase.1.html",
+          "https://www.kernel.org/pub/software/scm/git/docs/git-rebase.html",
+          "https://git-scm.com/docs/git-rebase/2.42.1",
+          "https://www.chiark.greenend.org.uk/doc/git/html/git-rebase.html",
+          "https://git-scm.com/docs/git-rebase/2.18.0",
+          "https://manpages.ubuntu.com/manpages/focal/man1/git-rebase.1.html",
+          "https://linux.die.net/man/1/git-rebase",
+          "https://docs.oracle.com/cd/E56344_01/html/E54075/git-rebase-1.html"
+        ],
+        "tavily": [
+          "https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase",
+          "https://git-scm.com/docs/git-rebase",
+          "https://womanonrails.com/git-rebase-onto",
+          "https://thoughtbot.com/blog/rebasing-your-branch-with-git-rebase-onto",
+          "https://medium.com/@gabriellamedas/git-rebase-and-git-rebase-onto-a6a3f83f9cce",
+          "https://www.thinktecture.com/en/tools/git-rebase-onto",
+          "https://www.reddit.com/r/git/comments/t4wgm3/git_rebase_vs_onto",
+          "https://stackoverflow.com/questions/29914052/how-to-git-rebase-a-branch-with-the-onto-command",
+          "https://www.youtube.com/watch?v=f1wnYdLEpgI&vl=en"
+        ]
+      }
+    },
+    {
+      "id": "q06",
+      "provider_urls": {
+        "brave": [
+          "https://last9.io/blog/docker-compose-health-checks/",
+          "https://www.warp.dev/terminus/docker-compose-health-check",
+          "https://oneuptime.com/blog/post/2026-01-30-docker-compose-health-checks/view",
+          "https://www.paulsblog.dev/how-to-successfully-implement-a-healthcheck-in-docker-compose/",
+          "https://docs.docker.com/reference/compose-file/services/",
+          "https://medium.com/@cbaah123/docker-compose-health-checks-made-easy-a-practical-guide-3a340571b88e",
+          "https://medium.com/@saklani1408/configuring-healthcheck-in-docker-compose-3fa6439ee280",
+          "https://github.com/peter-evans/docker-compose-healthcheck",
+          "https://dev.to/jjoc007/mastering-docker-defining-health-checks-in-docker-compose-4l5k",
+          "https://docs.rapidminer.com/2024.1/hub/install/docker-compose/healthchecks.html"
+        ],
+        "exa": [
+          "https://docs.docker.com/reference/compose-file/services/",
+          "https://github.com/compose-spec/compose-spec/blob/a5cd401cbdca20f044d11a05707d206dbbacf22c/spec.md",
+          "https://github.com/docker/docs/blob/main/content/reference/compose-file/services.md",
+          "https://github.com/compose-spec/compose-spec/blob/4fe398641bc04937dbf841eca3004a4be5d0664b/spec.md",
+          "https://oneuptime.com/blog/post/2026-01-30-docker-compose-health-checks/view",
+          "https://last9.io/blog/docker-compose-health-checks/",
+          "https://www.warp.dev/terminus/docker-compose-health-check",
+          "https://docs.docker.com/reference/compose-file/",
+          "https://docs.docker.com/compose/how-tos/startup-order/",
+          "https://oneuptime.com/blog/post/2026-02-08-how-to-use-docker-compose-healthcheck-configuration/view"
+        ],
+        "parallel": [
+          "https://github.com/peter-evans/docker-compose-healthcheck/blob/master/docker-compose.yml",
+          "https://github.com/peter-evans/docker-compose-healthcheck/blob/master/README.md",
+          "https://www.warp.dev/terminus/docker-compose-health-check",
+          "https://toolsops.dev/en/guides/docker-compose-healthchecks",
+          "https://gist.github.com/supermarsx/d4c8ae4b11134247ac3f0acf75258290",
+          "https://docs.docker.com/reference/compose-file/services",
+          "https://dev.to/jjoc007/mastering-docker-defining-health-checks-in-docker-compose-4l5k",
+          "https://docs.docker.com/compose/gettingstarted",
+          "https://devhints.io/docker-compose",
+          "https://docs.docker.com/reference/compose-file"
+        ],
+        "tavily": [
+          "https://oneuptime.com/blog/post/2026-01-30-docker-compose-health-checks/view",
+          "https://dev.to/jjoc007/mastering-docker-defining-health-checks-in-docker-compose-4l5k",
+          "https://medium.com/@cbaah123/docker-compose-health-checks-made-easy-a-practical-guide-3a340571b88e",
+          "https://www.warp.dev/terminus/docker-compose-health-check",
+          "https://last9.io/blog/docker-compose-health-checks",
+          "https://www.paulsblog.dev/how-to-successfully-implement-a-healthcheck-in-docker-compose",
+          "https://docs.docker.com/reference/compose-file/services",
+          "https://medium.com/@saklani1408/configuring-healthcheck-in-docker-compose-3fa6439ee280",
+          "https://docs.rapidminer.com/2024.1/hub/install/docker-compose/healthchecks.html",
+          "https://github.com/peter-evans/docker-compose-healthcheck"
+        ]
+      }
+    },
+    {
+      "id": "q07",
+      "provider_urls": {
+        "brave": [
+          "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html",
+          "https://stackoverflow.com/questions/78636946/what-are-the-differences-between-typescript-s-satisfies-operator-and-type-assert",
+          "https://www.totaltypescript.com/clarifying-the-satisfies-operator",
+          "https://www.freecodecamp.org/news/typescript-satisfies-operator/",
+          "https://mimo.org/glossary/typescript/satisfies",
+          "https://refine.dev/blog/typescript-satisfies-operator/",
+          "https://dev.to/benarambide/understanding-typescripts-satisfies-vs-as-3d6",
+          "https://medium.com/@robinviktorsson/a-comprehensive-guide-to-the-satisfies-operator-in-typescript-with-practical-examples-3d77a873dcf8",
+          "https://medium.com/@jsmanifest/the-power-of-typescripts-satisfies-operator-5acd3b151440",
+          "https://www.builder.io/blog/satisfies-operator"
+        ],
+        "exa": [
+          "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html",
+          "https://www.totaltypescript.com/clarifying-the-satisfies-operator",
+          "https://blog.openreplay.com/typescript-satisfies-operator/",
+          "https://stackoverflow.com/questions/78636946/what-are-the-differences-between-typescript-s-satisfies-operator-and-type-assert",
+          "https://typescriptworld.com/typescript-satisfies-operator-deep-dive",
+          "https://engineered.at/articles/typescript-the-satisfies-operator",
+          "https://www.freecodecamp.org/news/typescript-satisfies-operator/",
+          "https://refine.dev/blog/typescript-satisfies-operator/",
+          "https://typescript.website/how-to-use-satisfies-in-typescript-with-safer-object-and-config-patterns",
+          "https://dev.to/playfulprogramming/a-deep-dive-into-the-satisfies-operator-in-typescript-1b3n"
+        ],
+        "parallel": [
+          "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html",
+          "https://www.freecodecamp.org/news/typescript-satisfies-operator",
+          "https://www.programiz.com/typescript/operators",
+          "https://mimo.org/glossary/typescript/satisfies",
+          "https://www.learningtypescript.com/articles/the-satisfies-operator",
+          "https://mimo.org/glossary/typescript/operator",
+          "https://typescript.tv/new-features/what-is-the-satisfies-operator-in-typescript",
+          "https://www.tutorialspoint.com/typescript/typescript_operators.htm",
+          "https://salman0butt.github.io/handbook/docs/typescript/satisfies-operator",
+          "https://www.typescriptlang.org/docs/handbook/intro.html"
+        ],
+        "tavily": [
+          "https://refine.dev/blog/typescript-satisfies-operator",
+          "https://mimo.org/glossary/typescript/satisfies",
+          "https://www.freecodecamp.org/news/typescript-satisfies-operator",
+          "https://www.convex.dev/typescript/advanced/type-operators-manipulation/typescript-satisfies",
+          "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html",
+          "https://www.reddit.com/r/webdev/comments/zrt1rb/the_satisfies_operator_in_typescript_49_is_a_game",
+          "https://www.totaltypescript.com/clarifying-the-satisfies-operator",
+          "https://www.youtube.com/watch?v=r1L35zxZQPE",
+          "https://stackoverflow.com/questions/78636946/what-are-the-differences-between-typescript-s-satisfies-operator-and-type-assert"
+        ]
+      }
+    },
+    {
+      "id": "q08",
+      "provider_urls": {
+        "brave": [
+          "https://docs.rs/tokio/latest/tokio/macro.select.html",
+          "https://developerlife.com/2024/07/10/rust-async-cancellation-safety-tokio/",
+          "https://users.rust-lang.org/t/cancel-safety-in-async-and-tokio-select/92381",
+          "https://www.reddit.com/r/rust/comments/1e019tc/tutorial_rust_async_in_practice_tokioselect/",
+          "https://stackoverflow.com/questions/74547855/how-to-assess-cancel-safety-of-select",
+          "https://rfd.shared.oxide.computer/rfd/0400",
+          "https://github.com/logos-blockchain/logos-blockchain/issues/3513",
+          "https://stackoverflow.com/questions/77847411/how-to-tokioselect-futures-but-never-cancel-slow-ones",
+          "https://docs.rs/tokio-cancel-guard/latest/tokio_cancel_guard/",
+          "https://docs.rs/tokio-util/latest/tokio_util/sync/struct.CancellationToken.html"
+        ],
+        "exa": [
+          "https://docs.rs/tokio/latest/tokio/macro.select.html",
+          "https://tokio.rs/tokio/tutorial/select",
+          "https://docs.rs/tokio/latest/src/tokio/macros/select.rs.html",
+          "https://github.com/tokio-rs/tokio/blob/c637f6e7/tokio/src/macros/select.rs",
+          "https://biriukov.dev/posts/async-rust-gocha-tokio-cancelation-select-future-then/",
+          "https://stackoverflow.com/questions/74547855/how-to-assess-cancel-safety-of-select",
+          "https://docs.rs/tokio/1.46.1/tokio/macro.select.html",
+          "http://developerlife.com/2024/07/10/rust-async-cancellation-safety-tokio/",
+          "https://users.rust-lang.org/t/cancel-safety-in-async-and-tokio-select/92381",
+          "https://users.rust-lang.org/t/cancellation-safety-of-locks-in-select/137188"
+        ],
+        "parallel": [
+          "https://docs.rs/tokio/1.21.2/i686-unknown-linux-gnu/tokio/macro.select.html",
+          "https://users.rust-lang.org/t/cancel-safety-in-async-and-tokio-select/92381",
+          "https://docs.rs/tokio/latest/src/tokio/macros/select.rs.html",
+          "https://users.rust-lang.org/t/cancellation-safety-of-locks-in-select/137188",
+          "https://docs.rs/tokio/latest/tokio/macro.select.html",
+          "https://docs.rs/tokio/1.35.1/i686-unknown-linux-gnu/macro.select.html",
+          "https://users.rust-lang.org/t/is-tokios-select-cancel-safe/138050",
+          "https://docs.rs/tokio/1.14.0/tokio/macro.select.html",
+          "https://tokio.rs/tokio/tutorial/select",
+          "https://github.com/tokio-rs/tokio/blob/master/tokio/src/macros/select.rs"
+        ],
+        "tavily": []
+      }
+    },
+    {
+      "id": "q09",
+      "provider_urls": {
+        "brave": [
+          "https://kubernetes.io/docs/tasks/run-application/configure-pdb/",
+          "https://www.chkk.io/blog/pod-disruption-budgets",
+          "https://medium.com/geekculture/kubernetes-pod-disruption-budgets-pdb-b74f3dade6c1",
+          "https://kubernetes.io/docs/concepts/workloads/pods/disruptions/",
+          "https://www.gruntwork.io/blog/avoiding-outages-in-your-kubernetes-cluster-using-poddisruptionbudgets",
+          "https://www.reddit.com/r/kubernetes/comments/1aumj5w/pod_disruption_budgets/",
+          "https://zesty.co/finops-glossary/k8s-pod-disruption-budgets/",
+          "https://www.cloudbolt.io/kubernetes-pod-scheduling/pod-disruption-budgets/",
+          "https://scaleops.com/blog/pod-disruption-budget/",
+          "https://oneuptime.com/blog/post/2026-01-30-kubernetes-pdb-strategies/view"
+        ],
+        "exa": [
+          "https://kubernetes.io/docs/tasks/run-application/configure-pdb/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/disruptions/",
+          "https://kubernetes.io/docs/reference/kubernetes-api/policy/pod-disruption-budget-v1/",
+          "https://kubernetes.io/docs/reference/kubectl/generated/kubectl_create/kubectl_create_poddisruptionbudget/",
+          "https://v1-36.docs.kubernetes.io/docs/tasks/run-application/configure-pdb/",
+          "https://v1-36.docs.kubernetes.io/docs/concepts/workloads/pods/disruptions/",
+          "https://www.devopsness.com/blog/kubernetes-pod-disruption-budgets-node-drains",
+          "https://www.chkk.io/blog/pod-disruption-budgets",
+          "https://scaleops.com/blog/pod-disruption-budget/",
+          "https://www.techopsexamples.com/p/how-kubernetes-pod-disruption-budgets-work-and-how-to-use-pdbs"
+        ],
+        "parallel": [
+          "https://v1-36.docs.kubernetes.io/docs/tasks/run-application/configure-pdb/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/disruptions",
+          "https://kubespec.dev/kubernetes/policy/v1/PodDisruptionBudget",
+          "https://kubernetes.io/docs/reference/kubernetes-api/policy-resources/pod-disruption-budget-v1",
+          "https://v1-32.docs.kubernetes.io/docs/tasks/run-application/configure-pdb",
+          "https://www.elastic.co/docs/deploy-manage/deploy/cloud-on-k8s/pod-disruption-budget",
+          "https://kubernetes.io/docs/tasks/run-application/configure-pdb",
+          "https://docs.oracle.com/en/industries/communications/cloud-native-core/3.24.2/nef_install/pod-disruption-budget-configurations.html",
+          "https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/pod_disruption_budget",
+          "https://docs.okd.io/4.18/rest_api/policy_apis/poddisruptionbudget-policy-v1.html"
+        ],
+        "tavily": [
+          "https://zesty.co/finops-glossary/k8s-pod-disruption-budgets",
+          "https://medium.com/@muppedaanvesh/a-hand-on-guide-to-kubernetes-pod-disruption-budget-pdb-%EF%B8%8F-ebe3155a4b7c",
+          "https://cast.ai/blog/pod-disruption-budgets-in-your-deployment",
+          "https://www.gruntwork.io/blog/avoiding-outages-in-your-kubernetes-cluster-using-poddisruptionbudgets",
+          "https://scaleops.com/blog/pod-disruption-budget",
+          "https://www.chkk.io/blog/pod-disruption-budgets",
+          "https://www.cloudbolt.io/kubernetes-pod-scheduling/pod-disruption-budgets",
+          "https://kubernetes.io/docs/tasks/run-application/configure-pdb",
+          "https://kubernetes.io/docs/concepts/workloads/pods/disruptions"
+        ]
+      }
+    },
+    {
+      "id": "q10",
+      "provider_urls": {
+        "brave": [
+          "https://runs-on.com/github-actions/the-matrix-strategy/",
+          "https://medium.com/credera-engineering/matrix-strategies-in-github-actions-56dd6defeb04",
+          "https://docs.github.com/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow",
+          "https://codefresh.io/learn/github-actions/github-actions-matrix/",
+          "https://devopsdirective.com/posts/2025/08/advanced-github-actions-matrix/",
+          "https://stackoverflow.com/questions/75318609/matrix-strategy-over-entire-workflow-in-github-actions",
+          "https://www.geeksforgeeks.org/git/the-matrix-strategy-in-github-actions/",
+          "https://www.reddit.com/r/learnprogramming/comments/1oufk17/anyone_here_using_github_actions_matrix_strategy/",
+          "https://depot.dev/blog/github-actions-matrix-strategy",
+          "https://graphite.com/guides/github-actions-matrix"
+        ],
+        "exa": [
+          "https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/run-job-variations",
+          "https://docs.github.com/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow",
+          "https://blog.pmunhoz.com/blog/github-actions/github-actions-matrix-builds/",
+          "https://github.com/karldreher/example-matrix-strategy",
+          "https://runs-on.com/github-actions/the-matrix-strategy/",
+          "https://octopus.com/devops/github-actions/github-actions-matrix/",
+          "https://medium.com/credera-engineering/matrix-strategies-in-github-actions-56dd6defeb04",
+          "https://oneuptime.com/blog/post/2026-02-02-github-actions-matrix-builds/view",
+          "https://dev.to/tejastn10/mastering-github-actions-strategy-matrix-deploy-smarter-not-harder-28po",
+          "https://stackoverflow.com/questions/75318609/matrix-strategy-over-entire-workflow-in-github-actions"
+        ],
+        "parallel": [
+          "https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs",
+          "https://notes.kodekloud.com/docs/GitHub-Actions-Certification/GitHub-Actions-Core-Concepts/Using-a-matrix-for-your-jobs/page",
+          "https://notes.kodekloud.com/docs/GitHub-Actions/GitHub-Actions-Core-Concepts/Using-a-matrix-for-your-jobs/page",
+          "https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/run-job-variations",
+          "https://graphite.com/guides/github-actions-matrix",
+          "https://github.com/actions-matrix",
+          "https://www.kenmuse.com/blog/dynamic-build-matrices-in-github-actions",
+          "https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions",
+          "https://github.com/marketplace/actions/matrix-extended",
+          "http://github.com/features/actions"
+        ],
+        "tavily": [
+          "https://www.geeksforgeeks.org/git/the-matrix-strategy-in-github-actions",
+          "https://www.youtube.com/watch?v=FSQDtRMtSHo",
+          "https://runs-on.com/github-actions/the-matrix-strategy",
+          "https://octopus.com/devops/github-actions/github-actions-matrix",
+          "https://medium.com/credera-engineering/matrix-strategies-in-github-actions-56dd6defeb04",
+          "https://docs.github.com/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow",
+          "https://docs.github.com/actions/using-workflows/workflow-syntax-for-github-actions",
+          "https://stackoverflow.com/questions/75318609/matrix-strategy-over-entire-workflow-in-github-actions",
+          "https://github.com/marketplace/actions/setup-matrix"
+        ]
+      }
+    },
+    {
+      "id": "q11",
+      "provider_urls": {
+        "brave": [
+          "https://www.sqlite.org/wal.html",
+          "https://mohit-bhalla.medium.com/understanding-wal-mode-in-sqlite-boosting-performance-in-sql-crud-operations-for-ios-5a8bd8be93d2",
+          "https://www.sqlite.org/walformat.html",
+          "https://blog.pecar.me/sqlite-wal/",
+          "https://documentation.xojo.com/topics/databases/supported_engines/sqlite/write-ahead_logging.html",
+          "https://oneuptime.com/blog/post/2026-03-02-how-to-set-up-sqlite-with-wal-mode-on-ubuntu/view",
+          "https://www.drupal.org/node/2769027",
+          "https://deepwiki.com/sqlite/sqlite/3.4-write-ahead-logging-(wal)",
+          "https://adhdecode.com/articles/sqlite/sqlite-wal-mode-explained/",
+          "https://tool.oschina.net/uploads/apidocs/sqlite/wal.html"
+        ],
+        "exa": [
+          "https://www.sqlite.org/wal.html",
+          "https://www.sqlite.org/walformat.html",
+          "https://www3.sqlite.org/wal.html",
+          "https://www.sqlite.org/wal.html?v=1.1.1",
+          "https://github.com/sqlite/sqlite/blob/master/src/wal.c",
+          "https://flaviocopes.com/courses/sqlite/wal-mode/",
+          "http://www2.sqlite.org/draft/wal.html",
+          "https://a1.sqlite.org/walformat.html",
+          "https://til.simonwillison.net/sqlite/enabling-wal-mode",
+          "https://deepwiki.com/sqlite/sqlite/3.4-write-ahead-logging-(wal)"
+        ],
+        "parallel": [
+          "https://www.sqlite.org/wal.html",
+          "https://www2.sqlite.org/matrix/wal.html",
+          "https://sqlite.org/docsrc/raw/80055d0c0e395030879cbc777261f5dde0dfed3f?at=wal.in",
+          "https://sqlite.org/walformat.html",
+          "https://wizardforcel.gitbooks.io/sqlite-doc-en/content/48.html",
+          "https://sqlite.org/search?i=1&q=%22write-ahead%22%2B%22logging%22",
+          "https://www.drupal.org/node/2769027",
+          "https://www.postgresql.org/docs/19/wal-intro.html",
+          "https://www.postgresql.org/docs/15/wal-intro.html",
+          "https://android.googlesource.com/platform/docs/source.android.com/+/android-o-mr1-iot-release-1.0.7/en/devices/tech/perf/compatibility-wal.md"
+        ],
+        "tavily": [
+          "https://steemit.com/blog/@justyy/improve-multithreading-performance-of-sqlite-database-by-wal-write-ahead-logging",
+          "https://sqldocs.org/sqlite-write-ahead-logging",
+          "https://sqldocs.org/sqlite-database/sqlite-write-ahead-logging",
+          "https://helloacm.com/improve-multithreading-performance-of-sqlite-database-by-wal-write-ahead-logging",
+          "https://www.slingacademy.com/article/sqlite-write-ahead-logging-wal-explained-in-3-minutes",
+          "https://til.jingkaihe.com/scale-read-write-concurrency-with-SQLite-WAL-mode",
+          "https://file-extensions.com/docs/db-wal",
+          "https://stackoverflow.com/questions/52312594/how-to-enable-write-ahead-logwal-journal-mode-for-sqlite-in-android",
+          "https://forensic.manuals.mobiledit.com/MM/sqlite-write-ahead-log-wal-in-mobiledit-forensic",
+          "https://stackoverflow.com/questions/39149065/sqlite-write-ahead-logging-wal-journal-mode-with-attached-database"
+        ]
+      }
+    },
+    {
+      "id": "q12",
+      "provider_urls": {
+        "brave": [
+          "https://stackoverflow.com/questions/22759345/nginx-trailing-slash-in-proxy-pass-url",
+          "https://www.getpagespeed.com/server-setup/nginx/nginx-proxy-pass-trailing-slash",
+          "https://www.digitalocean.com/community/questions/i-need-help-understanding-trailing-slash-behaviour-in-nginx",
+          "https://oneuptime.com/blog/post/2025-12-16-fix-trailing-slash-nginx-proxy-pass/view",
+          "https://linuxcapable.com/nginx-proxy-pass-trailing-slash-explained/",
+          "https://mattbell.dev/til/nginx-vars-trailing-slashes/",
+          "https://serverfault.com/questions/607615/using-trailing-slashes-in-nginx-configuration",
+          "https://www.reddit.com/r/nginx/comments/1dfvbf8/nginx_reverse_proxy_random_slash_appearing_in_the/",
+          "https://serverfault.com/questions/1063540/nginx-location-proxy-pass-behaviour-differs-when-used-with-or-without-trailing",
+          "https://dev.to/schiff_heimlich/nginx-proxypass-the-trailing-slash-that-changes-everything-47b3"
+        ],
+        "exa": [
+          "https://nginx.org/en/docs/http/ngx_http_proxy_module.html",
+          "https://www.getpagespeed.com/server-setup/nginx/nginx-proxy-pass-trailing-slash",
+          "https://serverfault.com/questions/1063540/nginx-location-proxy-pass-behaviour-differs-when-used-with-or-without-trailing",
+          "https://www.getpagespeed.com/server-setup/nginx/nginx-proxy_pass",
+          "https://stackoverflow.com/questions/22759345/nginx-trailing-slash-in-proxy-pass-url",
+          "https://stackoverflow.com/questions/78884120/i-need-help-understanding-trailing-slash-behaviour-in-nginx",
+          "https://mailman.nginx.org/pipermail/nginx/2018-March/055836.html",
+          "https://serverfault.com/questions/562425/nginx-unwanted-location-redirect-with-trailing-slash",
+          "https://www.darazhost.com/proxy_pass-how-nginx-forwards-to-a-backend/",
+          "https://www.digitalocean.com/community/questions/i-need-help-understanding-trailing-slash-behaviour-in-nginx"
+        ],
+        "parallel": [
+          "https://trac.nginx.org/nginx/ticket/786?cnum_hist=2&cversion=0",
+          "https://serverfault.com/questions/1063540/nginx-location-proxy-pass-behaviour-differs-when-used-with-or-without-trailing",
+          "https://stackoverflow.com/questions/22759345/nginx-trailing-slash-in-proxy-pass-url",
+          "https://stackoverflow.com/questions/17422558/nginx-and-trailing-slash-with-proxy-pass",
+          "https://dev.to/rohitsharmaj7/trailing-and-non-trailing-slash-in-nginx-1ghp",
+          "https://dev.to/schiff_heimlich/nginx-proxypass-the-trailing-slash-that-changes-everything-47b3",
+          "https://stackoverflow.com/questions/53649885/a-little-confused-about-trailing-slash-behavior-in-nginx",
+          "https://nginx.org/en/CHANGES-1.10",
+          "https://serverfault.com/questions/656380/nginx-proxy-pass-with-uri-modification",
+          "https://trac.nginx.org/nginx/ticket/1253"
+        ],
+        "tavily": [
+          "https://www.getpagespeed.com/server-setup/nginx/nginx-proxy-pass-trailing-slash",
+          "https://oneuptime.com/blog/post/2025-12-16-fix-trailing-slash-nginx-proxy-pass/view",
+          "https://forum.cloudron.io/topic/12314/i-need-help-understanding-trailing-slash-behaviour-in-nginx",
+          "https://www.digitalocean.com/community/questions/i-need-help-understanding-trailing-slash-behaviour-in-nginx",
+          "https://mattbell.dev/til/nginx-vars-trailing-slashes",
+          "https://dev.to/danielkun/nginx-everything-about-proxypass-2ona",
+          "https://stackoverflow.com/questions/22759345/nginx-trailing-slash-in-proxy-pass-url",
+          "http://10.0.0.25:8080;",
+          "https://www.reddit.com/r/nginx/comments/1fmauah/nginx_returns_404_with_base_url_without_forward"
+        ]
+      }
+    },
+    {
+      "id": "q13",
+      "provider_urls": {
+        "brave": [
+          "https://pythontest.com/framework/pytest/pytest-session-scoped-fixtures/",
+          "https://docs.pytest.org/en/6.2.x/fixture.html",
+          "https://docs.pytest.org/en/stable/example/special.html",
+          "https://stackoverflow.com/questions/76859293/function-vs-class-vs-module-vs-package-vs-session-for-fixture-scopes-in-pytest",
+          "https://pytest-with-eric.com/fixtures/pytest-fixture-scope/",
+          "https://qaskills.sh/blog/pytest-fixtures-scope-complete-guide",
+          "https://docs.pytest.org/en/stable/how-to/fixtures.html",
+          "https://docs.pytest.org/en/6.2.x/example/special.html",
+          "https://happytest.readthedocs.io/en/latest/fixture/",
+          "https://stackoverflow.com/questions/26899001/pytest-how-do-i-use-global-session-wide-fixtures"
+        ],
+        "exa": [
+          "https://docs.pytest.org/en/stable/reference/fixtures.html",
+          "https://pytest.org/en/latest/reference/fixtures.html",
+          "https://docs.pytest.org/en/stable/how-to/fixtures.html",
+          "https://pytest.org/en/latest/how-to/fixtures.html",
+          "https://docs.pytest.org/en/7.4.x/reference/fixtures.html",
+          "https://stackoverflow.com/questions/76859293/function-vs-class-vs-module-vs-package-vs-session-for-fixture-scopes-in-pytest",
+          "https://docs.pytest.org/en/9.0.x/how-to/fixtures.html",
+          "https://pytest-with-eric.com/fixtures/pytest-fixture-scope/",
+          "https://doc.pytest.org/en/latest/%5Fmodules/%5Fpytest/fixtures.html",
+          "https://docs.pytest.org/en/7.0.x/reference/fixtures.html"
+        ],
+        "parallel": [
+          "https://docs.pytest.org/en/7.1.x/how-to/fixtures.html",
+          "https://pythontest.com/framework/pytest/pytest-fixture-scope",
+          "https://doc.pytest.org/en/6.2.x/fixture.html",
+          "https://pythontest.com/framework/pytest/pytest-session-scoped-fixtures",
+          "https://doc.pytest.org/en/latest/_modules/_pytest/fixtures.html",
+          "https://docs.pytest.org/en/7.1.x/_modules/_pytest/fixtures.html",
+          "https://docs.pytest.org/en/6.2.x/_modules/_pytest/fixtures.html",
+          "https://pytest.hogwarts.ceshiren.com/pytest/_modules/_pytest/fixtures.html",
+          "https://github.com/pytest-dev/pytest/blob/main/src/_pytest/fixtures.py",
+          "https://pypi.org/project/testing-fixtures"
+        ],
+        "tavily": [
+          "https://www.youtube.com/watch?v=FUFn4YeeXK8",
+          "https://pytest-with-eric.com/fixtures/pytest-fixture-scope",
+          "https://qaskills.sh/blog/pytest-fixtures-scope-complete-guide",
+          "https://pythontest.com/framework/pytest/pytest-session-scoped-fixtures",
+          "https://docs.pytest.org/en/6.2.x/explanation/fixtures.html",
+          "https://pawamoy.github.io/posts/same-pytest-fixtures-with-different-scopes",
+          "https://docs.pytest.org/en/stable/how-to/fixtures.html",
+          "https://stackoverflow.com/questions/76859293/function-vs-class-vs-module-vs-package-vs-session-for-fixture-scopes-in-pytest",
+          "https://docs.pytest.org/en/stable/reference/fixtures.html"
+        ]
+      }
+    },
+    {
+      "id": "q14",
+      "provider_urls": {
+        "brave": [
+          "https://developer.hashicorp.com/terraform/cli/commands/state/mv",
+          "https://spacelift.io/blog/terraform-state-mv",
+          "https://developer.hashicorp.com/terraform/cli/state/move",
+          "https://oneuptime.com/blog/post/2026-02-23-terraform-state-mv-command/view",
+          "https://docs.devnetexperttraining.com/static-docs/Terraform/docs/cli/commands/state/mv.html",
+          "https://github.com/hashicorp/web-unified-docs/blob/main/content/terraform/v1.15.x/docs/cli/commands/state/mv.mdx",
+          "https://medium.com/@sskender_/moving-terraform-resources-through-state-files-9973f4dde5f2",
+          "https://leyaa.ai/codefly/learn/terraform/qna/how-to-use-terraform-state-mv",
+          "https://docs.w3cub.com/terraform/commands/state/mv.html",
+          "https://oneuptime.com/blog/post/2026-01-30-terraform-state-migration/view"
+        ],
+        "exa": [
+          "https://developer.hashicorp.com/terraform/cli/commands/state/mv",
+          "https://developer.hashicorp.com/terraform/cli/state/move",
+          "https://developer.hashicorp.com/terraform/language/state/refactor",
+          "https://docs.hashicorp.com/terraform/cli/commands/state",
+          "https://spacelift.io/blog/terraform-state-mv",
+          "https://github.com/hashicorp/terraform/blob/8d3a8b76/internal/command/state_mv.go",
+          "https://github.com/hashicorp/web-unified-docs/blob/main/content/terraform/v1.15.x/docs/cli/commands/state/mv.mdx",
+          "https://developer.hashicorp.com/terraform/language/modules/develop/refactoring",
+          "https://oneuptime.com/blog/post/2026-02-23-terraform-state-mv-command/view",
+          "https://oneuptime.com/blog/post/2026-02-23-terraform-move-resources-between-state-files/view"
+        ],
+        "parallel": [
+          "https://developer.hashicorp.com/terraform/cli/v1.2.x/commands/state/mv",
+          "https://developer.hashicorp.com/terraform/cli/commands/state/mv",
+          "https://github.com/hashicorp/web-unified-docs/blob/main/content/terraform/v1.15.x/docs/cli/commands/state/mv.mdx",
+          "https://developer.hashicorp.com/terraform/cli/state/move",
+          "https://developer.hashicorp.com/terraform/cli/commands/state",
+          "https://developer.hashicorp.com/terraform/cli/v1.9.x/commands/state",
+          "https://www.ibm.com/support/pages/migrating-terraform-workspace-state-across-organizations-and-backends-terraform-cli-hcp-cloud-and-terraform-enterprise",
+          "https://www.ibm.com/support/pages/how-split-state-files",
+          "https://stategraph.com/docs/reference/terraform-compatibility",
+          "https://www.ibm.com/support/pages/moving-terraform-resources-address-or-outside-modules"
+        ],
+        "tavily": [
+          "https://spacelift.io/blog/terraform-state-mv",
+          "https://oneuptime.com/blog/post/2026-02-23-terraform-state-mv-command/view",
+          "https://developer.hashicorp.com/terraform/language/state/refactor",
+          "https://developer.hashicorp.com/terraform/cli/commands/state/mv",
+          "https://developer.hashicorp.com/terraform/cli/state/move",
+          "https://discuss.hashicorp.com/t/state-version-created-by-state-mv-command-not-supported/26567",
+          "https://medium.com/@rao.gr/navigating-terraform-state-mastering-mv-rm-and-import-89791b3bacac",
+          "https://aws.plainenglish.io/terraforms-moved-block-blew-my-mind-goodbye-terraform-state-mv-forever-a5c50f98f033",
+          "https://stackoverflow.com/questions/68314152/difference-between-terraform-import-and-terraform-state-mv"
+        ]
+      }
+    },
+    {
+      "id": "q15",
+      "provider_urls": {
+        "brave": [
+          "https://webpack.js.org/guides/tree-shaking/",
+          "https://medium.com/@craigmiller160/how-to-fully-optimize-webpack-4-tree-shaking-405e1c76038",
+          "https://www.smashingmagazine.com/2021/05/tree-shaking-reference-guide/",
+          "https://docs.webpack.js.org/guides/tree-shaking",
+          "https://dev.to/fogel/tree-shaking-in-webpack-5apj",
+          "https://v4.webpack.js.org/guides/tree-shaking/",
+          "https://blog.saeloun.com/2022/11/24/tree-shaking-in-webpack-5/",
+          "https://tedpiotrowski.svbtle.com/how-does-tree-shaking-work",
+          "https://github.com/mrdoob/three.js/issues/16059",
+          "https://www.jonathancreamer.com/webpack-tree-shaking-in-3-easy-steps/"
+        ],
+        "exa": [
+          "https://webpack.js.org/guides/tree-shaking",
+          "https://docs.webpack.js.org/guides/tree-shaking",
+          "https://github.com/webpack/webpack/blob/main/examples/side-effects/README.md",
+          "https://stackoverflow.com/questions/49160752/what-does-webpack-4-expect-from-a-package-with-sideeffects-false",
+          "https://webpack.js.org/",
+          "https://github.com/webpack/webpack-doc-kit/blob/main/pages/guides/optimization/tree-shaking.md",
+          "https://www.code-splitting.com/advanced-tree-shaking-dependency-optimization/configuring-sideeffects-for-optimal-tree-shaking/",
+          "https://typeerror.org/docs/webpack~5/guides/tree-shaking",
+          "https://weiweiwu.me/posts/demystifying-tree-shaking/",
+          "https://blog.saeloun.com/"
+        ],
+        "parallel": [
+          "https://github.com/webpack/webpack-doc-kit/blob/main/pages//guides/optimization/tree-shaking.md",
+          "https://github.com/webpack/webpack/blob/main/examples/side-effects/README.md",
+          "https://webpack.js.org/guides/tree-shaking",
+          "https://github.com/webpack/webpack/blob/main/examples/side-effects/template.md",
+          "https://npm.hexdocs.pm/NPM.SideEffects.html",
+          "https://github.com/webpack/webpack/issues/15486",
+          "https://dev.to/fogel/tree-shaking-in-webpack-5apj",
+          "https://bazos.forum/_/https/webpack.js.org/guides/tree-shaking",
+          "https://github.com/webpack/webpack/issues/9337",
+          "https://github.com/webpack/docs.webpack.js.org/blob/main/guides/tree-shaking.mdx"
+        ],
+        "tavily": [
+          "https://blog.saeloun.com/2022/11/24/tree-shaking-in-webpack-5",
+          "https://dev.to/markliu2013/deep-dive-into-sideeffects-configuration-14me",
+          "https://www.reddit.com/r/nextjs/comments/1fz89wu/using_sideeffects_configuration_of_webpack",
+          "https://github.com/orgs/web-infra-dev/discussions/17",
+          "https://github.com/mrdoob/three.js/issues/16059",
+          "https://rspack.rs/guide/optimization/tree-shaking",
+          "https://www.jonathancreamer.com/webpack-tree-shaking-in-3-easy-steps",
+          "https://stackoverflow.com/questions/68857475/why-tree-shaking-remove-the-side-effects-code",
+          "https://tianyaschool.medium.com/webpack-5-tree-shaking-and-module-federation-6a21715c66e6",
+          "https://webpack.js.org/guides/tree-shaking"
+        ]
+      }
+    },
+    {
+      "id": "q16",
+      "provider_urls": {
+        "brave": [
+          "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control",
+          "https://datatracker.ietf.org/doc/html/rfc5861",
+          "https://www.keycdn.com/blog/keycdn-supports-stale-while-revalidate",
+          "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control",
+          "https://www.fastly.com/documentation/guides/concepts/cache/stale/",
+          "https://www.debugbear.com/docs/stale-while-revalidate",
+          "https://web.dev/articles/stale-while-revalidate",
+          "https://medium.com/@rathkalyforgna/what-is-stale-while-revalidate-f1f22d408f6a",
+          "https://developers.cloudflare.com/cache/concepts/revalidation/",
+          "https://www.vergecloud.com/blog/stale-while-revalidate/"
+        ],
+        "exa": [
+          "https://www.rfc-editor.org/rfc/rfc5861.html",
+          "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control",
+          "https://httpwg.org/specs/rfc5861.html",
+          "https://http.dev/cache-control",
+          "https://developers.cloudflare.com/cache/concepts/revalidation/",
+          "https://www.fastly.com/documentation/guides/concepts/cache/stale",
+          "https://web.dev/articles/stale-while-revalidate",
+          "https://www.ietf.org/rfc/rfc5861.txt",
+          "https://www.rfc-editor.org/info/rfc5861/",
+          "https://www.varnish-software.com/developers/tutorials/http-caching-basics/"
+        ],
+        "parallel": [
+          "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control",
+          "https://www.rfc-editor.org/rfc/rfc5861.html",
+          "https://datatracker.ietf.org/doc/html/rfc5861",
+          "https://httpwg.org/specs/rfc5861.html",
+          "http://community.cloudflare.com/t/support-for-stale-while-revalidate/496788/16",
+          "https://developers.cloudflare.com/cache/concepts/revalidation",
+          "https://datatracker.ietf.org/doc/rfc5861",
+          "https://www.rfc-editor.org/info/rfc5861",
+          "https://datatracker.ietf.org/doc/draft-nottingham-http-stale-controls/00/",
+          "https://www.rfc-editor.org/rfc/rfc9213.html"
+        ],
+        "tavily": [
+          "https://www.varnish-software.com/developers/tutorials/http-caching-basics",
+          "https://www.bennadel.com/blog/4794-using-stale-while-revalidate-cache-control-headers-in-htmx-and-coldfusion.htm",
+          "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control",
+          "https://github.com/kornelski/http-cache-semantics/issues/27",
+          "https://community.cloudflare.com/t/does-stale-while-revalidate-work/24161",
+          "https://web.dev/articles/stale-while-revalidate",
+          "https://www.debugbear.com/docs/stale-while-revalidate",
+          "https://medium.com/@hadiyolworld007/fastapi-http-caching-with-stale-while-revalidate-instant-feels-correct-data-5811297867ea",
+          "https://stackoverflow.com/questions/18148884/difference-between-no-cache-and-must-revalidate-for-cache-control"
+        ]
+      }
+    },
+    {
+      "id": "q17",
+      "provider_urls": {
+        "brave": [
+          "https://docs.kernel.org/admin-guide/cgroup-v2.html",
+          "https://unix.stackexchange.com/questions/778510/linux-cgroup-v2-why-has-setting-memory-max-no-effect-here",
+          "https://blog.gntech.me/posts/2026-06-17-cgroups-v2-docker-container-resource-limits/",
+          "https://facebookmicrosites.github.io/cgroup2/docs/memory-controller.html",
+          "https://devopsil.com/articles/2026-04-24-linux-control-groups-cgroups-v2-limiting-cpu-and-memory-for-",
+          "https://stackharbor.com/en/knowledge-base/linux-cgroup-v2-resource-control/",
+          "https://pavlokhmel.com/cgroup-v2-limit-memory-and-cpu-usage-for-all-users-on-linux.html",
+          "https://fernandovillalba.substack.com/p/a-journey-to-understand-cgroups-v2",
+          "https://linuxconfig.net/howto/use-cgroups-v2-to-control-linux-resources.html",
+          "https://cubepath.com/docs/Linux%20Internals/cgroups-v2-resource-management"
+        ],
+        "exa": [
+          "https://docs.kernel.org/admin-guide/cgroup-v2.html",
+          "https://cdn.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html",
+          "https://www.kernel.org/doc/Documentation/admin-guide/cgroup-v2.rst",
+          "https://www.kernel.org/doc/html/v7.2-rc5/admin-guide/cgroup-v2.html",
+          "https://www.netdata.cloud/academy/diagnosing-linux-cgroups/",
+          "https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/assembly_configuring-resource-management-using-systemd_managing-monitoring-and-updating-the-kernel",
+          "https://superuser.com/questions/1854994/memory-allocation-exceeds-memory-max-value-set-for-cgroupsv2",
+          "https://kernel-internals.org/mm/memcg/",
+          "https://www.kernel.org/doc/html/latest/_sources/admin-guide/cgroup-v2.rst.txt",
+          "https://facebookmicrosites.github.io/cgroup2/docs/memory-controller.html"
+        ],
+        "parallel": [
+          "https://www.kernel.org/doc/html//v4.20/admin-guide/cgroup-v2.html",
+          "https://www.kernel.org/doc/html//v5.7/admin-guide/cgroup-v2.html",
+          "https://docs.kernel.org/next/admin-guide/cgroup-v2.html",
+          "https://kernel.org/doc/html//v5.9/admin-guide/cgroup-v2.html",
+          "https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html",
+          "https://www.kernel.org/doc/html/v5.0/admin-guide/cgroup-v2.html",
+          "https://www.kernel.org/doc/html/v5.15/admin-guide/cgroup-v2.html",
+          "https://www.kernel.org/doc/html//v6.4/admin-guide/cgroup-v2.html",
+          "https://docs.kernel.org/6.2/admin-guide/cgroup-v2.html",
+          "https://kernel.org/doc/html/v6.8/admin-guide/cgroup-v2.html"
+        ],
+        "tavily": [
+          "https://www.usenix.org/system/files/lisa21_slides_down.pdf",
+          "https://unix.stackexchange.com/questions/778510/linux-cgroup-v2-why-has-setting-memory-max-no-effect-here",
+          "https://tech-champion.com/database/sql-server/sql-server-on-linux-cgroup-v2-memory-throttling-and-oom-kills/feed",
+          "https://tyglewis.com/linux/2024/08/24/cgroups-v2",
+          "https://developers.redhat.com/articles/2023/04/19/openjdk-8u372-feature-cgroup-v2-support",
+          "https://tech-champion.com/database/sql-server/sql-server-on-linux-cgroup-v2-memory-throttling-and-oom-kills",
+          "https://stackoverflow.com/questions/71145589/cgroup-v2-and-java-8",
+          "https://www.explaintopic.com/linux/cgroup-configuration-issues-on-linux-servers-1765821592.html",
+          "https://serverfault.com/questions/1166165/how-do-memory-limits-in-kubernetes-work-with-cgroup-v2-memory-high",
+          "https://unix.stackexchange.com/questions/783131/cgroup-memory-max-is-overridden-by-docker"
+        ]
+      }
+    },
+    {
+      "id": "q18",
+      "provider_urls": {
+        "brave": [
+          "https://protobuf.dev/programming-guides/field_presence/",
+          "https://protobuf.dev/programming-guides/proto3/",
+          "https://github.com/protocolbuffers/protobuf/blob/main/docs/implementing_proto3_presence.md",
+          "https://github.com/protocolbuffers/protobuf/blob/main/docs/field_presence.md",
+          "https://daobook.github.io/protobuf/docs/implementing_proto3_presence.html",
+          "https://mip-cloud.gitlab.io/post/2020/11/protobuf-default-value/",
+          "https://github.com/protocolbuffers/protobuf/blob/v3.12.0/docs/field_presence.md",
+          "https://github.com/protocolbuffers/protobuf/blob/v3.15.0/docs/field_presence.md",
+          "https://stackoverflow.com/questions/42622015/how-to-define-an-optional-field-in-protobuf-3",
+          "https://github.com/pseudomuto/protoc-gen-doc/issues/422"
+        ],
+        "exa": [
+          "https://protobuf.dev/programming-guides/field_presence/",
+          "https://protobuf.dev/programming-guides/proto3/",
+          "https://github.com/protocolbuffers/protobuf/blob/7cb5597013f0c4b978f02bce4330849f118aa853/docs/field_presence.md",
+          "https://github.com/protocolbuffers/protobuf/blob/v3.17.0/docs/implementing_proto3_presence.md",
+          "https://github.com/protocolbuffers/protocolbuffers.github.io/blob/main/content/programming-guides/proto3.md",
+          "https://github.com/protocolbuffers/protobuf/blob/58f02be5/docs/implementing_proto3_presence.md",
+          "https://protobuf.dev/programming-guides/proto2/",
+          "https://chromium.googlesource.com/external/github.com/protocolbuffers/protobuf/+/refs/tags/v3.29.1/docs/implementing_proto3_presence.md",
+          "https://groups.google.com/g/protobuf/c/NVXPBdt1RLg",
+          "https://protobuf.dev/programming-guides/editions/"
+        ],
+        "parallel": [
+          "https://protobuf.dev/programming-guides/field_presence",
+          "https://github.com/protocolbuffers/protobuf/blob/main/docs/field_presence.md",
+          "https://chromium.googlesource.com/openscreen/+/HEAD/third_party/protobuf/docs/field_presence.md",
+          "https://chromium.googlesource.com/external/github.com/protocolbuffers/protobuf/+/refs/heads/validation_protoc_authentic/docs/implementing_proto3_presence.md",
+          "https://github.com/protocolbuffers/protobuf/blob/master/docs/implementing_proto3_presence.md",
+          "https://github.com/protocolbuffers/protobuf/blob/main/docs/implementing_proto3_presence.md",
+          "https://protobuf.dev/programming-guides/proto/",
+          "https://protobuf.hexdocs.pm/Protobuf.html",
+          "https://protobuf.dev/reference/cpp/cpp-generated",
+          "https://protobuf.dev/news/2025-07-14"
+        ],
+        "tavily": [
+          "https://daobook.github.io/protobuf/docs/implementing_proto3_presence.html",
+          "https://protobuf.dev/programming-guides/field_presence",
+          "https://github.com/protocolbuffers/protobuf/issues/8933",
+          "https://protobuf.dev/programming-guides/proto3",
+          "https://victoriametrics.com/blog/go-protobuf-basic",
+          "https://groups.google.com/g/protobuf/c/NVXPBdt1RLg",
+          "https://stackoverflow.com/questions/31801257/why-were-required-and-optional-removed-in-protocol-buffers-3"
+        ]
+      }
+    },
+    {
+      "id": "q19",
+      "provider_urls": {
+        "brave": [
+          "https://jqlang.org/manual/",
+          "https://jqlang.org/manual/v1.6/",
+          "https://jqlang.github.io/jq/manual/v1.5/",
+          "https://jqlang.org/manual/v1.7/",
+          "https://github.com/jqlang/jq/issues/3211",
+          "https://github.com/jqlang/jq/pull/3205",
+          "https://jqlang.org/manual/dev/",
+          "https://devdocs.io/jq/",
+          "https://manpages.ubuntu.com/manpages/trusty/man1/jq.1.html",
+          "https://jqlang.org/manual/v1.3/"
+        ],
+        "exa": [
+          "https://jqlang.org/manual/",
+          "https://jqlang.org/manual/dev/",
+          "https://jqlang.org/manual/v1.7/",
+          "https://github.com/stedolan/jq/blob/master/docs/content/manual/v1.6/manual.yml",
+          "https://github.com/andrewstellman/quality-playbook/blob/main/repos/docs_gathered/jq/filter-language.md",
+          "https://github.com/jqlang/jq/blob/fb59f149/docs/content/manual/v1.4/manual.yml",
+          "https://github.com/andrewstellman/quality-playbook/blob/main/repos/docs_gathered/jq/advanced-features.md",
+          "https://github.com/jqlang/jq/blob/579e6f76/docs/content/manual/dev/manual.yml",
+          "https://github.com/stedolan/jq/blob/master/docs/content/manual/v1.3/manual.yml",
+          "https://github.com/jqlang/jq/blob/fb59f149/docs/content/manual/v1.5/manual.yml"
+        ],
+        "parallel": [
+          "https://jqlang.org/manual/v1.3",
+          "https://qmacro.org/blog/posts/2022/03/25/understanding-jqs-reduce-function",
+          "https://github.com/jqlang/jq/issues/3211",
+          "https://jqlang.org/manual",
+          "https://github.com/jqlang/jq/issues/1612",
+          "https://github.com/jqlang/jq/blob/master/NEWS.md",
+          "http://agn.caltech.edu/~srk/Unix/CheatSheets/jq%20Manual%20(development%20version).html",
+          "https://github.com/stedolan/jq/releases",
+          "https://docs.rs/crate/jaq-syn/latest",
+          "https://crates.io/crates/jaq-parse"
+        ],
+        "tavily": [
+          "https://github.com/jqlang/jq/issues/3211",
+          "https://jqlang.org/manual/v1.7",
+          "https://jqlang.org/manual",
+          "https://man.archlinux.org/man/extra/jq/jq.1.en",
+          "https://www.systutorials.com/linux-manual-page-1-jq",
+          "https://github.com/jqlang/jq/issues/2169",
+          "https://exercism.org/tracks/jq/concepts/reduce",
+          "https://qmacro.org/blog/posts/2022/03/25/understanding-jqs-reduce-function",
+          "https://stackoverflow.com/questions/33558674/recursive-reduce-arrays-using-jq"
+        ]
+      }
+    },
+    {
+      "id": "q20",
+      "provider_urls": {
+        "brave": [
+          "https://thevaluable.dev/zsh-expansion-guide-example/",
+          "https://zsh.sourceforge.io/Doc/Release/Expansion.html",
+          "https://www.zsh.org/mla/workers/2025/msg00389.html",
+          "https://www.zsh.org/mla/workers//2014/msg01670.html",
+          "https://www.simplified.guide/zsh/use-glob-qualifiers",
+          "https://blog.warrick.io/2012/09/27/zsh-globbing-qualifiers.html",
+          "https://linuxaria.com/howto/globbing-con-zsh",
+          "https://adhdecode.com/articles/zsh/zsh-glob-expansion-guide/",
+          "https://www.refining-linux.org/archives/37-ZSH-Gem-2-Extended-globbing-and-expansion.html",
+          "https://linux.die.net/man/1/zshexpn"
+        ],
+        "exa": [
+          "https://zsh.sourceforge.io/Doc/Release/Expansion.html",
+          "https://zsh.sourceforge.io/Intro/intro_2.html",
+          "https://zsh.sourceforge.io/Doc/zsh_us.pdf",
+          "https://zsh.sourceforge.io/Guide/zshguide05.html",
+          "https://man.archlinux.org/man/zshexpn.1",
+          "https://zsh.sourceforge.io/",
+          "https://thevaluable.dev/",
+          "https://adhdecode.com/articles/zsh/zsh-glob-expansion-guide/",
+          "https://www.bash2zsh.com/zsh_refcard/refcard.pdf",
+          "https://linux.die.net/"
+        ],
+        "parallel": [
+          "https://www.zsh.org/mla/workers/2025/msg00389.html",
+          "https://github.com/zsh-users/zsh-autosuggestions/issues/503",
+          "https://zsh.sourceforge.io/Doc/Release/Concept-Index.html",
+          "https://zsh.sourceforge.io/Guide/zshguide03.html",
+          "https://superuser.com/questions/1465173/zsh-glob-with-prefix",
+          "https://thevaluable.dev/zsh-expansion-guide-example",
+          "https://linux.die.net/man/1/zshexpn",
+          "https://zsh.sourceforge.io/Doc/Release/Parameters.html",
+          "https://gist.github.com/roalcantara/5cf137f83261d8108f53019748c17222",
+          "https://stackoverflow.com/questions/41502846/zsh-test-whether-a-file-matching-a-pattern-exists"
+        ],
+        "tavily": [
+          "https://gist.github.com/roalcantara/5cf137f83261d8108f53019748c17222",
+          "https://zsh.sourceforge.io/Doc/Release/Expansion.html",
+          "https://thevaluable.dev/zsh-expansion-guide-example",
+          "https://docs.jade.fyi/zsh",
+          "https://adamj.eu/tech/2026/08/07/zsh-e-glob-qualifiers",
+          "https://linux.die.net/man/1/zshexpn",
+          "https://www.reddit.com/r/zsh/comments/rpl8h3/a_guide_to_zsh_expansion_with_examples",
+          "https://unix.stackexchange.com/questions/552103/limiting-the-scope-of-glob-qualifiers-in-zsh",
+          "https://superuser.com/questions/1465173/zsh-glob-with-prefix"
+        ]
+      }
+    },
+    {
+      "id": "q21",
+      "provider_urls": {
+        "brave": [
+          "https://opentelemetry.io/docs/specs/semconv/http/http-metrics/",
+          "https://opentelemetry.io/docs/specs/semconv/",
+          "https://opentelemetry.io/docs/specs/semconv/http/",
+          "https://uptrace.dev/opentelemetry/semconv",
+          "https://opentelemetry.io/docs/concepts/semantic-conventions/",
+          "https://oneuptime.com/blog/post/2026-01-25-semantic-conventions-opentelemetry/view",
+          "https://opentelemetry.io/docs/specs/semconv/registry/attributes/http/",
+          "https://oneuptime.com/blog/post/2026-01-07-opentelemetry-semantic-conventions/view",
+          "https://opentelemetry.io/docs/specs/semconv/general/trace/",
+          "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/general/attributes.md"
+        ],
+        "exa": [
+          "https://opentelemetry.io/docs/specs/semconv/registry/attributes/http/",
+          "https://opentelemetry.io/docs/specs/semconv/http/http-spans/",
+          "https://opentelemetry.io/docs/specs/semconv/http/",
+          "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/registry/attributes/http.md",
+          "https://opentelemetry.io/docs/specs/semconv/non-normative/http-migration/",
+          "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/http/http-spans.md",
+          "https://github.com/open-telemetry/semantic-conventions/blob/v1.36.0/docs/registry/attributes/http.md",
+          "https://opentelemetry.io/docs/specs/semconv/http/http-metrics/",
+          "https://github.com/open-telemetry/semantic-conventions/blob/main/model/http/spans.yaml",
+          "https://github.com/open-telemetry/opentelemetry.io/blob/main/content/en/blog/2023/http-conventions-declared-stable.md"
+        ],
+        "parallel": [
+          "https://opentelemetry.io/docs/concepts/semantic-conventions/index.md",
+          "https://opentelemetry.io/docs/specs/semconv/general",
+          "https://opentelemetry.io/docs/specs/semconv/general/attributes",
+          "https://opentelemetry-semantic-conventions.hexdocs.pm/readme-29.html",
+          "https://unpkg.com/%40opentelemetry/semantic-conventions%401.28.0/README.md",
+          "http://opentelemetry.io/docs/concepts/semantic-conventions",
+          "https://opentelemetry.io/docs/reference/specification/semantic-conventions",
+          "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/general/attributes.md",
+          "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/registry/attributes/http.md",
+          "https://opentelemetry.io/docs/specs/otel/semantic-conventions/index.md"
+        ],
+        "tavily": [
+          "https://www.honeycomb.io/blog/opentelemetry-http-attributes",
+          "https://oneuptime.com/blog/post/2026-01-25-semantic-conventions-opentelemetry/view",
+          "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/http/http-spans.md",
+          "https://opentelemetry.io/blog/2023/http-conventions-declared-stable",
+          "https://opentelemetry.io/docs/concepts/semantic-conventions",
+          "https://opentelemetry.io/docs/specs/semconv/http",
+          "https://uptrace.dev/opentelemetry/semconv",
+          "https://opentelemetry.io/docs/specs/semconv",
+          "https://opentelemetry.io/docs/specs/semconv/http/http-metrics"
+        ]
+      }
+    },
+    {
+      "id": "q22",
+      "provider_urls": {
+        "brave": [
+          "https://stackoverflow.com/questions/25482199/verify-a-certificate-chain-using-openssl-verify",
+          "https://docs.openssl.org/3.0/man1/openssl-verify/",
+          "https://serverfault.com/questions/1011294/how-to-view-certificate-chain-using-openssl",
+          "https://www.misterpki.com/openssl-verify/",
+          "https://security.stackexchange.com/questions/223884/verification-of-certificate-chain-using-openssl-verify-command",
+          "https://www.howtouselinux.com/post/certificate-chain",
+          "https://docs.openssl.org/3.1/man1/openssl-verification-options/",
+          "https://docs.openssl.org/1.1.1/man1/verify/",
+          "https://www.warp.dev/terminus/openssl-check-certificate",
+          "https://docs.apigee.com/how-to-guides/validating-certificate-chain"
+        ],
+        "exa": [
+          "https://docs.openssl.org/3.3/man1/openssl-verify/",
+          "https://docs.openssl.org/3.2/man1/openssl-verify/",
+          "https://docs.openssl.org/3.0/man1/openssl-verify/",
+          "https://manpages.debian.org/unstable/openssl/openssl-verify.1ssl.en.html",
+          "https://security.stackexchange.com/questions/223884/verification-of-certificate-chain-using-openssl-verify-command",
+          "https://man.archlinux.org/man/openssl-verify.1ssl.en",
+          "https://stackoverflow.com/questions/25482199/verify-a-certificate-chain-using-openssl-verify",
+          "https://www.cyberciti.biz/faq/verify-ssl-certificate-openssl/",
+          "https://openssl.org/docs/man1.0.2/man1/openssl-verify.html",
+          "https://docs.openssl.org/3.4/man1/openssl-verification-options/"
+        ],
+        "parallel": [
+          "https://docs.openssl.org/1.1.1/man1/verify",
+          "https://docs.openssl.org/3.0/man1/openssl-verify",
+          "https://docs.openssl.org/master/man1/openssl-verify",
+          "https://docs.openssl.org/3.5/man1/openssl-verify",
+          "https://docs.openssl.org/1.0.2/man1/verify",
+          "https://linux.die.net/man/1/verify",
+          "https://manpages.debian.org/jessie-backports/openssl/verify.1ssl.en.html",
+          "https://manpages.debian.org/testing/openssl/openssl-verify.1ssl.en.html",
+          "https://portal.nersc.gov/project/dasrepo/etalumis/conda_envs/jan11_2018_horovod14_00/share/doc/openssl/html/man1/verify.html",
+          "https://manpages.ubuntu.com/manpages/bionic/man1/openssl-verify.1ssl.html"
+        ],
+        "tavily": [
+          "https://www.warp.dev/terminus/openssl-check-certificate",
+          "https://docs.openssl.org/3.0/man1/openssl-verify",
+          "https://docs.apigee.com/how-to-guides/validating-certificate-chain",
+          "https://security.stackexchange.com/questions/223884/verification-of-certificate-chain-using-openssl-verify-command",
+          "https://serverfault.com/questions/1011294/how-to-view-certificate-chain-using-openssl",
+          "https://my.f5.com/manage/s/article/K99038704",
+          "https://stackoverflow.com/questions/25482199/verify-a-certificate-chain-using-openssl-verify",
+          "https://superuser.com/questions/904859/why-cant-i-verify-this-certificate-chain",
+          "https://www.dell.com/support/kbdoc/en-uk/000211907/general-procedure-how-to-validate-and-convert-ssl-certificate"
+        ]
+      }
+    }
+  ]
+}

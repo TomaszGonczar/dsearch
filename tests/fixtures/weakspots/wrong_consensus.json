@@ -1,0 +1,16 @@
+{
+  "query": "vercel.json schema validation",
+  "known_wrong_consensus_url": "https://vercel.com/docs",
+  "human_labelled_correct_url": "https://vercel.com/docs/project-configuration/vercel-json",
+  "provider_urls": {
+    "brave": [
+      "https://vercel.com/docs",
+      "https://vercel.com/docs/project-configuration/vercel-json"
+    ],
+    "exa": [
+      "https://vercel.com/docs"
+    ]
+  },
+  "expected_defect": "popular_wrong_page_is_corroborated",
+  "defect_status": "open"
+}
