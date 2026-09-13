@@ -1,0 +1,129 @@
+{
+  "measured_at": "2026-09-13T11:18:43.088813+00:00",
+  "providers": [
+    "brave",
+    "exa",
+    "tavily",
+    "parallel"
+  ],
+  "queries": [
+    {
+      "query": "vercel.json schema validation",
+      "per_provider": {
+        "brave": 10,
+        "exa": 10,
+        "tavily": 10,
+        "parallel": 10
+      },
+      "union": 30,
+      "consensus": 7,
+      "consensus_rate": 0.2333,
+      "unique_share": {
+        "brave": 0.6,
+        "exa": 0.5,
+        "tavily": 0.6,
+        "parallel": 0.6
+      }
+    },
+    {
+      "query": "python 3.13 free-threading status",
+      "per_provider": {
+        "brave": 10,
+        "exa": 10,
+        "tavily": 10,
+        "parallel": 10
+      },
+      "union": 29,
+      "consensus": 6,
+      "consensus_rate": 0.2069,
+      "unique_share": {
+        "brave": 0.5,
+        "exa": 0.5,
+        "tavily": 0.5,
+        "parallel": 0.8
+      }
+    },
+    {
+      "query": "postgres index bloat monitoring",
+      "per_provider": {
+        "exa": 10,
+        "tavily": 8,
+        "parallel": 10
+      },
+      "union": 24,
+      "consensus": 4,
+      "consensus_rate": 0.1667,
+      "unique_share": {
+        "exa": 0.7,
+        "tavily": 0.75,
+        "parallel": 0.7
+      }
+    },
+    {
+      "query": "RFC 9110 conditional requests",
+      "per_provider": {
+        "brave": 10,
+        "exa": 10,
+        "tavily": 9,
+        "parallel": 10
+      },
+      "union": 33,
+      "consensus": 5,
+      "consensus_rate": 0.1515,
+      "unique_share": {
+        "brave": 0.6,
+        "exa": 0.7,
+        "tavily": 0.7778,
+        "parallel": 0.8
+      }
+    },
+    {
+      "query": "rust tokio cancellation safety",
+      "per_provider": {
+        "brave": 10,
+        "exa": 10,
+        "tavily": 9,
+        "parallel": 10
+      },
+      "union": 24,
+      "consensus": 11,
+      "consensus_rate": 0.4583,
+      "unique_share": {
+        "brave": 0.3,
+        "exa": 0.3,
+        "tavily": 0.0,
+        "parallel": 0.7
+      }
+    },
+    {
+      "query": "kubernetes pod disruption budget",
+      "per_provider": {
+        "brave": 10,
+        "exa": 10,
+        "tavily": 9,
+        "parallel": 10
+      },
+      "union": 26,
+      "consensus": 8,
+      "consensus_rate": 0.3077,
+      "unique_share": {
+        "brave": 0.3,
+        "exa": 0.5,
+        "tavily": 0.2222,
+        "parallel": 0.8
+      }
+    }
+  ],
+  "aggregate": {
+    "queries": 6,
+    "total_union": 166,
+    "total_consensus": 41,
+    "mean_consensus_rate": 0.247,
+    "mean_unique_share": {
+      "brave": 0.46,
+      "exa": 0.5333,
+      "tavily": 0.475,
+      "parallel": 0.7333
+    }
+  }
+}

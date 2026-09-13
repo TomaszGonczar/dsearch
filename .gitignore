@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+.pnp/
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+pip-wheel-metadata/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# dSearch runtime state — never commit the ledger
+.dsearch/
+dsearch.local.json
+ledger.jsonl
+*.corrupt
+
+# Live experiment output is committed deliberately (experiments/data/),
+# but raw scratch runs are not.
+experiments/tmp/
+experiments/raw/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/mcp.json
+!.vscode/extensions.json
+*.swp
+*~
+
+# Logs
+*.log
+logs/
