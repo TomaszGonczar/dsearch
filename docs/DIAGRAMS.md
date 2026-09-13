@@ -1,5 +1,10 @@
 # Diagrams
 
+> [!WARNING]
+> Historical design diagrams. They show the proposed end-to-end router, most of which was never
+> implemented. The retained code covers provider contracts and the deterministic pure core; see
+> the [README](../README.md) for the final scope.
+
 Visual companion to [`CONCEPT.md`](CONCEPT.md). GitHub renders these as diagrams; a terminal
 shows them as ASCII.
 

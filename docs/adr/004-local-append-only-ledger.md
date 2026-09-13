@@ -1,6 +1,10 @@
 # ADR 004 — Keep the audit ledger local and append-only
 
-**Status:** Accepted
+> [!WARNING]
+> Historical design decision. The ledger was not implemented; product development stopped after
+> the consensus hypothesis failed its precision evaluation. See the [README](../../README.md).
+
+**Status:** Superseded — not implemented
 **Date:** 2026-09-13
 **Deciders:** Operator
 **Affects:** future ledger implementation and diagnostics

@@ -1,5 +1,12 @@
 # Experiment: is the consensus signal real?
 
+> [!WARNING]
+> Preliminary experiment, superseded by the DS-3 precision evaluation. The committed artifact is
+> insufficient to independently reproduce every pairwise Jaccard and repeat-stability claim. Its
+> reported `0.247` is the pooled rate `41 / 166`, not a mean of per-query rates, and the recorded
+> Parallel repeat stability is `0.82`, not `1.00`. See the [README](../README.md) for the audited
+> result.
+
 **Date:** 2026-09-13
 **Status:** measured against four live providers with real API keys
 **Scripts:** `experiments/overlap-probe.py`, `experiments/overlap-record.py`, `experiments/weakspots.py`

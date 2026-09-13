@@ -1,5 +1,11 @@
 # Choosing your providers
 
+> [!WARNING]
+> Historical design reference. The explicit independence classes remain part of the retained
+> provider configuration, but no router was shipped and cross-provider agreement did not validate
+> as a quality signal. Pairing advice below is not current product guidance; see the
+> [README](../README.md).
+
 **This document is half the product.** The router is the machinery; this is the map of what
 to plug into it, and — more importantly — **what not to pair**.
 
