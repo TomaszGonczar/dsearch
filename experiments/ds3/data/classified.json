@@ -1,0 +1,346 @@
+{
+  "per_query": [
+    {
+      "alternate": [
+        {
+          "url": "https://github.com/vercel/schemas",
+          "why": "Vercel's own schema repository \u2014 arguably authoritative, but it is a source repo not a reference page; classify as wrong to stay conservative"
+        }
+      ],
+      "exact": [],
+      "id": "q01",
+      "query": "vercel.json schema validation",
+      "wrong": [
+        "https://github.com/vercel/vercel/pull/7394",
+        "https://vercel.com/changelog/schema-autocomplete-and-validation-for-vercel-json",
+        "https://vercel.com/docs/project-configuration/vercel-json",
+        "https://vercel.com/docs/project-configuration/vercel-json.md"
+      ]
+    },
+    {
+      "alternate": [
+        {
+          "url": "https://docs.python.org/3.14/howto/free-threading-python.html",
+          "why": "the 3.14 branch of the same CPython HOWTO page"
+        },
+        {
+          "url": "https://docs.python.org/3/howto/free-threading-python.html",
+          "why": "CPython's own free-threading HOWTO, a second authoritative page for the same topic"
+        }
+      ],
+      "exact": [],
+      "id": "q02",
+      "query": "python 3.13 free-threading status",
+      "wrong": [
+        "https://codspeed.io/blog/state-of-python-3-13-performance-free-threading",
+        "https://realpython.com/python313-free-threading-jit"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://rfc-editor.org/rfc/rfc9110"
+      ],
+      "id": "q03",
+      "query": "RFC 9110 conditional requests",
+      "wrong": [
+        "https://datatracker.ietf.org/doc/html/rfc9110.html",
+        "https://dl.acm.org/doi/10.17487/RFC9110",
+        "https://rfc-editor.org/info/rfc9110",
+        "https://rfc-editor.org/rfc/rfc9110.pdf"
+      ]
+    },
+    {
+      "alternate": [
+        {
+          "url": "https://neon.com/docs/extensions/pgstattuple",
+          "why": "third-party documentation of the same PostgreSQL contrib module; NOT vendor-authoritative, so classify as wrong \u2014 see NOTE below"
+        }
+      ],
+      "exact": [],
+      "id": "q04",
+      "query": "postgres index bloat monitoring pgstattuple",
+      "wrong": [
+        "https://dev.to/ozkanpakdil/understanding-and-monitoring-index-and-table-bloat-in-postgresql-4ked",
+        "https://github.com/keithf4/pg_bloat_check",
+        "https://techcommunity.microsoft.com/blog/adforpostgresql/managing-bloat-in-postgresql-using-pgstattuple-on-azure-database-for-postgresql-/4410449"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://git-scm.com/docs/git-rebase"
+      ],
+      "id": "q05",
+      "query": "git rebase --onto usage",
+      "wrong": [
+        "https://atlassian.com/git/tutorials/rewriting-history/git-rebase",
+        "https://blogs.vmware.com/tanzu/getting-started-with-git-rebase-onto-for-specific-commits",
+        "https://stackoverflow.com/questions/29914052/how-to-git-rebase-a-branch-with-the-onto-command"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://docs.docker.com/reference/compose-file/services"
+      ],
+      "id": "q06",
+      "query": "docker compose healthcheck syntax",
+      "wrong": [
+        "https://dev.to/jjoc007/mastering-docker-defining-health-checks-in-docker-compose-4l5k",
+        "https://docs.docker.com/reference/compose-file",
+        "https://last9.io/blog/docker-compose-health-checks",
+        "https://oneuptime.com/blog/post/2026-01-30-docker-compose-health-checks/view",
+        "https://warp.dev/terminus/docker-compose-health-check"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html"
+      ],
+      "id": "q07",
+      "query": "typescript satisfies operator",
+      "wrong": [
+        "https://freecodecamp.org/news/typescript-satisfies-operator",
+        "https://mimo.org/glossary/typescript/satisfies",
+        "https://refine.dev/blog/typescript-satisfies-operator",
+        "https://stackoverflow.com/questions/78636946/what-are-the-differences-between-typescript-s-satisfies-operator-and-type-assert",
+        "https://totaltypescript.com/clarifying-the-satisfies-operator"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://docs.rs/tokio/latest/tokio/macro.select.html"
+      ],
+      "id": "q08",
+      "query": "tokio select cancellation safety",
+      "wrong": [
+        "https://developerlife.com/2024/07/10/rust-async-cancellation-safety-tokio",
+        "https://docs.rs/tokio/latest/src/tokio/macros/select.rs.html",
+        "https://stackoverflow.com/questions/74547855/how-to-assess-cancel-safety-of-select",
+        "https://tokio.rs/tokio/tutorial/select",
+        "https://users.rust-lang.org/t/cancel-safety-in-async-and-tokio-select/92381",
+        "https://users.rust-lang.org/t/cancellation-safety-of-locks-in-select/137188"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://kubernetes.io/docs/concepts/workloads/pods/disruptions"
+      ],
+      "id": "q09",
+      "query": "kubernetes pod disruption budget",
+      "wrong": [
+        "https://chkk.io/blog/pod-disruption-budgets",
+        "https://kubernetes.io/docs/tasks/run-application/configure-pdb",
+        "https://scaleops.com/blog/pod-disruption-budget",
+        "https://v1-36.docs.kubernetes.io/docs/tasks/run-application/configure-pdb"
+      ]
+    },
+    {
+      "alternate": [
+        {
+          "url": "https://docs.github.com/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow",
+          "why": "GitHub relocated the matrix docs to this path; same vendor, same content"
+        },
+        {
+          "url": "https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/run-job-variations",
+          "why": "the current canonical location GitHub redirects the old path to"
+        }
+      ],
+      "exact": [],
+      "id": "q10",
+      "query": "github actions matrix strategy",
+      "wrong": [
+        "https://graphite.com/guides/github-actions-matrix",
+        "https://medium.com/credera-engineering/matrix-strategies-in-github-actions-56dd6defeb04",
+        "https://runs-on.com/github-actions/the-matrix-strategy",
+        "https://stackoverflow.com/questions/75318609/matrix-strategy-over-entire-workflow-in-github-actions"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://sqlite.org/wal.html"
+      ],
+      "id": "q11",
+      "query": "sqlite WAL mode write-ahead log",
+      "wrong": [
+        "https://deepwiki.com/sqlite/sqlite/3.4-write-ahead-logging-(wal)",
+        "https://drupal.org/node/2769027",
+        "https://sqlite.org/walformat.html"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q12",
+      "query": "nginx proxy_pass trailing slash behaviour",
+      "wrong": [
+        "https://dev.to/schiff_heimlich/nginx-proxypass-the-trailing-slash-that-changes-everything-47b3",
+        "https://digitalocean.com/community/questions/i-need-help-understanding-trailing-slash-behaviour-in-nginx",
+        "https://getpagespeed.com/server-setup/nginx/nginx-proxy-pass-trailing-slash",
+        "https://serverfault.com/questions/1063540/nginx-location-proxy-pass-behaviour-differs-when-used-with-or-without-trailing",
+        "https://stackoverflow.com/questions/22759345/nginx-trailing-slash-in-proxy-pass-url"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://docs.pytest.org/en/stable/how-to/fixtures.html"
+      ],
+      "id": "q13",
+      "query": "pytest fixture scope session module function",
+      "wrong": [
+        "https://pytest-with-eric.com/fixtures/pytest-fixture-scope",
+        "https://pythontest.com/framework/pytest/pytest-session-scoped-fixtures",
+        "https://stackoverflow.com/questions/76859293/function-vs-class-vs-module-vs-package-vs-session-for-fixture-scopes-in-pytest"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://developer.hashicorp.com/terraform/cli/commands/state/mv"
+      ],
+      "id": "q14",
+      "query": "terraform state mv command",
+      "wrong": [
+        "https://developer.hashicorp.com/terraform/cli/state/move",
+        "https://github.com/hashicorp/web-unified-docs/blob/main/content/terraform/v1.15.x/docs/cli/commands/state/mv.mdx",
+        "https://oneuptime.com/blog/post/2026-02-23-terraform-state-mv-command/view",
+        "https://spacelift.io/blog/terraform-state-mv"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://webpack.js.org/guides/tree-shaking"
+      ],
+      "id": "q15",
+      "query": "webpack tree shaking sideEffects package.json",
+      "wrong": [
+        "https://dev.to/fogel/tree-shaking-in-webpack-5apj",
+        "https://docs.webpack.js.org/guides/tree-shaking",
+        "https://github.com/webpack/webpack/blob/main/examples/side-effects/README.md"
+      ]
+    },
+    {
+      "alternate": [
+        {
+          "url": "https://datatracker.ietf.org/doc/html/rfc5861",
+          "why": "the IETF datatracker mirror of the same RFC; identical specification text"
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control",
+          "why": "MDN restructured its URL scheme; same page, new path"
+        }
+      ],
+      "exact": [],
+      "id": "q16",
+      "query": "HTTP stale-while-revalidate cache directive",
+      "wrong": [
+        "https://developers.cloudflare.com/cache/concepts/revalidation",
+        "https://fastly.com/documentation/guides/concepts/cache/stale",
+        "https://httpwg.org/specs/rfc5861.html",
+        "https://rfc-editor.org/info/rfc5861",
+        "https://rfc-editor.org/rfc/rfc5861.html",
+        "https://web.dev/articles/stale-while-revalidate"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://docs.kernel.org/admin-guide/cgroup-v2.html"
+      ],
+      "id": "q17",
+      "query": "linux cgroup v2 memory.max configuration",
+      "wrong": [
+        "https://facebookmicrosites.github.io/cgroup2/docs/memory-controller.html"
+      ]
+    },
+    {
+      "alternate": [
+        {
+          "url": "https://github.com/protocolbuffers/protobuf/blob/main/docs/field_presence.md",
+          "why": "the upstream protobuf source of the very page protobuf.dev renders"
+        }
+      ],
+      "exact": [],
+      "id": "q18",
+      "query": "protobuf field presence optional",
+      "wrong": [
+        "https://github.com/protocolbuffers/protobuf/blob/main/docs/implementing_proto3_presence.md",
+        "https://protobuf.dev/programming-guides/field_presence",
+        "https://protobuf.dev/programming-guides/proto3"
+      ]
+    },
+    {
+      "alternate": [
+        {
+          "url": "https://jqlang.org/manual",
+          "why": "the jq manual after the project moved from jqlang.github.io to jqlang.org"
+        }
+      ],
+      "exact": [],
+      "id": "q19",
+      "query": "jq reduce foreach manual",
+      "wrong": [
+        "https://github.com/jqlang/jq/issues/3211",
+        "https://jqlang.org/manual/dev",
+        "https://jqlang.org/manual/v1.3",
+        "https://jqlang.org/manual/v1.7"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [
+        "https://zsh.sourceforge.io/Doc/Release/Expansion.html"
+      ],
+      "id": "q20",
+      "query": "zsh glob qualifiers documentation",
+      "wrong": [
+        "https://adhdecode.com/articles/zsh/zsh-glob-expansion-guide",
+        "https://linux.die.net/man/1/zshexpn",
+        "https://thevaluable.dev/zsh-expansion-guide-example",
+        "https://zsh.org/mla/workers/2025/msg00389.html"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q21",
+      "query": "opentelemetry semantic conventions http attributes",
+      "wrong": [
+        "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/general/attributes.md",
+        "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/registry/attributes/http.md",
+        "https://opentelemetry.io/docs/concepts/semantic-conventions",
+        "https://opentelemetry.io/docs/specs/semconv/http",
+        "https://opentelemetry.io/docs/specs/semconv/http/http-metrics",
+        "https://opentelemetry.io/docs/specs/semconv/registry/attributes/http"
+      ]
+    },
+    {
+      "alternate": [],
+      "exact": [],
+      "id": "q22",
+      "query": "openssl verify certificate chain command",
+      "wrong": [
+        "https://docs.openssl.org/1.1.1/man1/verify",
+        "https://docs.openssl.org/3.0/man1/openssl-verify",
+        "https://security.stackexchange.com/questions/223884/verification-of-certificate-chain-using-openssl-verify-command",
+        "https://stackoverflow.com/questions/25482199/verify-a-certificate-chain-using-openssl-verify"
+      ]
+    }
+  ],
+  "precision_inclusive_same_document": 0.2037,
+  "precision_strict_exact_only": 0.1111,
+  "queries_with_zero_correct_or_alternate": 3,
+  "totals": {
+    "all_corroborations": 108,
+    "alternate": 10,
+    "exact": 12,
+    "wrong": 86
+  }
+}

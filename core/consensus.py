@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from enum import StrEnum
 from itertools import combinations
 
-from core.canonical import canonicalize_url
+from core.canonical import CanonicalizationError, canonicalize_url
 from providers.registry import IndependenceClass, ProviderDeclaration
 
 
@@ -49,6 +49,7 @@ class ConsensusReport:
     eligible_providers: tuple[str, ...]
     ineligible_providers: tuple[str, ...]
     pairs: tuple[PairwiseAgreement, ...]
+    unparseable_url_count: int = 0
 
     def to_data(self) -> dict[str, object]:
         return {
@@ -60,6 +61,7 @@ class ConsensusReport:
             "eligible_providers": list(self.eligible_providers),
             "ineligible_providers": list(self.ineligible_providers),
             "pairs": [pair.to_data() for pair in self.pairs],
+            "unparseable_url_count": self.unparseable_url_count,
         }
 
 
@@ -75,10 +77,28 @@ def compute_consensus(
 
     Duplicate or decorated URLs from one provider count once. Class B, class C, and providers
     absent from configuration remain visible as ineligible but never contribute a trust mark.
+
+    URLs that cannot be canonicalized are **skipped and counted**, never allowed to abort the
+    measurement. A single malformed URL in one provider's response — a truncated port, a
+    non-HTTP scheme, embedded credentials — must not cost every other provider its trust mark
+    for that query. Raw provider output is untrusted input; the failure is recorded in
+    `unparseable_url_count` so it stays visible rather than silent.
     """
 
+    skipped_url_count = 0
+
+    def canonicalize_all(urls: Sequence[str]) -> frozenset[str]:
+        nonlocal skipped_url_count
+        canonical: set[str] = set()
+        for url in urls:
+            try:
+                canonical.add(canonicalize_url(url))
+            except CanonicalizationError:
+                skipped_url_count += 1
+        return frozenset(canonical)
+
     canonical_by_provider = {
-        provider: frozenset(canonicalize_url(url) for url in urls)
+        provider: canonicalize_all(urls)
         for provider, urls in sorted(provider_urls.items())
     }
     eligible = tuple(
@@ -100,6 +120,7 @@ def compute_consensus(
             eligible_providers=eligible,
             ineligible_providers=ineligible,
             pairs=(),
+            unparseable_url_count=skipped_url_count,
         )
 
     pair_reports: list[PairwiseAgreement] = []
@@ -132,6 +153,7 @@ def compute_consensus(
         eligible_providers=eligible,
         ineligible_providers=ineligible,
         pairs=tuple(pair_reports),
+        unparseable_url_count=skipped_url_count,
     )
 
 

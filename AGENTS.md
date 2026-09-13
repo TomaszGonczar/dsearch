@@ -37,9 +37,14 @@ These are the product. Breaking one is not a bug, it is a regression of the prem
    null and never an unqualified success.
 3. **Bounded by construction.** Per-provider timeout **and** a hard total deadline across all
    stages. A hung provider must not be able to consume the search budget.
-4. **Consensus is computed, never inferred.** Agreement is measured on canonicalized URLs
-   between providers whose indexes are independent. It is never estimated, never a vendor's
-   relevance score, never a model's opinion.
+4. **Consensus is computed, never inferred — and it is metadata, not a trust signal.**
+   Agreement is measured on canonicalized URLs between providers whose indexes are
+   independent. It is never estimated, never a vendor's relevance score, never a model's
+   opinion. **Measured, it must not be presented as evidence of quality:** precision is
+   **0.111** (0.204 counting the same document at another URL), and the rate is *negatively*
+   correlated with precision (r = −0.355) because popular pages are generic. See
+   `docs/DS3-DECISION.md`. A corroborated URL means two indexes found the same page — nothing
+   more. Never surface it in a pack header or CLI output as corroboration of correctness.
 5. **Count what you claim.** If the tool reports a corruption rate, every number behind it is
    recorded locally and derived from the same log the user can inspect. No telemetry, no
    network, no inferred statistics.
