@@ -1,121 +1,128 @@
-# dSearch: when search consensus pointed the wrong way
+# dSearch
 
-**This is a completed falsification record, not a working search product.**
+**Archived research report. Development stopped before an end-to-end search product existed.**
 
-Four search providers were queried, and the eligible independent indexes agreed often enough
-to look useful. On 60 labelled document queries, that agreement identified the labelled page
-in only **38 of 261 corroborated URLs: 14.6% strict precision** (Wilson 95% CI
-**[10.8%, 19.4%]**). Development stopped before the signal could be presented as trust.
+dSearch tested whether a URL returned by more than one independent search index was more likely
+to be the right page for a query.
 
-**The mechanism worked. The hypothesis did not.**
+Four providers were queried for 60 document-finding queries. Consensus was calculated across the
+eligible independent indexes. Of 261 URLs returned by at least two of those indexes, 38 matched a
+labelled reference URL. Strict precision was **0.1456** (Wilson 95% CI **[0.108, 0.194]**).
 
-[Result](#the-result) · [Method](#how-it-was-tested) · [Decision](#the-engineering-decision) ·
-[Audit notes](#what-the-evidence-does-not-establish) · [Reproduce](#reproduce-the-verifiable-core)
+The measured precision was too low to use agreement as a quality signal. This repository contains
+the pure-core implementation, recorded provider output, evaluation scripts, and a later audit of
+the experiment.
 
-> [!IMPORTANT]
-> dSearch is a research artifact. It preserves the hypothesis, deterministic core, measurement
-> harness, raw provider results, and the mistakes found during verification. It is not an
-> end-to-end router, supported package, or recommendation to use consensus as a quality signal.
+[Results](#results) · [Method](#method) · [Decision](#decision) ·
+[Limitations](#limitations-found-in-review) · [Reproduction](#reproduction)
 
-## The result
+## Results
 
-The proposed trust signal was simple: if independent search indexes return the same canonical
-URL, that page has corroboration unavailable from a single provider.
+| Question | Result |
+|---|---|
+| How often did a corroborated URL match the labelled page? | **38 / 261 = 0.1456** |
+| Did a zero-consensus case identify ambiguous queries? | No zero case occurred; consensus fired in **60 / 60** evaluation queries |
+| Was greater agreement associated with greater precision? | An exploratory inclusive analysis found a negative association: **r = -0.287**, two-sided **p = 0.026** |
 
-The signal was measurable and frequent. It was not informative enough to ship.
+Search indexes tend to share coverage of popular pages such as documentation roots, repository
+pages, and general references. Several providers can return those pages even when a query asks
+for one specific reference.
 
-| Prediction | Measurement | Outcome |
-|---|---:|---|
-| Provider agreement identifies the right page | **38 / 261 = 0.1456** strict precision | Falsified |
-| `consensus: none` exposes ambiguity | Consensus fired in **60 / 60** evaluation queries | Falsified in this sample |
-| More agreement means greater confidence | Exploratory inclusive analysis: **r = -0.287**, two-sided **p = 0.026** | Inverted in this sample |
+The decision rests on the strict result: 38 exact matches among 261 corroborated URLs. The
+negative correlation is exploratory because its calculation has the classification and
+provenance limitations described below.
 
-The third result is the surprising one: agreement did not merely add little information. In the
-recorded evaluation it moved in the wrong direction. A plausible mechanism is popularity:
-generic documentation roots, repository pages, and other widely indexed URLs are easy for
-providers to agree on, even when a query asks for one precise authoritative page.
+## Why this was tested
 
-The correlation is reported as **exploratory**, not established. Its classification and
-provenance limitations are stated below. The load-bearing result is strict precision:
-`38 / 261`, which does not depend on alternate-URL judgements.
+The project began with a failure observed in an agent session. Three web searches returned no
+results without producing a useful failure for the model. One call took 264 seconds. The agent
+continued planning without search evidence.
 
-## Why test this before building the router
+dSearch separated two concerns:
 
-The project started from a real agent failure. Three web searches returned zero results without
-surfacing a useful failure to the model; one call consumed **264 seconds**. The agent continued
-planning on an empty evidence base.
+1. Search should return an attributed, bounded outcome, including when no results are found.
+2. Agreement between independent indexes might provide evidence that a result is reliable.
 
-dSearch separated two questions:
+The deterministic envelope addresses the first concern. The second claim motivated the router,
+so it was evaluated before provider orchestration and agent integrations were implemented.
 
-1. Did search return an attributed, bounded outcome rather than a silent empty?
-2. Can cross-provider URL agreement say whether the result deserves trust?
+## Method
 
-The first question produced useful deterministic components. The second was the proposed
-differentiator, so it was measured before provider orchestration, packaging, or integrations
-were built around it. The measurement killed that feature.
+- 60 queries asking for specific technical documents.
+- One or more labelled reference URLs per query.
+- Four providers, with up to 10 results requested from each.
+- Consensus calculated only across providers configured as independent.
+- URL comparison after normalizing scheme, `www`, trailing slashes, and tracking parameters.
+- A URL classified as corroborated when at least two eligible providers returned it.
+- Strict precision defined as exact canonical matches divided by all corroborated URLs.
 
-## How it was tested
+The first run contained 22 queries:
 
-- **60 document-finding queries** with one or more labelled authoritative URLs.
-- **Four providers**, requesting up to 10 results from each.
-- URLs canonicalized before comparison: scheme, `www`, trailing slash, and tracking parameters.
-- A URL counted as consensus when at least two eligible providers returned it.
-- Strict precision counted only canonical matches to a labelled URL.
-- Raw responses, per-query scores, and classifications were committed under
-  [`experiments/ds3/data/`](experiments/ds3/data/).
+```text
+12 exact matches / 108 corroborated URLs = 0.1111
+Wilson 95% CI: [0.065, 0.184]
+```
 
-The evaluation was first run at 22 queries, where strict precision was `12 / 108 = 0.1111`
-(Wilson 95% CI `[0.065, 0.184]`), then extended to 60. The final strict result was
-`38 / 261 = 0.1456` (Wilson 95% CI `[0.108, 0.194]`).
+The extended run contained 60:
 
-This measures **page findability**, not answer correctness. It asks whether agreement recovers a
-labelled document. It does not test whether an answer synthesized from the results is correct.
+```text
+38 exact matches / 261 corroborated URLs = 0.1456
+Wilson 95% CI: [0.108, 0.194]
+```
 
-## The engineering decision
+Raw responses, per-query scores, and classifications for both runs are in
+[`experiments/ds3/data/`](experiments/ds3/data/).
 
-Consensus was demoted from a trust signal to descriptive metadata, and product work stopped.
-Topical scoping was not used to rescue it: deciding whether a page is relevant would require a
-model or another semantic judge inside the trust path, replacing a failed transparent signal
-with a harder-to-audit one.
+The unit of measurement is page retrieval. The experiment checks whether consensus recovers a
+labelled document; it never evaluates an answer produced from the search results.
 
-What remains technically valid:
+## Decision
 
-- deterministic attributed envelopes, including explicit zero-result outcomes;
-- URL canonicalization and pairwise agreement rates;
+At 0.1456 strict precision, consensus remains descriptive metadata. It provides no evidence that
+a page is correct or relevant.
+
+Rescuing consensus with a semantic relevance model would put an opaque judgement inside the path
+intended to provide auditable evidence. Development stopped instead.
+
+Development stopped after this result. The repository is retained as the record of the test and
+the decision.
+
+The implemented parts are:
+
+- attributed envelopes with explicit zero-result outcomes;
+- URL canonicalization;
+- pairwise agreement calculations;
 - context-aware output budgets;
-- offline provider contract fixtures;
-- explicit provider independence classes stored as configuration;
-- graceful handling of malformed provider URLs;
-- **78 offline tests** covering the pure core and provider contracts.
+- provider declarations and offline contract fixtures;
+- handling for malformed provider URLs;
+- 78 offline tests for the provider contracts and pure core.
 
-These components are evidence of the experiment, not a claim that dSearch is a complete tool.
+Implementation ends at the pure core. The provider orchestrator, command-line product, MCP
+server, and supported package were never built.
 
-## What the evidence does not establish
+## Limitations found in review
 
-An adversarial verification pass reproduced the strict result and found limitations that matter:
+A separate verification pass reproduced the strict precision result and found three problems
+with the broader analysis:
 
-- Two URLs are counted as `alternate` by
-  [`classify.py`](experiments/ds3/classify.py) even though their own annotations say they must
-  remain `wrong`. The committed measured-inclusive value is therefore `0.1801`; applying the
-  script's stated conservative rule gives `45 / 261 = 0.1724`. **Strict precision is unchanged.**
-- Repository history does not prove that labels predated provider calls. The result files have
-  measurement timestamps earlier than the commits that first contain their labels, while the
-  label metadata timestamps are later still. This is a provenance failure, not proof that the
-  labels were derived from provider output.
-- The committed overlap summary does not contain the raw URLs or repeated-call runs needed to
-  independently reproduce its pairwise Jaccard and stability claims. Its document records
-  Parallel repeat stability at `J = 0.82`, not `1.00`.
-- The permutation, median-split, and domain-precision calculations were not committed as code.
-  Their p-values depend on an unstated one-sided test. The negative correlation should therefore
-  be treated as an exploratory observation from this dataset.
+- **Alternate classifications.** [`classify.py`](experiments/ds3/classify.py) counts two URLs as
+  `alternate`, although their annotations say they should remain `wrong`. The committed inclusive
+  precision is 0.1801; applying the stated conservative rule gives `45 / 261 = 0.1724`. Strict
+  precision remains 38 / 261 because it excludes every alternate.
+- **Label chronology.** Measurement timestamps precede the commits that first contain the
+  corresponding labels, and the label metadata timestamps are later still. The repository
+  cannot establish the claimed ordering or rule out labels informed by provider output.
+- **Missing evidence and analysis code.** The overlap summary omits the provider URLs and repeated
+  calls needed to recompute its pairwise Jaccard and stability claims. Its document records
+  Parallel repeat stability at `J = 0.82`, not `1.00`. The permutation, median-split, and
+  domain-precision calculations were not committed as code, and their reported p-values require
+  an unstated one-sided test.
 
-Finding these issues is part of the result. A repository about search integrity should not ask a
-reader to trust its own evidence envelope.
+The negative correlation is therefore an exploratory result from this dataset.
 
-## Reproduce the verifiable core
+## Reproduction
 
-The default test suite is offline. Provider contracts use recorded fixtures; no API keys or live
-calls are required.
+The core test suite and stored classification run offline. No provider credentials are required.
 
 ```bash
 python3 -m pip install -e '.[dev]'
@@ -124,9 +131,12 @@ python3 -m ruff check .
 python3 experiments/ds3/classify.py
 ```
 
-Expected classification headline:
+Current output:
 
 ```text
+78 passed
+All checks passed!
+
 exact                    38
 alternate                 9
 wrong                   214
@@ -134,24 +144,18 @@ all_corroborations      261
 precision, STRICT         0.1456
 ```
 
-The classification command reproduces the committed artifact, including the alternate-label
-defect disclosed above.
+The classification command reproduces the committed classification, including the two
+alternate-label inconsistencies noted above. It does not independently reproduce every
+statistical claim.
 
-## Read the record
+## Repository guide
 
-| Artifact | What it contains |
+| Path | Contents |
 |---|---|
-| [`docs/DS3-DECISION.md`](docs/DS3-DECISION.md) | The decision written from the 60-query evaluation; retain the audit notes above while reading it |
-| [`experiments/ds3/data/`](experiments/ds3/data/) | Raw provider output, scored queries, and classification output for n=22 and n=60 |
-| [`docs/EXPERIMENT-OVERLAP.md`](docs/EXPERIMENT-OVERLAP.md) | The earlier overlap experiment and the defect it exposed |
-| [`docs/CONCEPT.md`](docs/CONCEPT.md) | The original product hypothesis; preserved as historical context, not current product truth |
-| [`docs/PROVIDERS.md`](docs/PROVIDERS.md) | Provider-index provenance and independence classes |
-| [`core/`](core/) and [`tests/`](tests/) | Deterministic implementation through the pure-core stage and its offline tests |
-
-## Status
-
-**Research complete. Product development stopped.**
-
-The valuable artifact is the decision trail: a plausible trust mechanism was made falsifiable,
-implemented deterministically, tested against labelled data, rejected on its measured precision,
-and then audited hard enough to expose weaknesses in the evaluation itself.
+| [`docs/DS3-DECISION.md`](docs/DS3-DECISION.md) | Decision recorded after the 60-query evaluation |
+| [`experiments/ds3/data/`](experiments/ds3/data/) | Provider output and scoring data for both runs |
+| [`docs/EXPERIMENT-OVERLAP.md`](docs/EXPERIMENT-OVERLAP.md) | Initial overlap experiment |
+| [`docs/CONCEPT.md`](docs/CONCEPT.md) | Original product proposal; not the current project status |
+| [`docs/PROVIDERS.md`](docs/PROVIDERS.md) | Provider provenance and independence classes |
+| [`core/`](core/) | Pure deterministic components |
+| [`tests/`](tests/) | Offline tests |
