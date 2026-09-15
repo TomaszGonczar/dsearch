@@ -74,6 +74,7 @@ def test_empty_success_is_an_attributed_outcome_not_null() -> None:
     assert data["providers_succeeded"] == ["brave", "exa"]
     assert data["errors"] == {}
     assert data["results"] == []
+    assert isinstance(data["consensus"], dict)
     assert data["consensus"]["rate"] == 0.0
     assert data["warnings"] == ["zero_results:providers_returned_empty"]
     assert data["degraded"] is False

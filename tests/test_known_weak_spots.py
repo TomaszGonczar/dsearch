@@ -8,7 +8,8 @@ FIXTURES = Path(__file__).parent / "fixtures" / "weakspots"
 
 
 def load_fixture(name: str) -> dict[str, Any]:
-    return json.loads((FIXTURES / name).read_text(encoding="utf-8"))
+    data: dict[str, Any] = json.loads((FIXTURES / name).read_text(encoding="utf-8"))
+    return data
 
 
 def test_wrong_consensus_fixture_documents_open_precision_defect() -> None:
