@@ -49,6 +49,8 @@ Thumbs.db
 !.vscode/extensions.json
 *.swp
 *~
+*.tmp
+*.bak
 
 # Logs
 *.log

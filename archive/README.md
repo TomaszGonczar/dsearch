@@ -1,6 +1,6 @@
 # Historical Antecedent Artifact (Omega-v3 Search Router)
 
-This directory preserves the original 575-line search router implementation from `Omega-v3` (`core/lib/search_router.py`), referenced in [`docs/CONCEPT.md` §10](file:///Users/tomaszgonczar/dsearch/docs/CONCEPT.md#L480-L486).
+This directory preserves the original 575-line search router implementation from `Omega-v3` (`core/lib/search_router.py`), referenced in [`docs/CONCEPT.md` §10](../docs/CONCEPT.md#L480-L486).
 
 ## Role in the dSearch Falsification Study
 
