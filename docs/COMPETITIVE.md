@@ -87,25 +87,22 @@ inside a router.
 
 ---
 
-## 3. Where AllSearch is simply better than our concept
+## 3. Where AllSearch is simply better — and the adoption matrix
 
 No hedging — these are real, and several should be adopted.
 
-| Their feature | Why it beats what we have |
-|---|---|
-| **Context budget with usage-aware tightening** (8 KB/16 KB caps; auto-tighten to 4 KB/2 KB above 75%/90% context) | Genuinely smarter than our flat byte budget. Ours is static; theirs adapts to how full the agent's context already is. **Adopt the idea.** |
-| **`fetch` with SSRF hardening** — rejects localhost, private IPs, embedded credentials, non-HTTP(S); re-validates the *final* redirect URL; 0600 temp files | We have **nothing** on retrieval. They thought about SSRF; we did not. **Adopt.** |
-| **Hard total deadline across all stages** (`ALLSEARCH_TOTAL_BUDGET_SECONDS`) | Ours is per-provider timeout only. A stage-overrun can still eat the budget. Theirs bounds the whole operation. **Adopt.** |
-| **Circuit breaker per provider** | We have failover but no state. A provider that failed 5× in a row should be skipped, not retried. **Adopt.** |
-| **Key pools with round-robin + quota failover** | Practical, real-world. We have nothing. |
-| **`route.stages`** — reports which providers ran, why, and their latency | Honest observability. We planned attribution but theirs is shipped. |
-| **Strict mode refuses rather than silently substituting** (`ALLSEARCH_ALLOW_DEGRADED_SEARCH=false` → primary failure returns an explicit error, no supplement runs) | **This is our "never a silent empty" principle, already implemented.** Credit: they got there independently. |
-| **Secret redaction before returning to the agent** | We specified it; they shipped it. |
-| **Working code, offline test suite, v0.2.0** | We have four markdown files and no repository. This is the honest headline. |
-
-The last row is the one that stings. They have mock-provider contract tests, SSRF checks,
-circuit-breaker coverage, deadline tests, and a Pi extension in `integrations/pi`. We have a
-concept document describing what we would build.
+| AllSearch Feature | Why It Beats What We Had | Disposition |
+|---|---|---|
+| **Context budget with usage-aware tightening** (8 KB/16 KB caps; auto-tighten to 4 KB/2 KB above 75%/90% context) | Genuinely smarter than a flat byte budget. Adapts to agent context load. | **Adopted** (implemented in `core/budget.py`) |
+| **`fetch` with SSRF hardening** (rejects localhost, private IPs, non-HTTP; re-validates redirect URL) | We had nothing on retrieval. Critical security requirement. | **Adopt** for any fetch tier |
+| **Hard total deadline across all stages** (`ALLSEARCH_TOTAL_BUDGET_SECONDS`) | Bounds the whole operation rather than just per-provider timeouts. | **Adopt** |
+| **Circuit breaker per provider** with state | Failover without memory pointlessly retries dead providers. | **Adopt** |
+| **Strict mode refuses rather than substituting** (`ALLSEARCH_ALLOW_DEGRADED_SEARCH=false`) | Matches our "never a silent empty" principle. | **Adopt** naming convention |
+| **Depth-by-intent naming** (`fast` / `balanced` / `verify` / `deep`) | Describes *task intent* rather than setup burden (Tier 0–3 API keys). | **Adopt** |
+| **Key pools with round-robin + quota failover** | Practical production resiliency. | Plan for multi-key ops |
+| **`route.stages` per-call latency reporting** | Honest observability and attribution. | Retain in attribution |
+| **Secret redaction before returning to agent** | Essential before untrusted transcript ingestion. | Plan for packaging |
+| **Working code, offline test suite** | Concrete empirical tests beat concept documents. | **Adopted** (78 offline tests) |
 
 **Their depth model is also a better UX than our tiers.** `fast` / `balanced` / `verify` /
 `deep` describes *task intent*. Our Tier 0–3 describes *setup burden* — how many API keys you
@@ -177,20 +174,7 @@ trust.
 
 ---
 
-## 5. What we should take
-
-Concretely, and without pretending these are our ideas:
-
-| Adopt | From | Note |
-|---|---|---|
-| Context-usage-aware budget tightening | AllSearch | Better than our static budget. Wire to the agent's reported context usage where available. |
-| SSRF-hardened `fetch` | AllSearch | We had no retrieval story. Theirs is the reference. |
-| Hard total deadline across stages | AllSearch | Ours was per-provider only. |
-| Circuit breaker with state | AllSearch | Failover without memory retries a dead provider. |
-| Depth-by-intent naming | AllSearch | `verify`/`deep` beats `Tier 2`/`Tier 3`. |
-| Strict mode that refuses | AllSearch | Already our principle; adopt their naming. |
-
-## 6. What we should not
+## 5. What we explicitly reject
 
 - **Grok-first, or any model producing the headline artifact.** It forfeits determinism,
   reproducibility, and auditability in one move — the three things this project is for.
