@@ -479,10 +479,10 @@ search-router makes search corruption countable. Neither asks the user to trust 
 
 ## 10. Source material
 
-Existing implementation to extract from: `Omega-v3/core/lib/search_router.py` (575 lines) —
+Existing implementation to extract from: an internal search router (575 lines) —
 dual-engine ensemble, RRF fusion with URL canonicalization, Exa HTTP failover,
 two-layer rerank (Cohere + deterministic local fallback), waterfall mode, provider adapters
-for Parallel / Brave / Exa. Tests in `Omega-v3/tests/test_search_router.py`.
+for Parallel / Brave / Exa. Unit-tested in the source repository.
 
 Documented failure evidence:
 [cc-switch#5363](https://github.com/farion1231/cc-switch/issues/5363) (264 s + 158 s, 0
