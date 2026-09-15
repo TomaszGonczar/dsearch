@@ -1,6 +1,15 @@
 <h1 align="center">dSearch</h1>
 
 <p align="center">
+  <b>The Deterministic AI Systems Suite</b><br>
+  <a href="https://github.com/TomaszGonczar/dCompress"><b>dCompress</b></a> (Fact Memory) &middot;
+  <a href="https://github.com/TomaszGonczar/dsearch"><b>dsearch</b></a> (Retrieval Grounding) &middot;
+  <a href="https://github.com/TomaszGonczar/dproof"><b>dproof</b></a> (State Evidence) &middot;
+  <a href="https://github.com/TomaszGonczar/omega-zero"><b>omega-zero</b></a> (Governance) &middot;
+  <a href="https://github.com/TomaszGonczar/hackathon-multi-ai-blueprint"><b>hackathon-blueprint</b></a> (Operations)
+</p>
+
+<p align="center">
   <b>261 URLs were corroborated across eligible search indexes. 38 matched the labelled page.</b><br>
   Completed falsification study · 60 labelled queries · no product release
 </p>
@@ -19,6 +28,7 @@
   <a href="https://github.com/TomaszGonczar/dsearch/actions/workflows/ci.yml"><img src="https://github.com/TomaszGonczar/dsearch/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.11+-3776AB?logo=python&logoColor=white" alt="Python 3.11+"></a>
   <img src="https://img.shields.io/badge/tests-78%20offline-2563EB" alt="78 offline tests">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
 </p>
 
 ---
@@ -94,14 +104,18 @@ router had two separate claims:
 The first claim produced deterministic engineering components. The second was the proposed trust
 signal and was tested before building the runtime around it.
 
-```text
-4 providers × up to 10 results
-              ↓
-       canonical URLs
-              ↓
-agreement across eligible independent indexes
-              ↓
- exact comparison with human-labelled documents
+```mermaid
+flowchart TD
+    Q["60 Labelled Document Queries"] --> F["Parallel Multi-Index Fan-Out<br/>(Brave, Exa, Parallel, Tavily)"]
+    F --> C["Deterministic URL Canonicalization<br/>(strip UTM/params, www, trailing slashes)"]
+    C --> A{"Independent Consensus Engine<br/>(Agreement >= 2 eligible indexes)"}
+    A -->|Fired for 60/60 queries| R["261 Corroborated URLs"]
+    R --> M{"Exact Ground-Truth Match"}
+    M -->|Target Document Hit| P["38 Authoritative Hits<br/>(Strict Precision: 0.1456)"]
+    M -->|Popularity Bias Trap| FP["223 Generic Traps<br/>(Homepages, Doc Roots, Portals)"]
+
+    style P fill:#15803d,stroke:#86efac,color:#fff
+    style FP fill:#b91c1c,stroke:#fca5a5,color:#fff
 ```
 
 The evaluation used 60 document-finding queries with one or more labelled authoritative URLs.
@@ -126,6 +140,29 @@ The first 22-query run produced `12 / 108 = 0.1111` strict precision. Extending 
 
 The retained core is deterministic: no clock, locale dependence, network access, or model
 judgement appears in its result path. The test suite contains 78 offline tests.
+
+### Using the pure core library
+
+The core components run on pure Python 3.11+ standard library with zero runtime dependencies:
+
+```python
+from core.canonical import canonicalize_url
+from core.envelope import SearchEnvelope, SearchResult
+from core.budget import ContextBudget
+
+# 1. Deterministic URL normalization
+url = canonicalize_url("https://docs.python.org/3/library/sys.html?utm_source=dev#mod")
+# -> "docs.python.org/3/library/sys.html"
+
+# 2. Immutable attributed search envelope
+envelope = SearchEnvelope(
+    query="python sys module",
+    results=[SearchResult(url=url, title="sys — System-specific parameters", snippet="...")]
+)
+
+# 3. Tighten output into strict LLM context budget (e.g. 2KB)
+compact = ContextBudget(max_bytes=2048).tighten(envelope)
+```
 
 ## Audit notes
 
@@ -161,3 +198,7 @@ corroborated URLs.
 
 Raw responses and both evaluation runs remain committed so the result can be inspected without
 repeating the live provider calls.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
