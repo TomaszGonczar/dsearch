@@ -8,12 +8,13 @@ If overlap is ~100%, they share an upstream and consensus is theatre.
 If overlap is ~0%, they never agree and consensus never fires.
 The useful middle is where this product lives.
 
-Read-only. No writes outside stdout. Reads keys from Omega-v3/.env.
+Read-only. No writes outside stdout. Reads provider keys from a local .env file
+(repo root, or override with DSEARCH_ENV_PATH).
 """
 import json, os, re, sys, urllib.parse, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
-ENV_PATH = os.path.expanduser("~/Omega-v3/.env")
+ENV_PATH = os.environ.get("DSEARCH_ENV_PATH", os.path.join(os.path.dirname(__file__), "..", ".env"))
 TIMEOUT = 20.0
 
 def load_keys():
