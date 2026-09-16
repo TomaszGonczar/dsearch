@@ -1,15 +1,6 @@
 <h1 align="center">dSearch</h1>
 
 <p align="center">
-  <b>The Deterministic AI Systems Suite</b><br>
-  <a href="https://github.com/TomaszGonczar/dCompress"><b>dCompress</b></a> (Fact Memory) &middot;
-  <a href="https://github.com/TomaszGonczar/dsearch"><b>dsearch</b></a> (Retrieval Grounding) &middot;
-  <a href="https://github.com/TomaszGonczar/dproof"><b>dproof</b></a> (State Evidence) &middot;
-  <a href="https://github.com/TomaszGonczar/omega-zero"><b>omega-zero</b></a> (Governance) &middot;
-  <a href="https://github.com/TomaszGonczar/hackathon-multi-ai-blueprint"><b>hackathon-blueprint</b></a> (Operations)
-</p>
-
-<p align="center">
   <b>261 URLs were corroborated across eligible search indexes. 38 matched the labelled page.</b><br>
   Completed falsification study · 60 labelled queries · no product release
 </p>
