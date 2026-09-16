@@ -6,6 +6,7 @@
 </p>
 
 <p align="center">
+  <a href="REVIEWER_GUIDE.md"><b>Reviewer Guide (10 min)</b></a> ·
   <a href="#result">Result</a> ·
   <a href="#reproduce">Reproduce</a> ·
   <a href="#experiment">Experiment</a> ·
