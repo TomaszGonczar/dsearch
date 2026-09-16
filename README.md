@@ -26,8 +26,8 @@
 ---
 
 > [!IMPORTANT]
-> dSearch is an archived research repository. It contains a deterministic core and recorded
-> evaluation evidence, not an installable search router, CLI, MCP server, or supported package.
+> dSearch is an archived research repository containing a deterministic core and recorded
+> evaluation evidence. Product development was halted following falsification.
 
 ## Result
 
@@ -43,8 +43,6 @@ labelled document reliably.
 | Exact matches to a labelled URL | 38 |
 | Strict precision | **0.1456** |
 | Wilson 95% confidence interval | **[0.108, 0.194]** |
-
-Consensus fired across all 60 queries and produced 261 corroborated URLs, but only 38 were exact matches to the labelled page (strict precision 0.1456).
 
 An exploratory inclusive analysis also found a negative association between agreement rate and
 precision (`r = -0.287`, two-sided `p = 0.026`). That secondary result has classification and
