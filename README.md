@@ -52,9 +52,7 @@ labelled document reliably.
 | Strict precision | **0.1456** |
 | Wilson 95% confidence interval | **[0.108, 0.194]** |
 
-Consensus did not fail because it was rare. It fired for every query in the evaluation and
-produced 261 corroborated URLs. It failed at the next step: only 38 were exact matches to the
-labelled page.
+Consensus fired across all 60 queries and produced 261 corroborated URLs, but only 38 were exact matches to the labelled page (strict precision 0.1456).
 
 An exploratory inclusive analysis also found a negative association between agreement rate and
 precision (`r = -0.287`, two-sided `p = 0.026`). That secondary result has classification and
@@ -112,7 +110,7 @@ flowchart TD
     A -->|Fired for 60/60 queries| R["261 Corroborated URLs"]
     R --> M{"Exact Ground-Truth Match"}
     M -->|Target Document Hit| P["38 Authoritative Hits<br/>(Strict Precision: 0.1456)"]
-    M -->|Popularity Bias Trap| FP["223 Generic Traps<br/>(Homepages, Doc Roots, Portals)"]
+    M -->|Popularity Bias| FP["223 Off-Target Matches<br/>(Homepages, Doc Roots, Portals)"]
 
     style P fill:#15803d,stroke:#86efac,color:#fff
     style FP fill:#b91c1c,stroke:#fca5a5,color:#fff
@@ -122,7 +120,7 @@ The evaluation used 60 document-finding queries with one or more labelled author
 Scheme, `www`, trailing slash, tracking parameters, and query ordering were normalized before URL
 comparison. A URL counted as corroborated when at least two eligible providers returned it.
 
-This measures document retrieval, not answer correctness. No model-generated answer was scored.
+This benchmark evaluates document retrieval only; no model-generated answers were scored.
 
 The first 22-query run produced `12 / 108 = 0.1111` strict precision. Extending the same method to
 60 queries produced `38 / 261 = 0.1456`.
